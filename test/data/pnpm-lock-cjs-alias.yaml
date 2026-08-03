@@ -1,0 +1,34 @@
+lockfileVersion: 5.1
+
+specifiers:
+  testplane: 8.20.5
+
+dependencies:
+  testplane: 8.20.5
+
+packages:
+
+  /testplane/8.20.5_48cca363293027fd6fa5a896c04e9e8c:
+    resolution: {integrity: sha512-vzCjQO/rgUuK9sf8VJZvjqiqiHFaZLnOiimmUuOKODxWL8mm/xua7viT7aqX7dgPY60otQjUotzFMmCB4VdmqQ==}
+    dependencies:
+      '@wdio/utils': 8.39.0
+      # Scoped path-style alias with a peer-dependency suffix - crashed cdxgen
+      '@wdio/utils-cjs': /@wdio/utils/7.26.0_typescript@6.0.2
+      # Unscoped path-style alias - silently produced a bogus purl
+      string-width-cjs: /string-width/4.2.3
+    dev: false
+
+  /@wdio/utils/7.26.0_typescript@6.0.2:
+    resolution: {integrity: sha512-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa}
+    engines: {node: '>=10'}
+    dev: false
+
+  /@wdio/utils/8.39.0:
+    resolution: {integrity: sha512-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb}
+    engines: {node: '>=10'}
+    dev: false
+
+  /string-width/4.2.3:
+    resolution: {integrity: sha512-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc}
+    engines: {node: '>=8'}
+    dev: false
