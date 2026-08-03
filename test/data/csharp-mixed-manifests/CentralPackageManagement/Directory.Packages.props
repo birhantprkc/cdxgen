@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="WiX" Version="3.14.1" />
+    <PackageVersion Include="Serilog" Version="3.1.1" />
+    <!-- Declared in a different case to the PackageReference that consumes it -->
+    <PackageVersion Include="newtonsoft.json" Version="13.0.3" />
+    <PackageVersion Include="Moq" Version="4.20.70" />
+    <PackageVersion Include="NUnit" Version="3.14.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Update is the documented way to change a version an imported props file declared -->
+    <PackageVersion Update="NUnit" Version="4.0.1" />
+  </ItemGroup>
+</Project>

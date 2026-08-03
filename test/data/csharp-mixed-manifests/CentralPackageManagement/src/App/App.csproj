@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>App</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Central package management: no Version attribute, by design -->
+    <PackageReference Include="WiX" GeneratePathProperty="true">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog" />
+    <!-- Case differs from the central declaration; NuGet package ids are case-insensitive -->
+    <PackageReference Include="Newtonsoft.Json" />
+    <!-- VersionOverride opts this project out of the central version -->
+    <PackageReference Include="Moq" VersionOverride="4.18.4" />
+    <PackageReference Include="NUnit" />
+    <!-- Not declared centrally, so it stays versionless rather than @undefined -->
+    <PackageReference Include="Unlisted.Package" />
+  </ItemGroup>
+</Project>
