@@ -363,6 +363,26 @@ export declare function parseYarnLock(yarnLockFile: string, parentComponent?: Ob
  * @param {string} swFile shrinkwrap-deps.json file
  */
 export declare function parseNodeShrinkwrap(swFile: string): Promise<any[]>;
+/**
+ * Strip the peer-dependency resolution that pnpm encodes into a version string.
+ *
+ * pnpm 5 and below append it after an underscore, either as a peer spec or as a hash
+ * of one, while 6 and above wrap it in parentheses:
+ *
+ *   7.26.0_typescript@6.0.2
+ *   2.3.3_5b3b7d3a75edb27abc53579646941536
+ *   3.0.1(ajv@8.14.0)
+ *
+ * An npm version can contain neither an underscore nor a parenthesis, so both are
+ * unambiguous separators. The suffix must not survive into a version or a purl: no
+ * SCA tool can match `2.3.3_5b3b7d...` against an advisory, so a component carrying
+ * one is effectively invisible to vulnerability lookups.
+ *
+ * @param {String} version Version string from a pnpm lock file
+ *
+ * @returns {String} The published version, without the peer-resolution suffix
+ */
+export declare function stripPnpmPeerSuffix(version: string): string;
 export declare function getVersionNumPnpm(depPkg: any, relativePath: any): Promise<any>;
 /**
  * Parse pnpm workspace file
@@ -396,6 +416,27 @@ export declare function findPnpmPackagePath(baseDir: string, packageName: string
  * @returns {Array} Enhanced package list
  */
 export declare function pnpmMetadata(pkgList: any[], lockFilePath: string): any[];
+/**
+ * Resolve a pnpm dependency value that is an alias pointing at another lock entry
+ * rather than a plain version.
+ *
+ * pnpm writes such a value in the same shape as its package keys, and that shape
+ * changed between lockfile versions:
+ *
+ *   v5 and below: /@wdio/utils/7.26.0_typescript@6.0.2, /string-width/4.2.3
+ *   v6 and above: /@wdio/utils@7.26.0, string-width@4.2.3
+ *
+ * The version is returned verbatim, peer-dependency suffix included, because that
+ * is how the aliased package's own lock key is turned into a version elsewhere in
+ * parsePnpmLock - stripping it here would leave the dependency ref pointing at a
+ * component that does not exist.
+ *
+ * @param {String} value Raw dependency value from the lock file
+ *
+ * @returns {Object|undefined} `{name, version}`, or undefined when the value is a
+ *          plain version and not an alias
+ */
+export declare function parsePnpmAliasRef(value: string): Object | undefined;
 /**
  * Parse nodejs pnpm lock file
  *
