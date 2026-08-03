@@ -1184,6 +1184,33 @@ export declare function parseNuspecData(nupkgFile: string, nuspecData: string): 
  */
 export declare function parseCsPkgData(pkgData: string, pkgFile: string, pkgNameVersions?: Object): Object[];
 /**
+ * Parse a Directory.Packages.props file and return the package versions it declares
+ * centrally via NuGet Central Package Management.
+ *
+ * @param {String} propsFile Path to a Directory.Packages.props file
+ *
+ * @returns {Object} Map of lowercased package id to version. NuGet package ids are
+ *          case-insensitive, so callers must lowercase before looking up.
+ */
+export declare function parseDirectoryPackagesProps(propsFile: string): Object;
+/**
+ * Method to collect the versions declared by NuGet Central Package Management for a
+ * given project file, by walking up to the nearest Directory.Packages.props.
+ *
+ * MSBuild imports the first Directory.Packages.props found while walking up from the
+ * project directory, and that file is often at the repository root - above the
+ * directory cdxgen was invoked with. The walk therefore deliberately continues past
+ * the scan root rather than stopping at it.
+ *
+ * @param {String} projFile Path to a .csproj like project file
+ * @param {Object} cache Optional per-scan cache keyed by props file path, so that a
+ *        repository with many projects parses each props file once
+ *
+ * @returns {Object} Map of lowercased package id to version. Empty when the project
+ *          does not use central package management.
+ */
+export declare function getCentralPackageVersions(projFile: string, cache?: Object): Object;
+/**
  * Method to find all text nodes in PropertyGroup elements in .props files.
  *
  * @param {String} propsFiles .props files in this project
@@ -1197,10 +1224,14 @@ export declare function getPropertyGroupTextNodes(propsFiles: string): Object;
  * @param {String} csProjData Raw data
  * @param {String} projFile File name
  * @param {Object} pkgNameVersions Package name - version map object
+ * @param {Boolean} msbuildInstalled Whether msbuild is available to resolve properties
+ * @param {Object} pkgVersionLabelCandidates Candidate values for msbuild version properties
+ * @param {Object} centralVersions Versions declared centrally in Directory.Packages.props,
+ *        keyed by lowercased package id. See {@link getCentralPackageVersions}.
  *
  * @returns {Object} Containing parent component, package, and dependencies
  */
-export declare function parseCsProjData(csProjData: string, projFile: string, pkgNameVersions?: Object, msbuildInstalled?: boolean, pkgVersionLabelCandidates?: {}): Object;
+export declare function parseCsProjData(csProjData: string, projFile: string, pkgNameVersions?: Object, msbuildInstalled?: boolean, pkgVersionLabelCandidates?: Object, centralVersions?: Object): Object;
 /**
  * Parse a .NET project.assets.json file and return the package list and dependency tree.
  *
