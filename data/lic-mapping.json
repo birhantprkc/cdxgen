@@ -31,13 +31,7 @@
   {
     "exp": "0BSD",
     "names": [
-      "Zero-Clause BSD",
-      "BSD",
-      "BSD License",
-      "BSD-like",
-      "new BSD License",
-      "new BSD",
-      "BSD, Public Domain"
+      "Zero-Clause BSD"
     ]
   },
   {
@@ -69,7 +63,9 @@
       "Revised BSD License",
       "The New BSD License",
       "BSD (3-clause)",
-      "3-Clause BSD License"
+      "3-Clause BSD License",
+      "new BSD",
+      "new BSD License"
     ]
   },
   {
