@@ -21,7 +21,7 @@ jobs:
           ref: ${{ github.head_ref }}
           persist-credentials: false
       - name: Setup pnpm
-        uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271  # v6.0.9
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86  # v6.0.10
       - name: Use Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020  # v7.0.0
         with:
@@ -30,7 +30,7 @@ jobs:
       - name: Fix
         run: |
           pnpm i --no-frozen-lockfile
-      - uses: EndBug/add-and-commit@290ea2c423ad77ca9c62ae0f5b224379612c0321 # v10.0.0
+      - uses: EndBug/add-and-commit@645ecc0dd0a57f4d86d26c0aa5fc42c0a856fbca  # v11.0.0
         with:
           add: 'pnpm-lock.yaml'
           commit: --signoff

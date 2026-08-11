@@ -61,7 +61,7 @@ jobs:
         run: |
           rm -rf /tmp/docker-images-* /tmp/atom-usages-* /tmp/atom-reachables-* /tmp/cdx*
       - name: Setup pnpm
-        uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271  # v6.0.9
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86  # v6.0.10
       - name: Use Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020  # v7.0.0
         with:
@@ -392,7 +392,7 @@ jobs:
       - name: Trim CI agent
         run: rm -rf /tmp/docker-images-* /tmp/atom-*  /tmp/mvn-deps*
       - name: Setup pnpm
-        uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271  # v6.0.9
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86  # v6.0.10
       - name: Use Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020  # v7.0.0
         with:
@@ -456,7 +456,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Set up JDK ${{ matrix.java-version }}
-        uses: actions/setup-java@03ad4de0992f5dab5e18fcb136590ce7c4a0ac95  # v5.6.0
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961  # v5.7.0
         with:
           distribution: 'temurin'
           java-version: ${{ matrix.java-version }}
@@ -464,7 +464,7 @@ jobs:
         with:
           go-version: '1.26.4'
       - name: Setup pnpm
-        uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271  # v6.0.9
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86  # v6.0.10
       - name: Use Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020  # v7.0.0
         with:
@@ -481,7 +481,7 @@ jobs:
         run: |
           chmod +x contrib/free_disk_space.sh
           ./contrib/free_disk_space.sh
-      - uses: sbt/setup-sbt@6444f4c8111de4b9059c3975def104b03cfaa5f0  # v1.5.2
+      - uses: sbt/setup-sbt@8feba82adc7f01ddcf8165b86f778bdb5b82cebc  # v1.5.7
       - name: Install bazelisk - linux
         if: matrix.os == 'ubuntu-24.04'
         run: |
@@ -1344,12 +1344,12 @@ jobs:
           bin/cdxgen.js -r -t dotnet-framework repotests/Reporting-Windows-Application -o bomresults/bom-dotnet-framework-reporting.json --deep
         shell: bash
       - name: Set up JDK
-        uses: actions/setup-java@03ad4de0992f5dab5e18fcb136590ce7c4a0ac95  # v5.6.0
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961  # v5.7.0
         with:
           distribution: 'temurin'
           java-version: '21'
-      - uses: sbt/setup-sbt@6444f4c8111de4b9059c3975def104b03cfaa5f0  # v1.5.2
-      - uses: coursier/setup-action@fd1707a76b027efdfb66ca79318b4d29b72e5a02 # v3.0.0
+      - uses: sbt/setup-sbt@8feba82adc7f01ddcf8165b86f778bdb5b82cebc  # v1.5.7
+      - uses: coursier/setup-action@9b7939bf01fd1185ce2babe16135168361bf2c62  # v3.0.2
         with:
           apps: scala3 scalac
       - name: scala tests
@@ -1581,7 +1581,7 @@ jobs:
         with:
           go-version: '1.26.4'
       - name: Setup pnpm
-        uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271  # v6.0.9
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86  # v6.0.10
       - name: Use Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020  # v7.0.0
         with:
@@ -1744,7 +1744,7 @@ jobs:
         run: |
           rustup toolchain install nightly --component rustc-dev --component rust-src
       - name: Setup pnpm
-        uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271  # v6.0.9
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86  # v6.0.10
       - name: Use Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020  # v7.0.0
         with:
@@ -1891,12 +1891,12 @@ jobs:
         with:
           persist-credentials: false
       - name: Set up JDK
-        uses: actions/setup-java@03ad4de0992f5dab5e18fcb136590ce7c4a0ac95  # v5.6.0
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961  # v5.7.0
         with:
           distribution: 'temurin'
           java-version: '21'
       - name: Setup pnpm
-        uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271  # v6.0.9
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86  # v6.0.10
       - name: Use Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020  # v7.0.0
         with:
@@ -1936,19 +1936,19 @@ jobs:
         with:
           persist-credentials: false
       - name: Set up JDK ${{ matrix.java-version }}
-        uses: actions/setup-java@03ad4de0992f5dab5e18fcb136590ce7c4a0ac95  # v5.6.0
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961  # v5.7.0
         with:
           distribution: 'temurin'
           java-version: ${{ matrix.java-version }}
-      - uses: sbt/setup-sbt@6444f4c8111de4b9059c3975def104b03cfaa5f0  # v1.5.2
-      - uses: coursier/setup-action@fd1707a76b027efdfb66ca79318b4d29b72e5a02 # v3.0.0
+      - uses: sbt/setup-sbt@8feba82adc7f01ddcf8165b86f778bdb5b82cebc  # v1.5.7
+      - uses: coursier/setup-action@9b7939bf01fd1185ce2babe16135168361bf2c62  # v3.0.2
         with:
           apps: scala3 scalac
       - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e  # v7.0.0
         with:
           go-version: '1.26.4'
       - name: Setup pnpm
-        uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271  # v6.0.9
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86  # v6.0.10
       - name: Use Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020  # v7.0.0
         with:
@@ -1959,7 +1959,7 @@ jobs:
         run: |
           chmod +x contrib/free_disk_space.sh
           ./contrib/free_disk_space.sh
-      - uses: sbt/setup-sbt@6444f4c8111de4b9059c3975def104b03cfaa5f0  # v1.5.2
+      - uses: sbt/setup-sbt@8feba82adc7f01ddcf8165b86f778bdb5b82cebc  # v1.5.7
       - name: Install bazelisk - linux
         if: matrix.os == 'ubuntu-24.04'
         run: |
