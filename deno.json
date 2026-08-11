@@ -46,6 +46,10 @@
     "include": ["bin/", "*.js"],
     "exclude": ["test/", "data/", "contrib/"]
   },
+  "minimumDependencyAge": {
+    "age": "P3D",
+    "exclude": ["npm:@cdxgen/*", "npm:@appthreat/*"]
+  },
   "lock": false,
   "nodeModulesDir": "auto",
   "unstable": [],
