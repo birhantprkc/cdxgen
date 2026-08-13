@@ -7,5 +7,5 @@
  * @param {boolean} recurse Recurse. Default: false
  */
 export declare const getDirs: (dirPath: string, dirName: string, hidden?: boolean, recurse?: boolean) => string[];
-export declare const getOnlyDirs: (srcpath: any, dirName: any) => any[];
+export declare const getOnlyDirs: (srcpath: any, dirName: any) => any;
 //# sourceMappingURL=containerutils.d.ts.map
