@@ -105,12 +105,25 @@ jobs:
           TMP: 'D:\cdxtmp'
           TEMP: 'D:\cdxtmp'
         run: |
-          export PATH="$(echo "$PATH" | tr ':' '\n' | grep -iv docker | paste -sd: -)"
-          if command -v docker >/dev/null 2>&1; then echo 'docker CLI still visible on PATH'; exit 1; fi
+          # Hide the docker CLI by dropping the directory it resolves to from
+          # PATH, so cdxgen's CLI auto-detection falls through to wslc,
+          # matching a WSL-only host with no Docker install.
+          if command -v docker >/dev/null 2>&1; then
+            DOCKER_BIN="$(dirname "$(command -v docker)")"
+            export PATH="$(echo "$PATH" | tr ':' '\n' | grep -vxF "$DOCKER_BIN" | paste -sd: -)"
+          fi
+          if command -v docker >/dev/null 2>&1; then
+            echo "docker CLI still visible on PATH: $(command -v docker)"
+            echo "$PATH" | tr ':' '\n'
+            exit 1
+          fi
           node bin/cdxgen.js -t oci -o bom-alpine.cdx.json alpine:3.20 2>&1 | tee alpine-scan.log
           grep -q "Using wslc (WSL Containers) as the container CLI" alpine-scan.log
           grep -q "using wslc cli" alpine-scan.log
           node -e "const b=require('./bom-alpine.cdx.json'); if(!b.components||b.components.length<10){throw new Error('expected OS components in the alpine BOM, got '+b.components?.length)}; console.log('alpine BOM components:', b.components.length)"
+          # Show the key shape wslc emits for the local image cache matching in
+          # getImage (docker-style Repository/Tag keys).
+          wslc images --format=json | grep alpine || echo 'alpine not listed by wslc images'
       - name: Scan a published cdxgen image with wslc
         shell: bash
         env:
