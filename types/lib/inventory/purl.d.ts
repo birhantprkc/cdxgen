@@ -35,8 +35,17 @@ export declare function purlTypeIsRegistered(type: string): boolean;
  */
 export declare function purlTypeIsRegisteredString(purlString: string): boolean;
 /**
- * Encode a string for safe inclusion in a PackageURL, percent-encoding special characters
- * while preserving already-encoded `%40` sequences and keeping `:` and `/` unencoded.
+ * Encode a string for inclusion in a hand-written PackageURL string,
+ * percent-encoding every character the purl grammar does not allow literally,
+ * while preserving already-encoded `%40` sequences and keeping `:` and `/`
+ * unencoded.
+ *
+ * `encodeURIComponent` alone leaves `!`, `'`, `(`, `)` and `*` literal, and the
+ * purl grammar requires them escaped, so they are escaped here as well.
+ *
+ * Only for comparing against or assembling purl text. Never pass the result to
+ * `build()`, `new Purl()` or one of the helpers in this module: they escape
+ * their inputs themselves, and escaping twice turns `+` into `%252B`.
  *
  * @param {string} s String to encode
  * @returns {string} Encoded string suitable for use in a PackageURL component
@@ -195,6 +204,66 @@ export declare function genericPurl(name: string): string | null;
  * @returns {boolean} true when cdx-purl parses it
  */
 export declare function isValidPurl(candidate: string): boolean;
+/**
+ * Split a purl into its components without requiring it to be well-formed.
+ *
+ * `Purl.parse` rejects a purl whose parts are not already escaped, which is the
+ * case this exists to handle: a `bom-ref` (cdxgen writes the decoded form of the
+ * purl there), a `go mod graph` token such as `github.com/Azure/go-autorest@v14.2.0+incompatible`,
+ * or a purl from a third-party document that left a `+` or a `://` unescaped.
+ * The separators (`:`, `/`, `@`, `?`, `#`, `&`, `=`) are structural and are read
+ * positionally; everything between them is decoded and handed back raw, ready
+ * for `build` to escape correctly.
+ *
+ * The version is taken after the last `@` of the path, so a scoped npm name
+ * (`@scope/name@1.0.0`) and a composer branch version (`dev-feature/x`) both
+ * split correctly.
+ *
+ * @param {string} purl Purl to split
+ * @returns {{type: string, namespace: (string|null), name: string, version: (string|null), qualifiers: (Object|null), subpath: (string|null)}|null} Parts, or null when the purl has no type and name
+ */
+export declare function splitPurlLoose(purl: string): {
+    type: string;
+    namespace: (string | null);
+    name: string;
+    version: (string | null);
+    qualifiers: (Object | null);
+    subpath: (string | null);
+} | null;
+/**
+ * Parse a purl string that may carry unescaped reserved characters.
+ *
+ * A well-formed purl is parsed strictly, so its components come back exactly as
+ * cdx-purl reads them. Anything else is split structurally by
+ * {@link splitPurlLoose}. Use this where the input is known to be a decoded or
+ * hand-written purl (a `bom-ref`, a workspace reference, a package manager's
+ * `name@version` token), never to accept an invalid purl into a `purl` field:
+ * pass the parts to `build()` instead, which escapes them.
+ *
+ * @param {string} purlString Purl or decoded purl
+ * @returns {{type: string, namespace: (string|null), name: string, version: (string|null), qualifiers: (Object|null), subpath: (string|null)}|null} Raw components, or null when nothing purl-shaped remains
+ */
+export declare function parsePurlLoose(purlString: string): {
+    type: string;
+    namespace: (string | null);
+    name: string;
+    version: (string | null);
+    qualifiers: (Object | null);
+    subpath: (string | null);
+} | null;
+/**
+ * Turn a decoded or hand-written purl into a canonical, correctly escaped one.
+ *
+ * `bom-ref` values are the decoded form of a purl
+ * (`pkg:npm/foo@1.0.0+build`), which cdx-purl rightly rejects as a purl. This
+ * recovers the purl the ref was made from by splitting it structurally and
+ * rebuilding it with `build()`, so every reserved character is escaped exactly
+ * once.
+ *
+ * @param {string} purlString Purl or decoded purl
+ * @returns {string|null} Canonical purl string, or `null` when no valid purl can be built
+ */
+export declare function canonicalPurlFromLooseString(purlString: string): string | null;
 /**
  * Parse a purl string, returning `null` instead of throwing when it is invalid.
  *

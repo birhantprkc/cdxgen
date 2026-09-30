@@ -92,6 +92,14 @@ export declare const parseImageName: (fullImageName: any) => {
     name: string;
 };
 /**
+ * Prefer cli on windows, nerdctl on mac, or when using tcp/ssh based host.
+ * On Windows, fall back to wslc (WSL Containers) when the docker CLI is not
+ * installed, so OCI image scans work on hosts that only have WSL.
+ *
+ * @returns {string} Container CLI command to invoke
+ */
+export declare const getContainerCliCmd: () => string;
+/**
  * Method to get image to the local registry by pulling from the remote if required
  */
 export declare const getImage: (fullImageName: any) => Promise<any>;

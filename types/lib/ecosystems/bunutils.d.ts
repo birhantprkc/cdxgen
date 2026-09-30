@@ -14,14 +14,21 @@ export declare function parseBunDescriptor(descriptor: string): {
     version: string;
 };
 /**
- * Parse a bun text lockfile (`bun.lock`, lockfileVersion 1).
+ * Parse a bun text lockfile (`bun.lock`, lockfileVersion 1-3; v1 was written
+ * by the Zig implementation in bun 1.2.x-1.3.x and v2/v3 by the Rust one in
+ * bun 1.4+ - the content shape is identical, only parse strictness changed).
  *
  * Bun's text lockfile is JSONC (JSON with trailing commas). It records the
  * workspace roots under `workspaces` and the fully resolved dependency tree
- * under `packages`, where each entry is an array of the form
- * `["name@version", "registry", { dependencies, optionalDependencies, bin,
- * os, cpu, ... }, "sha512-..."]`. Nested duplicate versions are keyed by their
- * dependency path (eg `"parent/child"`).
+ * under `packages`, where nested duplicate versions are keyed by their
+ * dependency path (eg `"parent/child"`). The entry layout after the leading
+ * `"name@version"` descriptor depends on the resolution type (see the
+ * Stringifier in bun's bun.lock.rs):
+ * - npm: `["name@version", tarballUrlOrEmpty, { dependencies, bin, os, ... }, "sha512-..."]`
+ * - git/github: `["name@git+repo", { ... }, ".bun-tag", "sha512-..."]`
+ * - tarball/folder/symlink: `["name@url", { ... }, "sha512-..."]`
+ * - workspace: `["name@workspace:path"]`
+ * so the elements are recognised by shape instead of fixed indices.
  *
  * The binary lockfile (`bun.lockb`) is intentionally not supported - callers
  * should ask users to regenerate it with `bun install --save-text-lockfile`.

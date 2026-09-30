@@ -27,6 +27,41 @@ export declare function setNpmPeerProperty(pkg: object): void;
  */
 export declare function setNpmTypeOnlyProperty(pkg: object): void;
 /**
+ * Clean an npm version the way `npm publish` does before it records a release.
+ *
+ * Publishing a directory runs the manifest through `npm pkg fix`
+ * (`fixVersionField` in `@npmcli/package-json`, which calls `semver.clean` in
+ * loose mode) and then through libnpmpublish, which calls `semver.clean` again
+ * in strict mode and records the result as the packument version, the
+ * dist-tag, the `_id` and the tarball file name. Semver build metadata
+ * (`1.0.0+build.5`), a leading `v` or `=`, surrounding whitespace and leading
+ * zeros are dropped; a prerelease is kept.
+ *
+ * The `package.json` inside the published tarball keeps the original string,
+ * and so do the lockfiles npm, pnpm, yarn and bun write for a project, a
+ * workspace member or a git, file or link dependency. The cleaned form is the
+ * version the npm registry knows the package by.
+ *
+ * @param {string} version Version as a manifest or lockfile records it
+ * @returns {string|null} The cleaned version, or null when npm would reject `version` as invalid semver
+ */
+export declare function cleanNpmVersion(version: string): string | null;
+/**
+ * Record the version npm would publish when it differs from the recorded one.
+ *
+ * Sets `cdx:npm:cleanedVersion` on an npm component whose version is valid
+ * semver but not in the form {@link cleanNpmVersion} produces, for example
+ * `1.0.0+build.5` (published as `1.0.0`). The component's `version` and `purl`
+ * keep the recorded string: that is what the manifest and lockfile say. A
+ * component whose version is already clean, or not semver at all (a git
+ * commit, a `file:` path), is left without the property, and a stale value from
+ * an earlier pass is replaced.
+ *
+ * @param {object} component Component or package object with `version` and `purl`
+ * @returns {object} The same component, for chaining
+ */
+export declare function setNpmCleanedVersionProperty(component: object): object;
+/**
  * Helper function to create a properly encoded workspace PURL
  *
  * @param {string} packageName - Package name (e.g., "@babel/core")

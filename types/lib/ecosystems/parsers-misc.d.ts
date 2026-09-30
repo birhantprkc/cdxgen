@@ -311,8 +311,6 @@ export declare function parseSwiftResolved(resolvedFile: string): {
     name: any;
     group: any;
     version: any;
-    purl: string;
-    "bom-ref": string;
     properties: {
         name: string;
         value: string;
@@ -329,6 +327,55 @@ export declare function parseSwiftResolved(resolvedFile: string): {
         };
     };
 }[];
+/**
+ * Identify the targets of a Swift package that are part of what it ships.
+ *
+ * Production targets are the non-test targets that are part of a product,
+ * executables, macros, plugins, targets nothing else depends on, and every
+ * target they depend on. The remaining non-test targets only serve tests,
+ * such as snapshot or fixture helper libraries.
+ *
+ * @param {Object} dumpJson `swift package dump-package` document
+ * @returns {Set<string>} Lowercase names of the production targets
+ */
+export declare function collectSwiftProductionTargets(dumpJson: Object): Set<string>;
+/**
+ * Classify the dependencies of a Swift package into the packages its shipped
+ * code needs and the packages only its tests need.
+ *
+ * Production targets are the non-test targets that are part of a product,
+ * executables, macros, plugins, targets nothing else depends on, and every
+ * target they depend on. The remaining non-test targets only serve tests
+ * (test-support libraries). A package is test-only when only test and
+ * test-support targets reference its products or use its plugins. With the dependency graph from
+ * `swift package show-dependencies`, the packages reachable only through
+ * test-only packages are test-only as well; a package reachable from a
+ * production dependency, or from a declared dependency no target references,
+ * stays required.
+ *
+ * Target dependencies reference products either as
+ * `{"product": [name, package]}` or `{"byName": [name]}`; SwiftPM resolves a
+ * `byName` product through the package of the same name. When a production
+ * `byName` reference names neither a local target nor a package, the
+ * classification is abandoned rather than risking a required package being
+ * scoped optional.
+ *
+ * @param {Object|String} dumpJson `swift package dump-package` document, parsed or as text
+ * @param {Object|String} [treeJson] `swift package show-dependencies --format json` document, parsed or as text
+ * @returns {Object} `{ optionalRefs, requiredRefs, optionalNames, requiredNames }`:
+ *   bom-refs from the dependency graph, and lowercase package identities,
+ *   names, and repository names (the only result without a graph)
+ */
+export declare function classifySwiftDependencyScopes(dumpJson: Object | string, treeJson?: Object | string): Object;
+/**
+ * Decide whether a dump-package target is a test target. The `type` field is
+ * usually the string `"test"`, but manifest APIs have also been observed
+ * representing it as an object.
+ *
+ * @param {Object} atarget dump-package target
+ * @returns {boolean} `true` for test targets
+ */
+export declare function isSwiftTestTarget(atarget: Object): boolean;
 /**
  * Parse a CMake-generated dot/graphviz file and extract components and their dependency
  * relationships.

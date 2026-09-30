@@ -16,12 +16,24 @@ export declare function getPluginToolComponents(toolNames?: string[]): Object[];
  */
 export declare function getCargoAuditableInfo(src: string): string | undefined;
 /**
+ * Check that sourcekitten (bundled plugin or SOURCEKITTEN_CMD) answers a
+ * trivial syntax request.
+ *
+ * @param env {Object} Optional environment overrides merged over process.env
+ * @returns {String} `ok`; `unavailable` when there is no bundled plugin and
+ *   SOURCEKITTEN_CMD is unset; `not-found` when the configured executable does
+ *   not exist; `failed` when it ran but could not answer
+ */
+export declare function probeSourcekitten(env: Object): string;
+/**
  * Execute sourcekitten plugin with the given arguments
  *
  * @param args {Array} Arguments
+ * @param env {Object} Optional environment overrides merged over process.env,
+ *   used to align sourcekitten with a specific Swift toolchain
  * @returns {undefined|Object} Command output
  */
-export declare function executeSourcekitten(args: any[]): undefined | Object;
+export declare function executeSourcekitten(args: any[], env: Object): undefined | Object;
 /**
  * Canonicalise the distro vendor namespace of an OS package component
  * produced by trivy, regardless of whether trivy expressed the vendor via the
@@ -103,6 +115,23 @@ export declare function dropRedundantSourceComponents(pkgList: any[]): any[];
  * @returns {Object} Metadata containing packages, dependencies, etc
  */
 export declare function getOSPackages(src: string, imageConfig: Object, options?: {}): Object;
+/**
+ * Collect the dependency edges trivy recorded for one OS package component.
+ *
+ * Trivy keys its `dependencies` by its own bom-refs, which may leave the `+` of
+ * an rpm or deb version unescaped (`...libstdc%2B%2B6@14.2.0+git10526-...`), so
+ * each ref is read structurally and re-rendered in cdxgen's decoded bom-ref
+ * form with the component's type, namespace and distro qualifiers.
+ *
+ * @param {Object<string, string[]>} tmpDependencies Trivy's refs mapped to the refs they depend on
+ * @param {string} origBomRef The component's bom-ref as trivy wrote it
+ * @param {object} comp The component after cdxgen rewrote its purl and bom-ref
+ * @returns {{ref: string, dependsOn: string[]}|undefined} Dependency entry for the component
+ */
+export declare const retrieveDependencies: (tmpDependencies: Record<string, string[]>, origBomRef: string, comp: object) => {
+    ref: string;
+    dependsOn: string[];
+} | undefined;
 /**
  * Batch-enrich operating-system components with host-path trust data using the
  * `trustinspector` helper on darwin and Windows.

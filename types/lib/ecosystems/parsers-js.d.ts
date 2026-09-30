@@ -62,12 +62,15 @@ export declare function yarnLockToIdentMap(lockData: string): {};
  * @param {Object} parentComponent parent component
  * @param {Array[String]} workspacePackages Workspace packages
  * @param {Object} workspaceSrcFiles Workspace package.json files
- * @param {Object} _workspaceDirectDeps Direct dependencies of each workspace
+ * @param {Object} workspaceDirectDeps Declared dependencies (name to range) of each workspace package
  * @param {Object} depsWorkspaceRefs Workspace references for each dependency
  */
-export declare function parseYarnLock(yarnLockFile: string, parentComponent?: Object, workspacePackages?: any, workspaceSrcFiles?: Object, _workspaceDirectDeps?: Object, depsWorkspaceRefs?: Object): Promise<{
+export declare function parseYarnLock(yarnLockFile: string, parentComponent?: Object, workspacePackages?: any, workspaceSrcFiles?: Object, workspaceDirectDeps?: Object, depsWorkspaceRefs?: Object): Promise<{
     pkgList: any[];
-    dependenciesList: any[];
+    dependenciesList: {
+        ref: string;
+        dependsOn: any[];
+    }[];
 }>;
 /**
  * Parse nodejs shrinkwrap deps file
@@ -103,7 +106,10 @@ export declare function stripPnpmPeerSuffix(version: string): string;
  * {@link stripPnpmPeerSuffix}.
  *
  * @param {string|object} depPkg Dependency version string or package object.
- * @param {string} relativePath Base path for resolving link/file references.
+ * @param {string} relativePath Base path for resolving link/file references:
+ *   the directory of the importer that declares the dependency. Without it the
+ *   path is tried against the working directory, which only works when cdxgen
+ *   runs from the lock file's directory.
  * @returns {Promise<string|undefined>} The resolved published version.
  */
 export declare function getVersionNumPnpm(depPkg: string | object, relativePath: string): Promise<string | undefined>;
