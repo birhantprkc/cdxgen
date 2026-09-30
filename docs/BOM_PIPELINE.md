@@ -93,8 +93,6 @@ The CLI accepts more than one style of input.
 
 In standard CLI usage, `bin/cdxgen.js` calls `prepareEnv(srcDir, options)` before `createBom()`. `prepareEnv()` is synchronous and may install or configure required tools for Python, Node.js, Swift, Ruby, or SDKMAN-managed Java versions.
 
-Image export talks to the local Docker or Podman daemon when available and otherwise shells out to a container CLI. On Windows hosts without a docker CLI, `wslc` (WSL Containers, shipped with WSL 3.x) is used instead, so no Docker installation is required. `DOCKER_CMD` forces a specific CLI.
-
 That means the first class of failures often happens before BOM generation itself has started.
 
 ## Step 2: Mode selection inside `createBom()`
@@ -119,6 +117,8 @@ flowchart TD
 ```
 
 Container mode is important because it short-circuits several source-project assumptions. In that path, `createBom()` switches to OCI-style handling, disables dependency installation, establishes parent container metadata, and passes exploded layer paths into the multi-type flow.
+
+Image references are exported with a container CLI on Windows, on macOS with Rancher Desktop or Colima, for `tcp://` or `ssh://` `DOCKER_HOST` values, and whenever `DOCKER_USE_CLI` or `DOCKER_CMD` is set. Otherwise cdxgen talks to the Docker or Podman daemon API. On Windows the CLI is `docker` when it is installed and `wslc` (WSL Containers, WSL 2.9.3 or higher) otherwise, so WSL alone is enough to scan Linux images. `DOCKER_CMD` forces a specific CLI.
 
 ## Step 3: Project-type detection and manifest discovery
 

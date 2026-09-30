@@ -685,7 +685,7 @@ podman system service -t 0 &
 
 ### WSL Containers (wslc) on Windows
 
-On Windows, Docker Desktop is optional when [WSL Containers][wsl-containers-docs] is available. cdxgen automatically uses the `wslc` CLI (shipped with WSL 3.x) to pull, inspect, and export images whenever the docker CLI is not installed, so image scans such as the below work with just WSL:
+On Windows, Docker Desktop is optional when [WSL Containers][wsl-containers-docs] is available. cdxgen automatically uses the `wslc` CLI (included with WSL 2.9.3 or higher) to pull, inspect, and export images whenever the docker CLI is not installed, so image scans such as the below work with just WSL:
 
 ```shell
 wsl --update
