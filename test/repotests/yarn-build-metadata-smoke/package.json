@@ -1,0 +1,16 @@
+{
+  "name": "yarn-build-metadata",
+  "version": "1.0.0+root",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@acme/tools": "workspace:*",
+    "left-pad": "1.3.0",
+    "localdep": "file:./localdep.tgz",
+    "wsmember": "workspace:*"
+  },
+  "packageManager": "yarn@4.9.2"
+}

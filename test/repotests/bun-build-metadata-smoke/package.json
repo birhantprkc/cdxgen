@@ -1,0 +1,1 @@
+{"name":"bun-build-metadata","version":"1.0.0+root","private":true,"license":"MIT","workspaces":["packages/*"],"dependencies":{"left-pad":"1.3.0","localdep":"file:./localdep.tgz","wsmember":"workspace:*","@acme/tools":"workspace:*"}}

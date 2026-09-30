@@ -1,0 +1,32 @@
+{
+  "lockfileVersion": 2,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "bun-build-metadata",
+      "dependencies": {
+        "@acme/tools": "workspace:*",
+        "left-pad": "1.3.0",
+        "localdep": "file:./localdep.tgz",
+        "wsmember": "workspace:*",
+      },
+    },
+    "packages/tools": {
+      "name": "@acme/tools",
+      "version": "0.9.0+exp.sha.5114f85",
+    },
+    "packages/wsmember": {
+      "name": "wsmember",
+      "version": "3.0.0+ws",
+    },
+  },
+  "packages": {
+    "@acme/tools": ["@acme/tools@workspace:packages/tools"],
+
+    "left-pad": ["left-pad@1.3.0", "", {}, "sha512-XI5MPzVNApjAyhQzphX8BkmKsKUxD4LdyK24iZeQGinBN9yTQT3bFlCBy/aVx2HrNcqQGsdot8ghrjyrvMCoEA=="],
+
+    "localdep": ["localdep@./localdep.tgz", {}, "sha512-nf4ujVjBCQbkHO1lZsK5ezSlkUOTn0MEjH53jZgbNmDybR5CZO8Vb1Qnp65r2R+b7mdRFVUCTcqr6ZlSQpx2Iw=="],
+
+    "wsmember": ["wsmember@workspace:packages/wsmember"],
+  }
+}

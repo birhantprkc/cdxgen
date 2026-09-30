@@ -1,0 +1,42 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@acme/tools':
+        specifier: workspace:*
+        version: link:packages/tools
+      left-pad:
+        specifier: 1.3.0
+        version: 1.3.0
+      localdep:
+        specifier: file:./localdep.tgz
+        version: file:localdep.tgz
+      wsmember:
+        specifier: workspace:*
+        version: link:packages/wsmember
+
+  packages/tools: {}
+
+  packages/wsmember: {}
+
+packages:
+
+  left-pad@1.3.0:
+    resolution: {integrity: sha512-XI5MPzVNApjAyhQzphX8BkmKsKUxD4LdyK24iZeQGinBN9yTQT3bFlCBy/aVx2HrNcqQGsdot8ghrjyrvMCoEA==}
+    deprecated: use String.prototype.padStart()
+
+  localdep@file:localdep.tgz:
+    resolution: {integrity: sha512-nf4ujVjBCQbkHO1lZsK5ezSlkUOTn0MEjH53jZgbNmDybR5CZO8Vb1Qnp65r2R+b7mdRFVUCTcqr6ZlSQpx2Iw==, tarball: file:localdep.tgz}
+    version: 2.0.0+local
+
+snapshots:
+
+  left-pad@1.3.0: {}
+
+  localdep@file:localdep.tgz: {}

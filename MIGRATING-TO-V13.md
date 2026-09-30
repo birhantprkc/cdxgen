@@ -339,6 +339,29 @@ field:
 Previously these received a non-canonical or invalid purl like
 `pkg:swift/swift-smoke@undefined`.
 
+### Reserved characters in versions and names
+
+The purl grammar allows only letters, digits, `.`, `-`, `_`, `~` and `:` to
+appear literally in a component. Everything else is percent-encoded, once, in
+the `purl`; the `bom-ref` and the `dependencies` refs carry the decoded form,
+and the component `version` and `name` keep the string the manifest or lockfile
+recorded. `@cdxgen/cdx-purl` rejects a purl that leaves such a character
+unescaped (`E_INVALID_CHARACTER`), so cdxgen escapes every one of them:
+
+| Ecosystem           | Recorded version or name          | `purl`                                                  |
+| ------------------- | --------------------------------- | ------------------------------------------------------- |
+| npm, pnpm, yarn, bun | `1.0.0+build.5` (semver build)    | `pkg:npm/app@1.0.0%2Bbuild.5`                           |
+| Go                  | `v3.2.0+incompatible`             | `pkg:golang/github.com/dgrijalva/jwt-go@v3.2.0%2Bincompatible` |
+| Cargo               | `0.11.0+wasi-snapshot-preview1`   | `pkg:cargo/wasi@0.11.0%2Bwasi-snapshot-preview1`        |
+| PyPI                | `2.1.0+cpu`, `1!0.2.0` (epoch)    | `pkg:pypi/torch@2.1.0%2Bcpu`, `pkg:pypi/pkg@1%210.2.0`  |
+| Swift               | `1.0.0+build.7`                   | `pkg:swift/github.com/example/meta@1.0.0%2Bbuild.7`     |
+| deb                 | `libstdc++6`, `12.2.0-14+deb12u1` | `pkg:deb/debian/libstdc%2B%2B6@12.2.0-14%2Bdeb12u1`     |
+| Composer            | `dev-feature/x` (branch)          | `pkg:composer/acme/branch@dev-feature%2Fx`              |
+
+A purl typed by hand as a scan source (`cdxgen pkg:cargo/wasi@0.11.0+wasi-snapshot-preview1`)
+or read from a third-party BOM is accepted with the characters unescaped: cdxgen
+splits it on its separators and rebuilds it before validating it.
+
 ### Guidance for downstream consumers
 
 **dep-scan and other tools that match on purl strings** must handle the new
