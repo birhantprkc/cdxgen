@@ -65,6 +65,12 @@ jobs:
           }
           wslc version
           if ($LASTEXITCODE -ne 0) { throw 'wslc version failed' }
+          # Later steps run in fresh processes that inherit the runner agent's
+          # environment, not this session's PATH; export wslc's directory via
+          # GITHUB_PATH so node's spawnSync can resolve it too.
+          $wslcDir = Split-Path (Get-Command wslc).Source
+          Add-Content $env:GITHUB_PATH $wslcDir
+          Write-Output "wslc added to PATH for subsequent steps: $wslcDir"
           if (Get-Command docker -ErrorAction SilentlyContinue) {
             Write-Output 'docker CLI present; forcing wslc via DOCKER_CMD for this test'
           } else {
