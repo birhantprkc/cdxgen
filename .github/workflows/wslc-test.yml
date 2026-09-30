@@ -5,6 +5,12 @@ on:
   push:
     branches:
       - feat/wslc-oci-windows
+      - master
+    paths:
+      - '.github/workflows/wslc-test.yml'
+      - 'lib/managers/docker.js'
+      - 'lib/managers/docker.poku.js'
+  pull_request:
     paths:
       - '.github/workflows/wslc-test.yml'
       - 'lib/managers/docker.js'
@@ -89,21 +95,27 @@ jobs:
           Remove-Item -Recurse -Force -ErrorAction SilentlyContinue "$env:TEMP\docker-images-*"
           New-Item -ItemType Directory -Force -Path 'D:\cdxtmp' | Out-Null
           Get-PSDrive -PSProvider FileSystem | Format-Table Name,@{n='FreeGB';e={[math]::Round($_.Free/1GB,1)}},@{n='UsedGB';e={[math]::Round($_.Used/1GB,1)}}
-      - name: Scan a small image with wslc
+      - name: Scan a small image with auto-selected wslc
         shell: bash
         env:
           CDXGEN_DEBUG_MODE: debug
           # windows-latest images ship a docker CLI bound to a Windows-containers
-          # daemon, which cannot pull Linux images; force the wslc path here.
-          DOCKER_CMD: wslc
+          # daemon. Hide it from PATH so cdxgen's CLI auto-detection falls
+          # through to wslc, matching a WSL-only host with no Docker install.
           TMP: 'D:\cdxtmp'
           TEMP: 'D:\cdxtmp'
         run: |
-          node bin/cdxgen.js -t oci -o bom-alpine.cdx.json alpine:3.20
+          export PATH="$(echo "$PATH" | tr ':' '\n' | grep -iv docker | paste -sd: -)"
+          if command -v docker >/dev/null 2>&1; then echo 'docker CLI still visible on PATH'; exit 1; fi
+          node bin/cdxgen.js -t oci -o bom-alpine.cdx.json alpine:3.20 2>&1 | tee alpine-scan.log
+          grep -q "Using wslc (WSL Containers) as the container CLI" alpine-scan.log
+          grep -q "using wslc cli" alpine-scan.log
           node -e "const b=require('./bom-alpine.cdx.json'); if(!b.components||b.components.length<10){throw new Error('expected OS components in the alpine BOM, got '+b.components?.length)}; console.log('alpine BOM components:', b.components.length)"
       - name: Scan a published cdxgen image with wslc
         shell: bash
         env:
+          # Force the DOCKER_CMD override path here: the runner's docker CLI is
+          # installed, so auto-detection would otherwise keep docker.
           DOCKER_CMD: wslc
           TMP: 'D:\cdxtmp'
           TEMP: 'D:\cdxtmp'
