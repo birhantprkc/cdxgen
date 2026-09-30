@@ -1,0 +1,505 @@
+{
+  "cLanguageStandard" : null,
+  "cxxLanguageStandard" : null,
+  "defaultLocalization" : null,
+  "dependencies" : [
+    {
+      "sourceControl" : [
+        {
+          "identity" : "result",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/antitypical/Result.git"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "range" : [
+              {
+                "lowerBound" : "4.1.0",
+                "upperBound" : "5.0.0"
+              }
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceControl" : [
+        {
+          "identity" : "reactivetask",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/Carthage/ReactiveTask.git"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "range" : [
+              {
+                "lowerBound" : "0.16.0",
+                "upperBound" : "1.0.0"
+              }
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceControl" : [
+        {
+          "identity" : "commandant",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/Carthage/Commandant.git"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "range" : [
+              {
+                "lowerBound" : "0.16.0",
+                "upperBound" : "1.0.0"
+              }
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceControl" : [
+        {
+          "identity" : "prettycolors",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/jdhealy/PrettyColors.git"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "range" : [
+              {
+                "lowerBound" : "5.0.2",
+                "upperBound" : "6.0.0"
+              }
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceControl" : [
+        {
+          "identity" : "reactiveswift",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/ReactiveCocoa/ReactiveSwift.git"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "range" : [
+              {
+                "lowerBound" : "5.0.0",
+                "upperBound" : "6.0.0"
+              }
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceControl" : [
+        {
+          "identity" : "tentacle",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/mdiep/Tentacle.git"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "range" : [
+              {
+                "lowerBound" : "0.13.1",
+                "upperBound" : "1.0.0"
+              }
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceControl" : [
+        {
+          "identity" : "curry",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/thoughtbot/Curry.git"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "range" : [
+              {
+                "lowerBound" : "4.0.2",
+                "upperBound" : "5.0.0"
+              }
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceControl" : [
+        {
+          "identity" : "quick",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/Quick/Quick.git"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "range" : [
+              {
+                "lowerBound" : "2.2.1",
+                "upperBound" : "3.0.0"
+              }
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceControl" : [
+        {
+          "identity" : "nimble",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/Quick/Nimble.git"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "range" : [
+              {
+                "lowerBound" : "8.0.9",
+                "upperBound" : "9.0.0"
+              }
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "name" : "Carthage",
+  "packageKind" : {
+    "root" : [
+      "/src/Carthage"
+    ]
+  },
+  "pkgConfig" : null,
+  "platforms" : [
+
+  ],
+  "products" : [
+    {
+      "name" : "XCDBLD",
+      "settings" : [
+
+      ],
+      "targets" : [
+        "XCDBLD"
+      ],
+      "type" : {
+        "library" : [
+          "automatic"
+        ]
+      }
+    },
+    {
+      "name" : "CarthageKit",
+      "settings" : [
+
+      ],
+      "targets" : [
+        "CarthageKit"
+      ],
+      "type" : {
+        "library" : [
+          "automatic"
+        ]
+      }
+    },
+    {
+      "name" : "carthage",
+      "settings" : [
+
+      ],
+      "targets" : [
+        "carthage"
+      ],
+      "type" : {
+        "executable" : null
+      }
+    }
+  ],
+  "providers" : null,
+  "swiftLanguageVersions" : [
+    "4.2"
+  ],
+  "targets" : [
+    {
+      "dependencies" : [
+        {
+          "byName" : [
+            "Result",
+            null
+          ]
+        },
+        {
+          "byName" : [
+            "ReactiveSwift",
+            null
+          ]
+        },
+        {
+          "byName" : [
+            "ReactiveTask",
+            null
+          ]
+        }
+      ],
+      "exclude" : [
+
+      ],
+      "name" : "XCDBLD",
+      "packageAccess" : false,
+      "resources" : [
+
+      ],
+      "settings" : [
+
+      ],
+      "type" : "regular"
+    },
+    {
+      "dependencies" : [
+        {
+          "byName" : [
+            "XCDBLD",
+            null
+          ]
+        },
+        {
+          "byName" : [
+            "Quick",
+            null
+          ]
+        },
+        {
+          "byName" : [
+            "Nimble",
+            null
+          ]
+        }
+      ],
+      "exclude" : [
+
+      ],
+      "name" : "XCDBLDTests",
+      "packageAccess" : false,
+      "resources" : [
+
+      ],
+      "settings" : [
+
+      ],
+      "type" : "test"
+    },
+    {
+      "dependencies" : [
+        {
+          "byName" : [
+            "XCDBLD",
+            null
+          ]
+        },
+        {
+          "byName" : [
+            "Tentacle",
+            null
+          ]
+        },
+        {
+          "byName" : [
+            "Curry",
+            null
+          ]
+        }
+      ],
+      "exclude" : [
+
+      ],
+      "name" : "CarthageKit",
+      "packageAccess" : false,
+      "resources" : [
+
+      ],
+      "settings" : [
+
+      ],
+      "type" : "regular"
+    },
+    {
+      "dependencies" : [
+        {
+          "byName" : [
+            "CarthageKit",
+            null
+          ]
+        },
+        {
+          "byName" : [
+            "Quick",
+            null
+          ]
+        },
+        {
+          "byName" : [
+            "Nimble",
+            null
+          ]
+        }
+      ],
+      "exclude" : [
+        "Resources/FakeOldObjc.framework"
+      ],
+      "name" : "CarthageKitTests",
+      "packageAccess" : false,
+      "resources" : [
+
+      ],
+      "settings" : [
+
+      ],
+      "type" : "test"
+    },
+    {
+      "dependencies" : [
+        {
+          "byName" : [
+            "XCDBLD",
+            null
+          ]
+        },
+        {
+          "byName" : [
+            "CarthageKit",
+            null
+          ]
+        },
+        {
+          "byName" : [
+            "Commandant",
+            null
+          ]
+        },
+        {
+          "byName" : [
+            "Curry",
+            null
+          ]
+        },
+        {
+          "byName" : [
+            "PrettyColors",
+            null
+          ]
+        }
+      ],
+      "exclude" : [
+        "swift-is-crashy.c"
+      ],
+      "name" : "carthage",
+      "packageAccess" : false,
+      "resources" : [
+
+      ],
+      "settings" : [
+
+      ],
+      "type" : "regular"
+    }
+  ],
+  "toolsVersion" : {
+    "_version" : "4.2.0"
+  },
+  "traits" : [
+
+  ]
+}

@@ -19,11 +19,9 @@ export declare function getCargoAuditableInfo(src: string): string | undefined;
  * Execute sourcekitten plugin with the given arguments
  *
  * @param args {Array} Arguments
- * @param env {Object} Optional environment overrides merged over process.env,
- *   used to align sourcekitten with a specific Swift toolchain
  * @returns {undefined|Object} Command output
  */
-export declare function executeSourcekitten(args: any[], env: Object): undefined | Object;
+export declare function executeSourcekitten(args: any[]): undefined | Object;
 /**
  * Canonicalise the distro vendor namespace of an OS package component
  * produced by trivy, regardless of whether trivy expressed the vendor via the

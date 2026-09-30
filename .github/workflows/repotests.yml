@@ -1041,6 +1041,19 @@ jobs:
           CDXGEN_DEBUG_MODE=verbose bin/cdxgen.js -r -t swift repotests/swift-markdown -o bomresults/bom-swift.json --profile research
           rm -rf repotests/swift-markdown || true
         shell: bash
+      - name: repotests swift evidence fixture
+        if: matrix.os == 'ubuntu-24.04' || matrix.os == 'macos-15'
+        run: |
+          bin/cdxgen.js -t swift --evidence test/data/swift-evinse-demo -o bomresults/bom-swift-evinse.json --semantics-slices-file bomresults/swift-evinse.slices.json
+          # Occurrences come from the executable's sources only; the tests are not indexed
+          jq -e 'any(.components[]; .name == "swift-argument-parser" and ((.evidence.occurrences // []) | length) >= 1 and all((.evidence.occurrences // [])[]; .location | endswith("Sources/evinse-demo/main.swift")))' bomresults/bom-swift-evinse.json
+          # Packages only the tests use, and what they pull in, are optional
+          jq -e 'any(.components[]; .name == "swift-algorithms" and .scope == "optional")' bomresults/bom-swift-evinse.json
+          jq -e 'any(.components[]; .name == "swift-numerics" and .scope == "optional")' bomresults/bom-swift-evinse.json
+          jq -e 'all(.components[]; .name != "swift-argument-parser" or .scope != "optional")' bomresults/bom-swift-evinse.json
+          bin/cdxgen.js -t swift --evidence --required-only test/data/swift-evinse-demo -o bomresults/bom-swift-evinse-required.json --semantics-slices-file bomresults/swift-evinse-required.slices.json
+          jq -e 'any(.components[]; .name == "swift-argument-parser") and all(.components[]; .name != "swift-algorithms" and .name != "swift-numerics")' bomresults/bom-swift-evinse-required.json
+        shell: bash
       - name: repotests openpbs
         run: |
           bin/cdxgen.js -r -t c repotests/openpbs -o bomresults/bom-openpbs.json

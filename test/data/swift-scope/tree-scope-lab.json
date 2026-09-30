@@ -1,0 +1,102 @@
+{
+  "identity": "scope-lab",
+  "name": "scope-lab",
+  "url": "/src/scope-lab",
+  "version": "unspecified",
+  "path": "/src/scope-lab",
+  "traits": [
+    "default"
+  ],
+  "dependencies": [
+    {
+      "identity": "swift-collections",
+      "name": "swift-collections",
+      "url": "https://github.com/apple/swift-collections",
+      "version": "1.7.1",
+      "path": "/src/scope-lab/.build/checkouts/swift-collections",
+      "traits": [
+
+      ],
+      "dependencies": [
+
+      ]
+    },
+    {
+      "identity": "swift-argument-parser",
+      "name": "swift-argument-parser",
+      "url": "https://github.com/apple/swift-argument-parser",
+      "version": "1.8.2",
+      "path": "/src/scope-lab/.build/checkouts/swift-argument-parser",
+      "traits": [
+        "default"
+      ],
+      "dependencies": [
+
+      ]
+    },
+    {
+      "identity": "swift-snapshot-testing",
+      "name": "swift-snapshot-testing",
+      "url": "https://github.com/pointfreeco/swift-snapshot-testing",
+      "version": "1.19.6",
+      "path": "/src/scope-lab/.build/checkouts/swift-snapshot-testing",
+      "traits": [
+        "default"
+      ],
+      "dependencies": [
+        {
+          "identity": "swift-custom-dump",
+          "name": "swift-custom-dump",
+          "url": "https://github.com/pointfreeco/swift-custom-dump",
+          "version": "1.7.3",
+          "path": "/src/scope-lab/.build/checkouts/swift-custom-dump",
+          "traits": [
+            "FoundationNetworking"
+          ],
+          "dependencies": [
+            {
+              "identity": "xctest-dynamic-overlay",
+              "name": "xctest-dynamic-overlay",
+              "url": "https://github.com/pointfreeco/xctest-dynamic-overlay",
+              "version": "1.13.1",
+              "path": "/src/scope-lab/.build/checkouts/xctest-dynamic-overlay",
+              "traits": [
+                "default"
+              ],
+              "dependencies": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "identity": "swift-syntax",
+          "name": "swift-syntax",
+          "url": "https://github.com/swiftlang/swift-syntax",
+          "version": "604.0.0",
+          "path": "/src/scope-lab/.build/checkouts/swift-syntax",
+          "traits": [
+            "default"
+          ],
+          "dependencies": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "identity": "localkit",
+      "name": "LocalKit",
+      "url": "/src/LocalKit",
+      "version": "unspecified",
+      "path": "/src/LocalKit",
+      "traits": [
+        "default"
+      ],
+      "dependencies": [
+
+      ]
+    }
+  ]
+}
+

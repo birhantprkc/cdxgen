@@ -132,13 +132,13 @@ These variables are specifically for a single language or tool.
 
 ### Binary helpers and plugin metadata
 
-| Variable           | Description                                                                                                                                                                              |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| DOSAI_CMD          | Override the `dosai` helper path used for .NET enrichment.                                                                                                                               |
-| OSQUERY_CMD        | Override the `osquery` executable used for live-host OBOM collection.                                                                                                                    |
-| SOURCEKITTEN_CMD   | Override the `sourcekitten` executable used for Swift metadata extraction.                                                                                                               |
-| TRIVY_CMD          | Override the `trivy-cdxgen-*` helper used for OS-package inventory of container images and root filesystems (it runs `rootfs` scans only).                                               |
-| TRUSTINSPECTOR_CMD | Override the `trustinspector-cdxgen-*` helper used for repository trust anchors, certificate stores, macOS code-sign/notarization collection, and Windows Authenticode / WDAC inventory. |
+| Variable           | Description                                                                                                                                                                                                                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| DOSAI_CMD          | Override the `dosai` helper path used for .NET enrichment.                                                                                                                                                                                                                            |
+| OSQUERY_CMD        | Override the `osquery` executable used for live-host OBOM collection.                                                                                                                                                                                                                 |
+| SOURCEKITTEN_CMD   | Override the `sourcekitten` executable used for Swift metadata extraction. cdxgen points it at the toolchain that builds the project through `XCODE_DEFAULT_TOOLCHAIN_OVERRIDE` (macOS) or `LINUX_SOURCEKIT_LIB_PATH` (Linux) unless one of them, or `TOOLCHAIN_DIR`, is already set. |
+| TRIVY_CMD          | Override the `trivy-cdxgen-*` helper used for OS-package inventory of container images and root filesystems (it runs `rootfs` scans only).                                                                                                                                            |
+| TRUSTINSPECTOR_CMD | Override the `trustinspector-cdxgen-*` helper used for repository trust anchors, certificate stores, macOS code-sign/notarization collection, and Windows Authenticode / WDAC inventory.                                                                                              |
 
 When `CDXGEN_PLUGINS_DIR` points at a packaged plugins directory, cdxgen also looks for `plugins-manifest.json` in that same directory and, when valid, uses it to enrich `metadata.tools` with precise helper identity/version/hash metadata. The manifest is treated as data only: its fields are not executed as commands.
 
@@ -282,6 +282,7 @@ tree before re-running when a previously working project starts failing.
 | SWIFT_COMPILER_EXTRA_ARGS | Extra compiler arguments to add to the auto-detected string. Eg: -suppress-warnings -track-system-dependencies                                                                             |
 | SWIFT_SDK_ARGS            | Swift sdk arguments. Eg: -sdk <path>                                                                                                                                                       |
 | SWIFT_PACKAGE_ARGS        | Additional arguments to pass to the swift package command. The values gets inserted before the 'show-dependencies' sub-command. Example: --swift-sdks-path <swift-sdks-path> --jobs <jobs> |
+| SWIFT_BUILD_ARGS          | Additional arguments for the verbose `swift build` that Swift evidence (`--evidence`, `evinse -l swift`) runs. Example: `--build-system native` to use the llbuild engine with Swift 6.4.  |
 
 ## Caching and performance
 

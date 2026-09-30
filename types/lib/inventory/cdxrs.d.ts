@@ -3,9 +3,9 @@
  *
  * This module is the ONLY place that spawns the `cdxrs` binary. It enforces
  * the governing invariant: **no failure mode may abort SBOM generation.**
- * Every failure (missing binary, non-zero exit, timeout, oversized stdout,
- * malformed stdout, version-major mismatch, CDXGEN_RS_DISABLE) logs once at
- * `warn` and returns a sentinel that makes the caller take the JS path.
+ * Every failure (missing binary, non-zero exit, timeout, malformed stdout,
+ * version-major mismatch, CDXGEN_RS_DISABLE) logs once at `warn` and returns
+ * a sentinel that makes the caller take the JS path.
  *
  * Protocol:
  *   cdxrs <subcommand> --input <file|-> --output <file|-> --format json
@@ -66,11 +66,6 @@ export declare function cdxrsAvailable(subcommand?: string): {
  *   - `input`: a path to a file already on disk.
  *
  * Passing `content` is the normal case, since cdxgen holds BOMs in memory.
- *
- * Collected stdout is bounded: it must become a single JS string, so a child
- * that would exceed V8's string limit (by default; see
- * CDXGEN_RS_MAX_STDOUT_BYTES) is killed and reported as a fallback instead of
- * crashing the process at the concat.
  *
  * @param {string} subcommand The subcommand to run (e.g. "info").
  * @param {Object} opts

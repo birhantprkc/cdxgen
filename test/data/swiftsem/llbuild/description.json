@@ -1,0 +1,2177 @@
+{
+  "swiftCommands": {
+    "C.ArgumentParser-arm64-apple-macosx-debug-tool.module": {
+      "executable": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/bin/swiftc",
+      "fileList": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/sources",
+      "importPath": "__BASE__/.build/arm64-apple-macosx/debug/Modules-tool",
+      "inputs": [
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/BashCompletionsGenerator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/CompletionsGenerator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/FishCompletionsGenerator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/ZshCompletionsGenerator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Argument.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentDiscussion.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentHelp.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentVisibility.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/CompletionKind.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Errors.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Flag.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/NameSpecification.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Option.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/OptionGroup.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ParentCommand.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/AsyncParsableCommand.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandConfiguration.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandGroup.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/EnumerableFlag.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ExpressibleByArgument.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArguments.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableCommand.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDecoder.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDefinition.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentSet.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/CommandParser.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputKey.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputOrigin.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Name.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Parsed.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParsedValues.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParserError.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/SplitArguments.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/DumpHelpGenerator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpCommand.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpGenerator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/MessageInfo.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/UsageGenerator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/CollectionExtensions.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Foundation.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Mutex.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Platform.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SequenceExtensions.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/StringExtensions.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SwiftExtensions.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Tree.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/AsyncCompletionsValidator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/CodingKeyValidator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/NonsenseFlagsValidator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/ParsableArgumentsValidation.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/PositionalArgumentsValidator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/UniqueNamesValidator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/swift-version-6C412C584281D8DA.txt"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Modules-tool/ArgumentParserToolInfo.swiftmodule"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/sources"
+        }
+      ],
+      "isLibrary": true,
+      "moduleName": "ArgumentParser",
+      "moduleOutputPath": "__BASE__/.build/arm64-apple-macosx/debug/Modules-tool/ArgumentParser.swiftmodule",
+      "objects": [
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/BashCompletionsGenerator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/CompletionsGenerator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/FishCompletionsGenerator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ZshCompletionsGenerator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Argument.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ArgumentDiscussion.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ArgumentHelp.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ArgumentVisibility.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/CompletionKind.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Errors.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Flag.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/NameSpecification.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Option.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/OptionGroup.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ParentCommand.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/AsyncParsableCommand.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/CommandConfiguration.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/CommandGroup.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/EnumerableFlag.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ExpressibleByArgument.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ParsableArguments.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ParsableCommand.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ArgumentDecoder.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ArgumentDefinition.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ArgumentSet.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/CommandParser.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/InputKey.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/InputOrigin.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Name.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Parsed.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ParsedValues.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ParserError.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/SplitArguments.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/DumpHelpGenerator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/HelpCommand.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/HelpGenerator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/MessageInfo.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/UsageGenerator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/CollectionExtensions.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Foundation.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Mutex.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Platform.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/SequenceExtensions.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/StringExtensions.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/SwiftExtensions.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Tree.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/AsyncCompletionsValidator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/CodingKeyValidator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/NonsenseFlagsValidator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ParsableArgumentsValidation.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/PositionalArgumentsValidator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/UniqueNamesValidator.swift.o"
+      ],
+      "otherArguments": [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-v",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j14",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/include/ArgumentParser-Swift.h",
+        "-swift-version",
+        "6",
+        "-I",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+        "-L",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+        "-plugin-path",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-F",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-Xcc",
+        "-Wno-error",
+        "-suppress-warnings",
+        "-user-module-version",
+        "1.8.2",
+        "-package-name",
+        "swift_argument_parser"
+      ],
+      "outputFileMapPath": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/output-file-map.json",
+      "outputs": [
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/BashCompletionsGenerator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/CompletionsGenerator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/FishCompletionsGenerator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ZshCompletionsGenerator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Argument.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ArgumentDiscussion.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ArgumentHelp.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ArgumentVisibility.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/CompletionKind.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Errors.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Flag.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/NameSpecification.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Option.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/OptionGroup.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ParentCommand.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/AsyncParsableCommand.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/CommandConfiguration.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/CommandGroup.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/EnumerableFlag.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ExpressibleByArgument.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ParsableArguments.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ParsableCommand.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ArgumentDecoder.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ArgumentDefinition.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ArgumentSet.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/CommandParser.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/InputKey.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/InputOrigin.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Name.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Parsed.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ParsedValues.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ParserError.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/SplitArguments.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/DumpHelpGenerator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/HelpCommand.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/HelpGenerator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/MessageInfo.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/UsageGenerator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/CollectionExtensions.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Foundation.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Mutex.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Platform.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/SequenceExtensions.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/StringExtensions.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/SwiftExtensions.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/Tree.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/AsyncCompletionsValidator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/CodingKeyValidator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/NonsenseFlagsValidator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/ParsableArgumentsValidation.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/PositionalArgumentsValidator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build/UniqueNamesValidator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Modules-tool/ArgumentParser.swiftmodule"
+        }
+      ],
+      "prepareForIndexing": false,
+      "sources": [
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/BashCompletionsGenerator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/CompletionsGenerator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/FishCompletionsGenerator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/ZshCompletionsGenerator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Argument.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentDiscussion.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentHelp.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentVisibility.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/CompletionKind.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Errors.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Flag.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/NameSpecification.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Option.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/OptionGroup.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ParentCommand.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/AsyncParsableCommand.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandConfiguration.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandGroup.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/EnumerableFlag.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ExpressibleByArgument.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArguments.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableCommand.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDecoder.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDefinition.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentSet.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/CommandParser.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputKey.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputOrigin.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Name.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Parsed.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParsedValues.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParserError.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/SplitArguments.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/DumpHelpGenerator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpCommand.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpGenerator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/MessageInfo.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/UsageGenerator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/CollectionExtensions.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Foundation.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Mutex.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Platform.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SequenceExtensions.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/StringExtensions.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SwiftExtensions.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Tree.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/AsyncCompletionsValidator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/CodingKeyValidator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/NonsenseFlagsValidator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/ParsableArgumentsValidation.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/PositionalArgumentsValidator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/UniqueNamesValidator.swift"
+      ],
+      "tempsPath": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser-tool.build",
+      "wholeModuleOptimization": false
+    },
+    "C.ArgumentParser-arm64-apple-macosx-debug.module": {
+      "executable": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/bin/swiftc",
+      "fileList": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/sources",
+      "importPath": "__BASE__/.build/arm64-apple-macosx/debug/Modules",
+      "inputs": [
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/BashCompletionsGenerator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/CompletionsGenerator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/FishCompletionsGenerator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/ZshCompletionsGenerator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Argument.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentDiscussion.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentHelp.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentVisibility.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/CompletionKind.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Errors.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Flag.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/NameSpecification.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Option.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/OptionGroup.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ParentCommand.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/AsyncParsableCommand.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandConfiguration.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandGroup.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/EnumerableFlag.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ExpressibleByArgument.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArguments.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableCommand.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDecoder.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDefinition.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentSet.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/CommandParser.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputKey.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputOrigin.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Name.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Parsed.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParsedValues.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParserError.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/SplitArguments.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/DumpHelpGenerator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpCommand.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpGenerator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/MessageInfo.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/UsageGenerator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/CollectionExtensions.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Foundation.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Mutex.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Platform.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SequenceExtensions.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/StringExtensions.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SwiftExtensions.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Tree.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/AsyncCompletionsValidator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/CodingKeyValidator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/NonsenseFlagsValidator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/ParsableArgumentsValidation.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/PositionalArgumentsValidator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/UniqueNamesValidator.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/swift-version-6C412C584281D8DA.txt"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Modules/ArgumentParserToolInfo.swiftmodule"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/sources"
+        }
+      ],
+      "isLibrary": true,
+      "moduleName": "ArgumentParser",
+      "moduleOutputPath": "__BASE__/.build/arm64-apple-macosx/debug/Modules/ArgumentParser.swiftmodule",
+      "objects": [
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/BashCompletionsGenerator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/CompletionsGenerator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/FishCompletionsGenerator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ZshCompletionsGenerator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Argument.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ArgumentDiscussion.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ArgumentHelp.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ArgumentVisibility.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/CompletionKind.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Errors.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Flag.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/NameSpecification.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Option.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/OptionGroup.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ParentCommand.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/AsyncParsableCommand.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/CommandConfiguration.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/CommandGroup.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/EnumerableFlag.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ExpressibleByArgument.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ParsableArguments.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ParsableCommand.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ArgumentDecoder.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ArgumentDefinition.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ArgumentSet.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/CommandParser.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/InputKey.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/InputOrigin.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Name.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Parsed.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ParsedValues.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ParserError.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/SplitArguments.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/DumpHelpGenerator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/HelpCommand.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/HelpGenerator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/MessageInfo.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/UsageGenerator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/CollectionExtensions.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Foundation.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Mutex.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Platform.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/SequenceExtensions.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/StringExtensions.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/SwiftExtensions.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Tree.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/AsyncCompletionsValidator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/CodingKeyValidator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/NonsenseFlagsValidator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ParsableArgumentsValidation.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/PositionalArgumentsValidator.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/UniqueNamesValidator.swift.o"
+      ],
+      "otherArguments": [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-v",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j14",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/include/ArgumentParser-Swift.h",
+        "-swift-version",
+        "6",
+        "-I",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+        "-L",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+        "-plugin-path",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-F",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-Xcc",
+        "-Wno-error",
+        "-suppress-warnings",
+        "-user-module-version",
+        "1.8.2",
+        "-package-name",
+        "swift_argument_parser"
+      ],
+      "outputFileMapPath": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/output-file-map.json",
+      "outputs": [
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/BashCompletionsGenerator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/CompletionsGenerator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/FishCompletionsGenerator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ZshCompletionsGenerator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Argument.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ArgumentDiscussion.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ArgumentHelp.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ArgumentVisibility.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/CompletionKind.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Errors.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Flag.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/NameSpecification.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Option.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/OptionGroup.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ParentCommand.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/AsyncParsableCommand.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/CommandConfiguration.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/CommandGroup.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/EnumerableFlag.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ExpressibleByArgument.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ParsableArguments.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ParsableCommand.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ArgumentDecoder.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ArgumentDefinition.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ArgumentSet.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/CommandParser.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/InputKey.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/InputOrigin.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Name.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Parsed.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ParsedValues.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ParserError.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/SplitArguments.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/DumpHelpGenerator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/HelpCommand.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/HelpGenerator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/MessageInfo.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/UsageGenerator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/CollectionExtensions.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Foundation.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Mutex.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Platform.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/SequenceExtensions.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/StringExtensions.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/SwiftExtensions.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/Tree.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/AsyncCompletionsValidator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/CodingKeyValidator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/NonsenseFlagsValidator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/ParsableArgumentsValidation.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/PositionalArgumentsValidator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build/UniqueNamesValidator.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Modules/ArgumentParser.swiftmodule"
+        }
+      ],
+      "prepareForIndexing": false,
+      "sources": [
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/BashCompletionsGenerator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/CompletionsGenerator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/FishCompletionsGenerator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/ZshCompletionsGenerator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Argument.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentDiscussion.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentHelp.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentVisibility.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/CompletionKind.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Errors.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Flag.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/NameSpecification.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Option.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/OptionGroup.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ParentCommand.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/AsyncParsableCommand.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandConfiguration.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandGroup.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/EnumerableFlag.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ExpressibleByArgument.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArguments.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableCommand.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDecoder.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDefinition.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentSet.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/CommandParser.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputKey.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputOrigin.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Name.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Parsed.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParsedValues.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParserError.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/SplitArguments.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/DumpHelpGenerator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpCommand.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpGenerator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/MessageInfo.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/UsageGenerator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/CollectionExtensions.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Foundation.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Mutex.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Platform.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SequenceExtensions.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/StringExtensions.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SwiftExtensions.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Tree.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/AsyncCompletionsValidator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/CodingKeyValidator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/NonsenseFlagsValidator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/ParsableArgumentsValidation.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/PositionalArgumentsValidator.swift",
+        "__BASE__/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Validators/UniqueNamesValidator.swift"
+      ],
+      "tempsPath": "__BASE__/.build/arm64-apple-macosx/debug/ArgumentParser.build",
+      "wholeModuleOptimization": false
+    },
+    "C.SWXMLHash-arm64-apple-macosx-debug.module": {
+      "executable": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/bin/swiftc",
+      "fileList": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/sources",
+      "importPath": "__BASE__/.build/arm64-apple-macosx/debug/Modules",
+      "inputs": [
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/Deserialization/XMLAttributeDeserializable.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/Deserialization/XMLElementDeserializable.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/Deserialization/XMLIndexer+XMLDeserialization.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/Deserialization/XMLObjectDeserialization.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/Deserialization/XMLValueDeserialization.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/DeserializationTypes/Bool+XMLDeserialization.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/DeserializationTypes/Double+XMLDeserialization.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/DeserializationTypes/Float+XMLDeserialization.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/DeserializationTypes/Int+XMLDeserialization.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/DeserializationTypes/String+XMLDeserialization.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/Errors/IndexingError.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/Errors/ParsingError.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/Errors/XMLDeserializationError.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/FullXMLParser.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/IndexOp.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/LazyXMLParser.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/Stack.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/String+Extensions.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/TextElement.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/XMLAttribute.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/XMLContent.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/XMLElement.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/XMLHash.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/XMLHashOptions.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/XMLIndexer.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/SWXMLHash/Source/shim.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/swift-version-6C412C584281D8DA.txt"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/sources"
+        }
+      ],
+      "isLibrary": true,
+      "moduleName": "SWXMLHash",
+      "moduleOutputPath": "__BASE__/.build/arm64-apple-macosx/debug/Modules/SWXMLHash.swiftmodule",
+      "objects": [
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLAttributeDeserializable.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLElementDeserializable.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLIndexer+XMLDeserialization.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLObjectDeserialization.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLValueDeserialization.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/Bool+XMLDeserialization.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/Double+XMLDeserialization.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/Float+XMLDeserialization.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/Int+XMLDeserialization.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/String+XMLDeserialization.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/IndexingError.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/ParsingError.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLDeserializationError.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/FullXMLParser.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/IndexOp.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/LazyXMLParser.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/Stack.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/String+Extensions.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/TextElement.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLAttribute.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLContent.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLElement.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLHash.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLHashOptions.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLIndexer.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/shim.swift.o"
+      ],
+      "otherArguments": [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-v",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j14",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/include/SWXMLHash-Swift.h",
+        "-swift-version",
+        "5",
+        "-I",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+        "-L",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+        "-plugin-path",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-F",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-Xcc",
+        "-Wno-error",
+        "-suppress-warnings"
+      ],
+      "outputFileMapPath": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/output-file-map.json",
+      "outputs": [
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLAttributeDeserializable.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLElementDeserializable.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLIndexer+XMLDeserialization.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLObjectDeserialization.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLValueDeserialization.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/Bool+XMLDeserialization.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/Double+XMLDeserialization.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/Float+XMLDeserialization.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/Int+XMLDeserialization.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/String+XMLDeserialization.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/IndexingError.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/ParsingError.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLDeserializationError.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/FullXMLParser.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/IndexOp.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/LazyXMLParser.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/Stack.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/String+Extensions.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/TextElement.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLAttribute.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLContent.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLElement.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLHash.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLHashOptions.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/XMLIndexer.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build/shim.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Modules/SWXMLHash.swiftmodule"
+        }
+      ],
+      "prepareForIndexing": false,
+      "sources": [
+        "__BASE__/.build/checkouts/SWXMLHash/Source/Deserialization/XMLAttributeDeserializable.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/Deserialization/XMLElementDeserializable.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/Deserialization/XMLIndexer+XMLDeserialization.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/Deserialization/XMLObjectDeserialization.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/Deserialization/XMLValueDeserialization.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/DeserializationTypes/Bool+XMLDeserialization.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/DeserializationTypes/Double+XMLDeserialization.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/DeserializationTypes/Float+XMLDeserialization.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/DeserializationTypes/Int+XMLDeserialization.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/DeserializationTypes/String+XMLDeserialization.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/Errors/IndexingError.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/Errors/ParsingError.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/Errors/XMLDeserializationError.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/FullXMLParser.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/IndexOp.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/LazyXMLParser.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/Stack.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/String+Extensions.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/TextElement.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/XMLAttribute.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/XMLContent.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/XMLElement.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/XMLHash.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/XMLHashOptions.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/XMLIndexer.swift",
+        "__BASE__/.build/checkouts/SWXMLHash/Source/shim.swift"
+      ],
+      "tempsPath": "__BASE__/.build/arm64-apple-macosx/debug/SWXMLHash.build",
+      "wholeModuleOptimization": false
+    },
+    "C.Yams-arm64-apple-macosx-debug.module": {
+      "executable": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/bin/swiftc",
+      "fileList": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/sources",
+      "importPath": "__BASE__/.build/arm64-apple-macosx/debug/Modules",
+      "inputs": [
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/AliasDereferencingStrategy.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/Anchor.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/Constructor.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/Decoder.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/Emitter.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/Encoder.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/Mark.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/Node.Alias.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/Node.Mapping.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/Node.Scalar.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/Node.Sequence.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/Node.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/Parser.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/RedundancyAliasingStrategy.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/Representer.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/Resolver.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/String+Yams.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/Tag.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/YamlAnchorProviding.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/YamlError.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/checkouts/Yams/Sources/Yams/YamlTagProviding.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/swift-version-6C412C584281D8DA.txt"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/CYaml.build/src/api.c.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/CYaml.build/src/emitter.c.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/CYaml.build/src/parser.c.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/CYaml.build/src/reader.c.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/CYaml.build/src/scanner.c.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/CYaml.build/src/writer.c.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/sources"
+        }
+      ],
+      "isLibrary": true,
+      "moduleName": "Yams",
+      "moduleOutputPath": "__BASE__/.build/arm64-apple-macosx/debug/Modules/Yams.swiftmodule",
+      "objects": [
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/AliasDereferencingStrategy.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Anchor.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Constructor.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Decoder.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Emitter.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Encoder.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Mark.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Node.Alias.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Node.Mapping.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Node.Scalar.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Node.Sequence.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Node.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Parser.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/RedundancyAliasingStrategy.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Representer.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Resolver.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/String+Yams.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Tag.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/YamlAnchorProviding.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/YamlError.swift.o",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/YamlTagProviding.swift.o"
+      ],
+      "otherArguments": [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-v",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j14",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-Xcc",
+        "-fmodule-map-file=__BASE__/.build/checkouts/Yams/Sources/CYaml/include/module.modulemap",
+        "-Xcc",
+        "-I",
+        "-Xcc",
+        "__BASE__/.build/checkouts/Yams/Sources/CYaml/include",
+        "-module-cache-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/include/Yams-Swift.h",
+        "-swift-version",
+        "5",
+        "-Xcc",
+        "-DYAML_DECLARE_STATIC",
+        "-I",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+        "-L",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+        "-plugin-path",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-F",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-Xcc",
+        "-Wno-error",
+        "-suppress-warnings"
+      ],
+      "outputFileMapPath": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/output-file-map.json",
+      "outputs": [
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/AliasDereferencingStrategy.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Anchor.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Constructor.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Decoder.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Emitter.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Encoder.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Mark.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Node.Alias.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Node.Mapping.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Node.Scalar.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Node.Sequence.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Node.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Parser.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/RedundancyAliasingStrategy.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Representer.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Resolver.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/String+Yams.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/Tag.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/YamlAnchorProviding.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/YamlError.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build/YamlTagProviding.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Modules/Yams.swiftmodule"
+        }
+      ],
+      "prepareForIndexing": false,
+      "sources": [
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/AliasDereferencingStrategy.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/Anchor.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/Constructor.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/Decoder.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/Emitter.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/Encoder.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/Mark.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/Node.Alias.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/Node.Mapping.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/Node.Scalar.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/Node.Sequence.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/Node.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/Parser.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/RedundancyAliasingStrategy.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/Representer.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/Resolver.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/String+Yams.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/Tag.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/YamlAnchorProviding.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/YamlError.swift",
+        "__BASE__/.build/checkouts/Yams/Sources/Yams/YamlTagProviding.swift"
+      ],
+      "tempsPath": "__BASE__/.build/arm64-apple-macosx/debug/Yams.build",
+      "wholeModuleOptimization": false
+    },
+    "C.argparser-demo-arm64-apple-macosx-debug.module": {
+      "executable": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/bin/swiftc",
+      "fileList": "__BASE__/.build/arm64-apple-macosx/debug/argparser_demo.build/sources",
+      "importPath": "__BASE__/.build/arm64-apple-macosx/debug/Modules",
+      "inputs": [
+        {
+          "kind": "file",
+          "name": "__BASE__/Sources/argparser-demo/main.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/swift-version-6C412C584281D8DA.txt"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Modules/ArgumentParser.swiftmodule"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Modules/SWXMLHash.swiftmodule"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Modules/Yams.swiftmodule"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/argparser_demo.build/sources"
+        }
+      ],
+      "isLibrary": false,
+      "moduleName": "argparser_demo",
+      "moduleOutputPath": "__BASE__/.build/arm64-apple-macosx/debug/Modules/argparser_demo.swiftmodule",
+      "objects": [
+        "__BASE__/.build/arm64-apple-macosx/debug/argparser_demo.build/main.swift.o"
+      ],
+      "otherArguments": [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-v",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j14",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-Xcc",
+        "-fmodule-map-file=__BASE__/.build/checkouts/Yams/Sources/CYaml/include/module.modulemap",
+        "-Xcc",
+        "-I",
+        "-Xcc",
+        "__BASE__/.build/checkouts/Yams/Sources/CYaml/include",
+        "-module-cache-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "argparser_demo_main",
+        "-parse-as-library",
+        "-swift-version",
+        "6",
+        "-I",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+        "-L",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+        "-plugin-path",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-F",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-Xcc",
+        "-Wno-error",
+        "-package-name",
+        "argparser_demo"
+      ],
+      "outputFileMapPath": "__BASE__/.build/arm64-apple-macosx/debug/argparser_demo.build/output-file-map.json",
+      "outputs": [
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/argparser_demo.build/main.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Modules/argparser_demo.swiftmodule"
+        }
+      ],
+      "prepareForIndexing": false,
+      "sources": [
+        "__BASE__/Sources/argparser-demo/main.swift"
+      ],
+      "tempsPath": "__BASE__/.build/arm64-apple-macosx/debug/argparser_demo.build",
+      "wholeModuleOptimization": false
+    },
+    "C.argparser-demoTests-arm64-apple-macosx-debug.module": {
+      "executable": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/bin/swiftc",
+      "fileList": "__BASE__/.build/arm64-apple-macosx/debug/argparser_demoTests.build/sources",
+      "importPath": "__BASE__/.build/arm64-apple-macosx/debug/Modules",
+      "inputs": [
+        {
+          "kind": "file",
+          "name": "__BASE__/Tests/argparser-demoTests/DemoTests.swift"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/swift-version-6C412C584281D8DA.txt"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/argparser-demo"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/argparser_demoTests.build/sources"
+        }
+      ],
+      "isLibrary": true,
+      "moduleName": "argparser_demoTests",
+      "moduleOutputPath": "__BASE__/.build/arm64-apple-macosx/debug/Modules/argparser_demoTests.swiftmodule",
+      "objects": [
+        "__BASE__/.build/arm64-apple-macosx/debug/argparser_demoTests.build/DemoTests.swift.o"
+      ],
+      "otherArguments": [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-v",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j14",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-Xcc",
+        "-fmodule-map-file=__BASE__/.build/checkouts/Yams/Sources/CYaml/include/module.modulemap",
+        "-Xcc",
+        "-I",
+        "-Xcc",
+        "__BASE__/.build/checkouts/Yams/Sources/CYaml/include",
+        "-module-cache-path",
+        "__BASE__/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "6",
+        "-I",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+        "-L",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+        "-plugin-path",
+        "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-F",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-Xcc",
+        "-Wno-error",
+        "-package-name",
+        "argparser_demo"
+      ],
+      "outputFileMapPath": "__BASE__/.build/arm64-apple-macosx/debug/argparser_demoTests.build/output-file-map.json",
+      "outputs": [
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/argparser_demoTests.build/DemoTests.swift.o"
+        },
+        {
+          "kind": "file",
+          "name": "__BASE__/.build/arm64-apple-macosx/debug/Modules/argparser_demoTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing": false,
+      "sources": [
+        "__BASE__/Tests/argparser-demoTests/DemoTests.swift"
+      ],
+      "tempsPath": "__BASE__/.build/arm64-apple-macosx/debug/argparser_demoTests.build",
+      "wholeModuleOptimization": false
+    }
+  },
+  "targetDependencyMap": {
+    "ArgumentParser": [
+      "ArgumentParserToolInfo"
+    ],
+    "ArgumentParserToolInfo": [],
+    "CYaml": [],
+    "SWXMLHash": [],
+    "Yams": [
+      "CYaml"
+    ],
+    "argparser_demo": [
+      "Yams",
+      "CYaml",
+      "SWXMLHash",
+      "ArgumentParser",
+      "ArgumentParserToolInfo"
+    ],
+    "argparser_demoPackageTests": [
+      "argparser_demoTests",
+      "argparser_demo",
+      "Yams",
+      "CYaml",
+      "SWXMLHash",
+      "ArgumentParser",
+      "ArgumentParserToolInfo"
+    ],
+    "argparser_demoTests": [
+      "argparser_demo",
+      "Yams",
+      "CYaml",
+      "SWXMLHash",
+      "ArgumentParser",
+      "ArgumentParserToolInfo"
+    ],
+    "generate_docc_reference": [
+      "ArgumentParser",
+      "ArgumentParserToolInfo"
+    ],
+    "generate_manual": [
+      "ArgumentParser",
+      "ArgumentParserToolInfo"
+    ]
+  }
+}

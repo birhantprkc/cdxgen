@@ -26,18 +26,6 @@ export declare function safeIsExecutableSync(filePath: string): boolean;
  */
 export declare function safeWriteSync(filePath: string, data: string | Buffer, options?: Object): void;
 /**
- * Permission- and dry-run-aware write of a sequence of chunks, for content too
- * large to join into one string first. The chunks go to a temporary file next
- * to the target, which is renamed into place once complete, so a chunk may be
- * read from the file being replaced and a failed write leaves the target as it
- * was.
- *
- * @param {string} filePath File path to write.
- * @param {Iterable<string|Buffer>} chunks Chunks written in order.
- * @returns {void}
- */
-export declare function safeWriteChunksSync(filePath: string, chunks: Iterable<string | Buffer>): void;
-/**
  * Permission-aware wrapper around readFileSync that returns undefined instead
  * of throwing. Reads are allowed in dry-run mode, so unlike the write wrappers
  * this only guards secure-mode read permission; the read itself is not recorded

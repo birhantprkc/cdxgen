@@ -1,0 +1,1112 @@
+{
+ "key.dependencies": [
+  {
+   "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+   "key.is_system": true,
+   "key.kind": "source.lang.swift.import.module.swift",
+   "key.name": "Swift"
+  },
+  {
+   "key.dependencies": [
+    {
+     "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Swift"
+    }
+   ],
+   "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_StringProcessing.swiftmodule/arm64-apple-macos.swiftmodule",
+   "key.is_system": true,
+   "key.kind": "source.lang.swift.import.module.swift",
+   "key.name": "Swift"
+  },
+  {
+   "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_SwiftConcurrencyShims-1Y48F1JH690BG.pcm",
+   "key.is_system": true,
+   "key.kind": "source.lang.swift.import.module.clang",
+   "key.name": "_SwiftConcurrencyShims"
+  },
+  {
+   "key.dependencies": [
+    {
+     "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Swift"
+    },
+    {
+     "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/SwiftShims-1Y48F1JH690BG.pcm",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.clang",
+     "key.name": "SwiftShims"
+    }
+   ],
+   "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_Concurrency.swiftmodule/arm64-apple-macos.swiftmodule",
+   "key.is_system": true,
+   "key.kind": "source.lang.swift.import.module.swift",
+   "key.name": "Swift"
+  },
+  {
+   "key.dependencies": [
+    {
+     "key.dependencies": [
+      {
+       "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "Swift"
+      },
+      {
+       "key.dependencies": [
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        }
+       ],
+       "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/SwiftOnoneSupport.swiftmodule/arm64-apple-macos.swiftmodule",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "SwiftOnoneSupport"
+      },
+      {
+       "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_Concurrency.swiftmodule/arm64-apple-macos.swiftmodule",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "Swift"
+      },
+      {
+       "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_StringProcessing.swiftmodule/arm64-apple-macos.swiftmodule",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "Swift"
+      },
+      {
+       "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_SwiftConcurrencyShims-1Y48F1JH690BG.pcm",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.clang",
+       "key.name": "_SwiftConcurrencyShims"
+      }
+     ],
+     "key.filepath": "__BASE__/.build/arm64-apple-macosx/debug/Modules/ArgumentParserToolInfo.swiftmodule",
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "ArgumentParserToolInfo"
+    },
+    {
+     "key.dependencies": [
+      {
+       "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/Darwin-3CHZ8T7JP9RUP.pcm",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.clang",
+       "key.name": "Darwin"
+      },
+      {
+       "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "Swift"
+      },
+      {
+       "key.dependencies": [
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_Builtin_float-721Z6LX16AXL.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "_Builtin_float"
+        }
+       ],
+       "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_Builtin_float.swiftmodule/arm64-apple-macos.swiftmodule",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "_Builtin_float"
+      },
+      {
+       "key.dependencies": [
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_errno-17SY2EN6XJKLV.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "_errno"
+        }
+       ],
+       "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/_errno.swiftmodule/arm64e-apple-macos.swiftinterface",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "_errno"
+      },
+      {
+       "key.dependencies": [
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_math-17SY2EN6XJKLV.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "_math"
+        }
+       ],
+       "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/_math.swiftmodule/arm64e-apple-macos.swiftinterface",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "_math"
+      },
+      {
+       "key.dependencies": [
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_signal-17SY2EN6XJKLV.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "_signal"
+        }
+       ],
+       "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/_signal.swiftmodule/arm64e-apple-macos.swiftinterface",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "_signal"
+      },
+      {
+       "key.dependencies": [
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_stdio-17SY2EN6XJKLV.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "_stdio"
+        }
+       ],
+       "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/_stdio.swiftmodule/arm64e-apple-macos.swiftinterface",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "_stdio"
+      },
+      {
+       "key.dependencies": [
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_time-17SY2EN6XJKLV.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "_time"
+        }
+       ],
+       "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/_time.swiftmodule/arm64e-apple-macos.swiftinterface",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "_time"
+      },
+      {
+       "key.dependencies": [
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/sys_time-2Y9QFCQFP55EO.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "sys_time"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/sys_time-2Y9QFCQFP55EO.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "timeval"
+        }
+       ],
+       "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/sys_time.swiftmodule/arm64e-apple-macos.swiftinterface",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "sys_time"
+      },
+      {
+       "key.dependencies": [
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/unistd-3TUTPAS97V7QW.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "unistd"
+        }
+       ],
+       "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/unistd.swiftmodule/arm64e-apple-macos.swiftinterface",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "unistd"
+      }
+     ],
+     "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/Darwin.swiftmodule/arm64e-apple-macos.swiftinterface",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Darwin"
+    },
+    {
+     "key.dependencies": [
+      {
+       "key.dependencies": [
+        {
+         "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/Darwin.swiftmodule/arm64e-apple-macos.swiftinterface",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Darwin"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_Concurrency.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_StringProcessing.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_SwiftConcurrencyShims-1Y48F1JH690BG.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "_SwiftConcurrencyShims"
+        }
+       ],
+       "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Combine.framework/Modules/Combine.swiftmodule/arm64e-apple-macos.swiftinterface",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "Combine"
+      },
+      {
+       "key.dependencies": [
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/CoreFoundation-6BTTU411XD1H.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "CoreFoundation"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_Concurrency.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_StringProcessing.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_SwiftConcurrencyShims-1Y48F1JH690BG.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "_SwiftConcurrencyShims"
+        }
+       ],
+       "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/CoreFoundation.swiftmodule/arm64e-apple-macos.swiftinterface",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "CoreFoundation"
+      },
+      {
+       "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/Darwin.swiftmodule/arm64e-apple-macos.swiftinterface",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "Darwin"
+      },
+      {
+       "key.dependencies": [
+        {
+         "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Combine.framework/Modules/Combine.swiftmodule/arm64e-apple-macos.swiftinterface",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Combine"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/Dispatch-23KYM5Z3KPM5R.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "Dispatch"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_Concurrency.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_StringProcessing.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_SwiftConcurrencyShims-1Y48F1JH690BG.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "_SwiftConcurrencyShims"
+        }
+       ],
+       "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/Dispatch.swiftmodule/arm64e-apple-macos.swiftinterface",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "Dispatch"
+      },
+      {
+       "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/Foundation-3SWRNTX0WFQTV.pcm",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.clang",
+       "key.name": "Foundation"
+      },
+      {
+       "key.dependencies": [
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/ObjectiveC-WMGAQ7I01OVD.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "ObjectiveC"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_Concurrency.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_StringProcessing.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_SwiftConcurrencyShims-1Y48F1JH690BG.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "_SwiftConcurrencyShims"
+        }
+       ],
+       "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/ObjectiveC.swiftmodule/arm64e-apple-macos.swiftinterface",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "ObjectiveC"
+      },
+      {
+       "key.dependencies": [
+        {
+         "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/Darwin.swiftmodule/arm64e-apple-macos.swiftinterface",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Darwin"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_Concurrency.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/Darwin-3CHZ8T7JP9RUP.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "lock"
+        }
+       ],
+       "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Observation.swiftmodule/arm64-apple-macos.swiftmodule",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "Observation"
+      },
+      {
+       "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "Swift"
+      },
+      {
+       "key.dependencies": [
+        {
+         "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/Darwin.swiftmodule/arm64e-apple-macos.swiftinterface",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Darwin"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/Darwin-3CHZ8T7JP9RUP.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "Mach"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_Concurrency.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_StringProcessing.swiftmodule/arm64-apple-macos.swiftmodule",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.swift",
+         "key.name": "Swift"
+        },
+        {
+         "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_SwiftConcurrencyShims-1Y48F1JH690BG.pcm",
+         "key.is_system": true,
+         "key.kind": "source.lang.swift.import.module.clang",
+         "key.name": "_SwiftConcurrencyShims"
+        }
+       ],
+       "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/System.swiftmodule/arm64e-apple-macos.swiftinterface",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "System"
+      },
+      {
+       "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_Concurrency.swiftmodule/arm64-apple-macos.swiftmodule",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "Swift"
+      },
+      {
+       "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_StringProcessing.swiftmodule/arm64-apple-macos.swiftmodule",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "Swift"
+      },
+      {
+       "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_SwiftConcurrencyShims-1Y48F1JH690BG.pcm",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.clang",
+       "key.name": "_SwiftConcurrencyShims"
+      },
+      {
+       "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/Darwin-3CHZ8T7JP9RUP.pcm",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.clang",
+       "key.name": "sysdir"
+      },
+      {
+       "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/Darwin-3CHZ8T7JP9RUP.pcm",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.clang",
+       "key.name": "uuid"
+      }
+     ],
+     "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Modules/Foundation.swiftmodule/arm64e-apple-macos.swiftinterface",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Foundation"
+    },
+    {
+     "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Swift"
+    },
+    {
+     "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/SwiftOnoneSupport.swiftmodule/arm64-apple-macos.swiftmodule",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "SwiftOnoneSupport"
+    },
+    {
+     "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_Concurrency.swiftmodule/arm64-apple-macos.swiftmodule",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Swift"
+    },
+    {
+     "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_StringProcessing.swiftmodule/arm64-apple-macos.swiftmodule",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Swift"
+    },
+    {
+     "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_SwiftConcurrencyShims-1Y48F1JH690BG.pcm",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.clang",
+     "key.name": "_SwiftConcurrencyShims"
+    },
+    {
+     "key.dependencies": [
+      {
+       "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "Swift"
+      },
+      {
+       "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_Concurrency.swiftmodule/arm64-apple-macos.swiftmodule",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "Swift"
+      },
+      {
+       "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_StringProcessing.swiftmodule/arm64-apple-macos.swiftmodule",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.swift",
+       "key.name": "Swift"
+      },
+      {
+       "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_SwiftConcurrencyShims-1Y48F1JH690BG.pcm",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.clang",
+       "key.name": "_SwiftConcurrencyShims"
+      },
+      {
+       "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/os-10APNJ2Q6LKSV.pcm",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.clang",
+       "key.name": "log"
+      },
+      {
+       "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/os-10APNJ2Q6LKSV.pcm",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.clang",
+       "key.name": "os"
+      },
+      {
+       "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/os-10APNJ2Q6LKSV.pcm",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.clang",
+       "key.name": "signpost"
+      },
+      {
+       "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/os-10APNJ2Q6LKSV.pcm",
+       "key.is_system": true,
+       "key.kind": "source.lang.swift.import.module.clang",
+       "key.name": "workgroup"
+      }
+     ],
+     "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift/os.swiftmodule/arm64e-apple-macos.swiftinterface",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "os"
+    }
+   ],
+   "key.filepath": "__BASE__/.build/arm64-apple-macosx/debug/Modules/ArgumentParser.swiftmodule",
+   "key.kind": "source.lang.swift.import.module.swift",
+   "key.name": "ArgumentParser"
+  },
+  {
+   "key.dependencies": [
+    {
+     "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Modules/Foundation.swiftmodule/arm64e-apple-macos.swiftinterface",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Foundation"
+    },
+    {
+     "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Swift"
+    },
+    {
+     "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/SwiftOnoneSupport.swiftmodule/arm64-apple-macos.swiftmodule",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "SwiftOnoneSupport"
+    },
+    {
+     "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_Concurrency.swiftmodule/arm64-apple-macos.swiftmodule",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Swift"
+    },
+    {
+     "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_StringProcessing.swiftmodule/arm64-apple-macos.swiftmodule",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Swift"
+    },
+    {
+     "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_SwiftConcurrencyShims-1Y48F1JH690BG.pcm",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.clang",
+     "key.name": "_SwiftConcurrencyShims"
+    }
+   ],
+   "key.filepath": "__BASE__/.build/arm64-apple-macosx/debug/Modules/SWXMLHash.swiftmodule",
+   "key.kind": "source.lang.swift.import.module.swift",
+   "key.name": "SWXMLHash"
+  },
+  {
+   "key.dependencies": [
+    {
+     "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/CYaml-33ZEWMTVF6RX0.pcm",
+     "key.kind": "source.lang.swift.import.module.clang",
+     "key.name": "CYaml"
+    },
+    {
+     "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Combine.framework/Modules/Combine.swiftmodule/arm64e-apple-macos.swiftinterface",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Combine"
+    },
+    {
+     "key.filepath": "/Applications/Xcode-16.4.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Modules/Foundation.swiftmodule/arm64e-apple-macos.swiftinterface",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Foundation"
+    },
+    {
+     "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/Swift.swiftmodule/arm64-apple-macos.swiftmodule",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Swift"
+    },
+    {
+     "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/SwiftOnoneSupport.swiftmodule/arm64-apple-macos.swiftmodule",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "SwiftOnoneSupport"
+    },
+    {
+     "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_Concurrency.swiftmodule/arm64-apple-macos.swiftmodule",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Swift"
+    },
+    {
+     "key.filepath": "/Users/appthreat/Library/Developer/Toolchains/swift-6.3.3-RELEASE.xctoolchain/usr/lib/swift/macosx/_StringProcessing.swiftmodule/arm64-apple-macos.swiftmodule",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.swift",
+     "key.name": "Swift"
+    },
+    {
+     "key.filepath": "/tmp/cap-mc/2N1YANS0VUYS/_SwiftConcurrencyShims-1Y48F1JH690BG.pcm",
+     "key.is_system": true,
+     "key.kind": "source.lang.swift.import.module.clang",
+     "key.name": "_SwiftConcurrencyShims"
+    }
+   ],
+   "key.filepath": "__BASE__/.build/arm64-apple-macosx/debug/Modules/Yams.swiftmodule",
+   "key.kind": "source.lang.swift.import.module.swift",
+   "key.name": "Yams"
+  }
+ ],
+ "key.entities": [
+  {
+   "key.column": 8,
+   "key.kind": "source.lang.swift.ref.module",
+   "key.line": 1,
+   "key.name": "ArgumentParser",
+   "key.usr": "c:@M@ArgumentParser"
+  },
+  {
+   "key.column": 8,
+   "key.kind": "source.lang.swift.ref.module",
+   "key.line": 2,
+   "key.name": "SWXMLHash",
+   "key.usr": "c:@M@SWXMLHash"
+  },
+  {
+   "key.column": 8,
+   "key.kind": "source.lang.swift.ref.module",
+   "key.line": 3,
+   "key.name": "Yams",
+   "key.usr": "c:@M@Yams"
+  },
+  {
+   "key.attributes": [
+    {
+     "key.attribute": "source.decl.attribute.main"
+    }
+   ],
+   "key.column": 8,
+   "key.effective_access": "source.decl.effective_access.internal",
+   "key.entities": [
+    {
+     "key.column": 8,
+     "key.effective_access": "source.decl.effective_access.public",
+     "key.is_implicit": true,
+     "key.kind": "source.lang.swift.decl.var.static",
+     "key.line": 6,
+     "key.related": [
+      {
+       "key.kind": "source.lang.swift.ref.var.static",
+       "key.name": "configuration",
+       "key.usr": "s:14ArgumentParser15ParsableCommandP13configurationAA0D13ConfigurationVvpZ"
+      }
+     ],
+     "key.usr": "s:14ArgumentParser15ParsableCommandPAAE13configurationAA0D13ConfigurationVvpZ"
+    },
+    {
+     "key.column": 8,
+     "key.effective_access": "source.decl.effective_access.public",
+     "key.is_implicit": true,
+     "key.kind": "source.lang.swift.decl.var.static",
+     "key.line": 6,
+     "key.related": [
+      {
+       "key.kind": "source.lang.swift.ref.var.static",
+       "key.name": "_commandName",
+       "key.usr": "s:14ArgumentParser15ParsableCommandP12_commandNameSSvpZ"
+      }
+     ],
+     "key.usr": "s:14ArgumentParser15ParsableCommandPAAE12_commandNameSSvpZ"
+    },
+    {
+     "key.column": 8,
+     "key.effective_access": "source.decl.effective_access.public",
+     "key.is_implicit": true,
+     "key.kind": "source.lang.swift.decl.function.method.instance",
+     "key.line": 6,
+     "key.related": [
+      {
+       "key.kind": "source.lang.swift.ref.function.method.instance",
+       "key.name": "validate()",
+       "key.usr": "s:14ArgumentParser17ParsableArgumentsP8validateyyKF"
+      }
+     ],
+     "key.usr": "s:14ArgumentParser17ParsableArgumentsPAAE8validateyyKF"
+    },
+    {
+     "key.column": 8,
+     "key.effective_access": "source.decl.effective_access.public",
+     "key.is_implicit": true,
+     "key.kind": "source.lang.swift.decl.var.static",
+     "key.line": 6,
+     "key.related": [
+      {
+       "key.kind": "source.lang.swift.ref.var.static",
+       "key.name": "_errorLabel",
+       "key.usr": "s:14ArgumentParser17ParsableArgumentsP11_errorLabelSSvpZ"
+      }
+     ],
+     "key.usr": "s:14ArgumentParser17ParsableArgumentsPAAE11_errorLabelSSvpZ"
+    },
+    {
+     "key.column": 8,
+     "key.effective_access": "source.decl.effective_access.public",
+     "key.is_implicit": true,
+     "key.kind": "source.lang.swift.decl.var.static",
+     "key.line": 6,
+     "key.related": [
+      {
+       "key.kind": "source.lang.swift.ref.var.static",
+       "key.name": "_errorPrefix",
+       "key.usr": "s:14ArgumentParser17ParsableArgumentsP12_errorPrefixSSvpZ"
+      }
+     ],
+     "key.usr": "s:14ArgumentParser17ParsableArgumentsPAAE12_errorPrefixSSvpZ"
+    },
+    {
+     "key.column": 14,
+     "key.kind": "source.lang.swift.ref.protocol",
+     "key.line": 6,
+     "key.name": "ParsableCommand",
+     "key.usr": "s:14ArgumentParser15ParsableCommandP"
+    },
+    {
+     "key.column": 6,
+     "key.kind": "source.lang.swift.ref.struct",
+     "key.line": 7,
+     "key.name": "Option",
+     "key.usr": "s:14ArgumentParser6OptionV"
+    },
+    {
+     "key.column": 19,
+     "key.is_implicit": true,
+     "key.kind": "source.lang.swift.ref.function.constructor",
+     "key.line": 7,
+     "key.usr": "s:14ArgumentParser0A4HelpV13stringLiteralACSS_tcfc"
+    },
+    {
+     "key.column": 6,
+     "key.kind": "source.lang.swift.ref.function.constructor",
+     "key.line": 7,
+     "key.name": "init(name:parsing:help:completion:)",
+     "key.usr": "s:14ArgumentParser6OptionV4name7parsing4help10completionACyqd__SgGAA17NameSpecificationV_AA26SingleValueParsingStrategyVAA0A4HelpVSgAA14CompletionKindVSgtcAHRszAA013ExpressibleByA0Rd__lufc"
+    },
+    {
+     "key.attributes": [
+      {
+       "key.attribute": "source.decl.attribute._custom"
+      }
+     ],
+     "key.column": 9,
+     "key.effective_access": "source.decl.effective_access.internal",
+     "key.entities": [
+      {
+       "key.attributes": [
+        {
+         "key.attribute": "source.decl.attribute._custom"
+        }
+       ],
+       "key.column": 9,
+       "key.is_implicit": true,
+       "key.kind": "source.lang.swift.decl.function.accessor.getter",
+       "key.line": 8,
+       "key.usr": "s:14argparser_demo4DemoV3xmlSSSgvg"
+      },
+      {
+       "key.attributes": [
+        {
+         "key.attribute": "source.decl.attribute._custom"
+        }
+       ],
+       "key.column": 9,
+       "key.is_implicit": true,
+       "key.kind": "source.lang.swift.decl.function.accessor.setter",
+       "key.line": 8,
+       "key.usr": "s:14argparser_demo4DemoV3xmlSSSgvs"
+      }
+     ],
+     "key.kind": "source.lang.swift.decl.var.instance",
+     "key.line": 8,
+     "key.name": "xml",
+     "key.usr": "s:14argparser_demo4DemoV3xmlSSSgvp"
+    },
+    {
+     "key.column": 14,
+     "key.kind": "source.lang.swift.ref.struct",
+     "key.line": 8,
+     "key.name": "String",
+     "key.usr": "s:SS"
+    },
+    {
+     "key.column": 10,
+     "key.effective_access": "source.decl.effective_access.internal",
+     "key.entities": [
+      {
+       "key.column": 16,
+       "key.kind": "source.lang.swift.ref.var.instance",
+       "key.line": 11,
+       "key.name": "xml",
+       "key.usr": "s:14argparser_demo4DemoV3xmlSSSgvp"
+      },
+      {
+       "key.column": 27,
+       "key.kind": "source.lang.swift.ref.class",
+       "key.line": 12,
+       "key.name": "XMLHash",
+       "key.usr": "s:9SWXMLHash7XMLHashC"
+      },
+      {
+       "key.column": 35,
+       "key.kind": "source.lang.swift.ref.function.method.class",
+       "key.line": 12,
+       "key.name": "parse(_:)",
+       "key.usr": "s:9SWXMLHash7XMLHashC5parseyAA10XMLIndexerOSSFZ"
+      },
+      {
+       "key.column": 41,
+       "key.entities": [
+        {
+         "key.column": 41,
+         "key.is_implicit": true,
+         "key.kind": "source.lang.swift.ref.function.accessor.getter",
+         "key.line": 12,
+         "key.usr": "s:14argparser_demo4DemoV3xmlSSSgvg"
+        }
+       ],
+       "key.kind": "source.lang.swift.ref.var.instance",
+       "key.line": 12,
+       "key.name": "xml",
+       "key.usr": "s:14argparser_demo4DemoV3xmlSSSgvp"
+      },
+      {
+       "key.column": 13,
+       "key.kind": "source.lang.swift.ref.function.free",
+       "key.line": 13,
+       "key.name": "print(_:separator:terminator:)",
+       "key.usr": "s:s5print_9separator10terminatoryypd_S2StF"
+      },
+      {
+       "key.column": 27,
+       "key.entities": [
+        {
+         "key.column": 27,
+         "key.is_implicit": true,
+         "key.kind": "source.lang.swift.ref.function.accessor.getter",
+         "key.line": 13,
+         "key.usr": "s:9SWXMLHash10XMLIndexerO7elementAA10XMLElementCSgvg"
+        }
+       ],
+       "key.kind": "source.lang.swift.ref.var.instance",
+       "key.line": 13,
+       "key.name": "element",
+       "key.usr": "s:9SWXMLHash10XMLIndexerO7elementAA10XMLElementCSgvp"
+      },
+      {
+       "key.column": 36,
+       "key.entities": [
+        {
+         "key.column": 36,
+         "key.is_dynamic": true,
+         "key.is_implicit": true,
+         "key.kind": "source.lang.swift.ref.function.accessor.getter",
+         "key.line": 13,
+         "key.receiver_usr": "s:9SWXMLHash10XMLElementC",
+         "key.usr": "s:9SWXMLHash10XMLElementC4textSSvg"
+        }
+       ],
+       "key.is_dynamic": true,
+       "key.kind": "source.lang.swift.ref.var.instance",
+       "key.line": 13,
+       "key.name": "text",
+       "key.receiver_usr": "s:9SWXMLHash10XMLElementC",
+       "key.usr": "s:9SWXMLHash10XMLElementC4textSSvp"
+      },
+      {
+       "key.column": 41,
+       "key.kind": "source.lang.swift.ref.function.operator.infix",
+       "key.line": 13,
+       "key.name": "??(_:_:)",
+       "key.usr": "s:s2qqoiyxxSgn_xyKXKtKRi_zlF"
+      },
+      {
+       "key.column": 24,
+       "key.kind": "source.lang.swift.ref.module",
+       "key.line": 15,
+       "key.name": "Yams",
+       "key.usr": "c:@M@Yams"
+      },
+      {
+       "key.column": 29,
+       "key.kind": "source.lang.swift.ref.function.free",
+       "key.line": 15,
+       "key.name": "dump(object:canonical:indent:width:allowUnicode:lineBreak:explicitStart:explicitEnd:version:sortKeys:sequenceStyle:mappingStyle:newLineScalarStyle:redundancyAliasingStrategy:)",
+       "key.usr": "s:4Yams4dump6object9canonical6indent5width12allowUnicode9lineBreak13explicitStart0K3End7version8sortKeys13sequenceStyle07mappingR0013newLineScalarR026redundancyAliasingStrategySSypSg_SbS2iSbAA7EmitterC0uJ0OS2bSi5major_Si5minortSgSbAA4NodeO8SequenceV0R0OAZ7MappingVA1_OAZ0V0VA1_OAA010RedundancyxY0_pSgtKF"
+      },
+      {
+       "key.column": 42,
+       "key.is_implicit": true,
+       "key.kind": "source.lang.swift.ref.function.constructor",
+       "key.line": 15,
+       "key.usr": "s:SD17dictionaryLiteralSDyxq_Gx_q_td_tcfc"
+      },
+      {
+       "key.column": 9,
+       "key.kind": "source.lang.swift.ref.function.free",
+       "key.line": 16,
+       "key.name": "print(_:separator:terminator:)",
+       "key.usr": "s:s5print_9separator10terminatoryypd_S2StF"
+      }
+     ],
+     "key.kind": "source.lang.swift.decl.function.method.instance",
+     "key.line": 10,
+     "key.name": "run()",
+     "key.related": [
+      {
+       "key.kind": "source.lang.swift.ref.function.method.instance",
+       "key.name": "run()",
+       "key.usr": "s:14ArgumentParser15ParsableCommandP3runyyKF"
+      }
+     ],
+     "key.usr": "s:14argparser_demo4DemoV3runyyKF"
+    },
+    {
+     "key.column": 8,
+     "key.effective_access": "source.decl.effective_access.internal",
+     "key.is_implicit": true,
+     "key.kind": "source.lang.swift.decl.function.constructor",
+     "key.line": 6,
+     "key.usr": "s:14argparser_demo4DemoV3xmlAC14ArgumentParser6OptionVySSSgG_tcfc"
+    },
+    {
+     "key.column": 8,
+     "key.effective_access": "source.decl.effective_access.internal",
+     "key.is_implicit": true,
+     "key.kind": "source.lang.swift.decl.function.constructor",
+     "key.line": 6,
+     "key.related": [
+      {
+       "key.kind": "source.lang.swift.ref.function.constructor",
+       "key.name": "init()",
+       "key.usr": "s:14ArgumentParser17ParsableArgumentsPxycfc"
+      }
+     ],
+     "key.usr": "s:14argparser_demo4DemoVACycfc"
+    }
+   ],
+   "key.kind": "source.lang.swift.decl.struct",
+   "key.line": 6,
+   "key.name": "Demo",
+   "key.related": [
+    {
+     "key.column": 14,
+     "key.kind": "source.lang.swift.ref.protocol",
+     "key.line": 6,
+     "key.name": "ParsableCommand",
+     "key.usr": "s:14ArgumentParser15ParsableCommandP"
+    }
+   ],
+   "key.usr": "s:14argparser_demo4DemoV"
+  }
+ ]
+}
