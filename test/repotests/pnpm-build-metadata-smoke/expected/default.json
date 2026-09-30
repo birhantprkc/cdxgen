@@ -104,11 +104,9 @@
     {
       "dependsOn": [
         "pkg:npm/%40acme/tools@0.9.0%2Bexp.sha.5114f85",
-        "pkg:npm/@acme/tools@packages/tools",
         "pkg:npm/left-pad@1.3.0",
         "pkg:npm/localdep@2.0.0%2Blocal_vcs_url_file:localdep.tgz",
-        "pkg:npm/wsmember@3.0.0%2Bws",
-        "pkg:npm/wsmember@packages/wsmember"
+        "pkg:npm/wsmember@3.0.0%2Bws"
       ],
       "ref": "pkg:npm/pnpm-build-metadata@1.0.0%2Broot"
     },
