@@ -76,6 +76,19 @@ jobs:
           } else {
             Write-Output 'docker CLI absent; cdxgen auto-selects wslc'
           }
+      - name: Free disk space and prepare a temp dir on the workspace drive
+        shell: pwsh
+        run: |
+          Get-PSDrive -PSProvider FileSystem | Format-Table Name,@{n='FreeGB';e={[math]::Round($_.Free/1GB,1)}},@{n='UsedGB';e={[math]::Round($_.Used/1GB,1)}}
+          # The full cdxgen image needs several GB for the WSL session store,
+          # the exported tar, and the extracted layers. Drop the preinstalled
+          # Android SDKs and stale temp files to make room on C:.
+          foreach ($dir in 'C:\Android', 'C:\Program Files\Android', 'C:\Program Files (x86)\Android') {
+            if (Test-Path $dir) { Remove-Item -Recurse -Force -ErrorAction SilentlyContinue $dir }
+          }
+          Remove-Item -Recurse -Force -ErrorAction SilentlyContinue "$env:TEMP\docker-images-*"
+          New-Item -ItemType Directory -Force -Path 'D:\cdxtmp' | Out-Null
+          Get-PSDrive -PSProvider FileSystem | Format-Table Name,@{n='FreeGB';e={[math]::Round($_.Free/1GB,1)}},@{n='UsedGB';e={[math]::Round($_.Used/1GB,1)}}
       - name: Scan a small image with wslc
         shell: bash
         env:
@@ -83,15 +96,21 @@ jobs:
           # windows-latest images ship a docker CLI bound to a Windows-containers
           # daemon, which cannot pull Linux images; force the wslc path here.
           DOCKER_CMD: wslc
+          TMP: 'D:\cdxtmp'
+          TEMP: 'D:\cdxtmp'
         run: |
           node bin/cdxgen.js -t oci -o bom-alpine.cdx.json alpine:3.20
           node -e "const b=require('./bom-alpine.cdx.json'); if(!b.components||b.components.length<10){throw new Error('expected OS components in the alpine BOM, got '+b.components?.length)}; console.log('alpine BOM components:', b.components.length)"
       - name: Scan a published cdxgen image with wslc
         shell: bash
         env:
-          CDXGEN_DEBUG_MODE: debug
           DOCKER_CMD: wslc
+          TMP: 'D:\cdxtmp'
+          TEMP: 'D:\cdxtmp'
         run: |
+          # Drop the alpine image from the wslc session store before pulling
+          # the much larger cdxgen image.
+          wslc image remove alpine:3.20 || true
           node bin/cdxgen.js -t oci -o bom-cdxgen.cdx.json ghcr.io/cdxgen/cdxgen:latest
           node -e "const b=require('./bom-cdxgen.cdx.json'); if(!b.components||b.components.length<50){throw new Error('expected components in the cdxgen image BOM, got '+b.components?.length)}; const mc=b.metadata&&b.metadata.component; if(!mc||mc.type!=='container'){throw new Error('expected a container parent component')}; console.log('cdxgen image BOM components:', b.components.length, 'parent:', mc.name)"
       - name: Upload BOMs
