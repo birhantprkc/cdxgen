@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - feat/wslc-oci-windows
       - master
     paths:
       - '.github/workflows/wslc-test.yml'
