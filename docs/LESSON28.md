@@ -158,25 +158,34 @@ cdxgen -t swift -o bom.json .
 evinse -l swift -i bom.json -o bom.evinse.json .
 ```
 
-`evinse -l swift` calls `createSemanticsSlices` in `lib/evinser/swiftsem.js`,
-which performs a verbose debug build to learn the compiler arguments, dumps the
-package manifest with `swift package dump-package`, and then invokes the
-SourceKitten companion binary (resolved from `cdxgen-plugins-bin` or
-`SOURCEKITTEN_CMD`) for three things:
+`evinse -l swift` (and `cdxgen -t swift --evidence`) calls
+`createSemanticsSlices` in `lib/evinser/swiftsem.js`, which:
 
-- `structure` per source file (types and declarations).
-- `index` per source file (symbol occurrences and roles).
-- `module-info` per module (exported classes, protocols, enums, methods).
+- runs `swift -print-target-info` in the project directory to find the
+  toolchain that builds it (honouring swiftly's `.swift-version`) and points
+  SourceKitten at the same toolchain;
+- performs a clean verbose debug build, with either SwiftPM build engine, and
+  reads each module's compiler arguments and sources from llbuild's
+  `description.json` or the Swift Build driver lines;
+- maps modules to packages through `.build/workspace-state.json` (and
+  `.build/manifest.pif` for Swift Build);
+- runs SourceKitten `index` over every non-test source of the root package with
+  that module's own arguments, and attributes each resolved reference to the
+  package that declares it by demangling its USR.
 
 Note that Swift only produces **semantics** slices through this path. Unlike
 JVM or Python, there is no atom-based usages or data-flow slice for Swift, so
-occurrences and call-stack evidence come from the SourceKitten-backed semantics
-slice alone. Projects that require `xcodebuild` to build (rather than `swift
-build`) are not supported by the semantics slicer today.
+occurrence evidence comes from the SourceKitten-backed semantics slice alone.
+Projects that require `xcodebuild` to build (rather than `swift build`) are not
+supported by the semantics slicer today.
+
+Packages that only the tests use are scoped `optional`, so
+`cdxgen -t swift --evidence --required-only` keeps just the packages the
+shipped code needs.
 
 You can override the detected compiler and SDK with `SWIFT_COMPILER_ARGS` and
-`SWIFT_SDK_ARGS`, which is useful when the auto-detection fails for a custom
-toolchain.
+`SWIFT_SDK_ARGS`, and pass extra build arguments such as
+`--build-system native` with `SWIFT_BUILD_ARGS`.
 
 ## 7) CI sketch for an iOS app
 

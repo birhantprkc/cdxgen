@@ -1,0 +1,835 @@
+{
+ "projectPath": "/src/argparser-demo",
+ "toolchain": "Apple Swift version 6.3.3 (swift-6.3.3-RELEASE)",
+ "packageMetadata": {
+  "rootModule": "argparser-demo",
+  "rootDir": [
+   "/src/argparser-demo"
+  ],
+  "platforms": [],
+  "dependencies": [
+   {
+    "ref": "argparser-demo",
+    "dependsOn": [
+     "ArgumentParser",
+     "SWXMLHash",
+     "Yams"
+    ]
+   },
+   {
+    "ref": "argparser-demoTests",
+    "dependsOn": [
+     "argparser-demo"
+    ]
+   }
+  ],
+  "rootModules": [
+   "argparser_demo"
+  ],
+  "testModules": [
+   "argparser_demoTests"
+  ]
+ },
+ "packages": [
+  {
+   "identity": "swift-argument-parser",
+   "name": "swift-argument-parser",
+   "location": "https://github.com/apple/swift-argument-parser",
+   "kind": "remoteSourceControl",
+   "modules": [
+    "ArgumentParser",
+    "ArgumentParserToolInfo",
+    "generate_docc_reference",
+    "generate_manual"
+   ]
+  },
+  {
+   "identity": "swxmlhash",
+   "name": "SWXMLHash",
+   "location": "https://github.com/drmohundro/SWXMLHash",
+   "kind": "remoteSourceControl",
+   "modules": [
+    "SWXMLHash"
+   ]
+  },
+  {
+   "identity": "yams",
+   "name": "Yams",
+   "location": "https://github.com/jpsim/Yams",
+   "kind": "remoteSourceControl",
+   "modules": [
+    "CYaml",
+    "Yams"
+   ]
+  }
+ ],
+ "packageModules": {
+  "argparser-demo": [
+   "argparser_demo",
+   "argparser_demoTests"
+  ],
+  "swift-argument-parser": [
+   "ArgumentParser",
+   "ArgumentParserToolInfo",
+   "generate_docc_reference",
+   "generate_manual"
+  ],
+  "swxmlhash": [
+   "SWXMLHash"
+  ],
+  "SWXMLHash": [
+   "SWXMLHash"
+  ],
+  "yams": [
+   "CYaml",
+   "Yams"
+  ],
+  "Yams": [
+   "CYaml",
+   "Yams"
+  ]
+ },
+ "buildSymbols": {
+  "generate_manual": [
+   "AuthorArgument",
+   "ArgumentSynopsis",
+   "Author",
+   "Authors",
+   "Container",
+   "Empty",
+   "ForEach",
+   "MDocASTNodeWrapper",
+   "MDocBuilder",
+   "MDocComponent",
+   "Discussion",
+   "Document",
+   "DocumentDate",
+   "Exit",
+   "List",
+   "MultiPageDescription",
+   "Name",
+   "Preamble",
+   "Section",
+   "SeeAlso",
+   "SinglePageDescription",
+   "Synopsis",
+   "ArgumentParser_MDoc",
+   "Date_ExpressibleByArgument",
+   "Process_SimpleAPI",
+   "GenerateManual",
+   "MDocASTNode",
+   "MDocMacro",
+   "MDocSerializationContext",
+   "String_Escaping"
+  ],
+  "generate_docc_reference": [
+   "ArgumentParser_Markdown",
+   "Process_SimpleAPI",
+   "GenerateDoccReference"
+  ],
+  "argparser_demo": [
+   "main"
+  ],
+  "Yams": [
+   "AliasDereferencingStrategy",
+   "Anchor",
+   "Constructor",
+   "Decoder",
+   "Emitter",
+   "Encoder",
+   "Mark",
+   "Node.Alias",
+   "Node.Mapping",
+   "Node.Scalar",
+   "Node.Sequence",
+   "Node",
+   "Parser",
+   "RedundancyAliasingStrategy",
+   "Representer",
+   "Resolver",
+   "String_Yams",
+   "Tag",
+   "YamlAnchorProviding",
+   "YamlError",
+   "YamlTagProviding"
+  ],
+  "SWXMLHash": [
+   "XMLAttributeDeserializable",
+   "XMLElementDeserializable",
+   "XMLIndexer_XMLDeserialization",
+   "XMLObjectDeserialization",
+   "XMLValueDeserialization",
+   "Bool_XMLDeserialization",
+   "Double_XMLDeserialization",
+   "Float_XMLDeserialization",
+   "Int_XMLDeserialization",
+   "String_XMLDeserialization",
+   "IndexingError",
+   "ParsingError",
+   "XMLDeserializationError",
+   "FullXMLParser",
+   "IndexOp",
+   "LazyXMLParser",
+   "Stack",
+   "String_Extensions",
+   "TextElement",
+   "XMLAttribute",
+   "XMLContent",
+   "XMLElement",
+   "XMLHash",
+   "XMLHashOptions",
+   "XMLIndexer",
+   "shim"
+  ],
+  "ArgumentParserToolInfo": [
+   "ToolInfo"
+  ],
+  "ArgumentParser": [
+   "BashCompletionsGenerator",
+   "CompletionsGenerator",
+   "FishCompletionsGenerator",
+   "ZshCompletionsGenerator",
+   "Argument",
+   "ArgumentDiscussion",
+   "ArgumentHelp",
+   "ArgumentVisibility",
+   "CompletionKind",
+   "Errors",
+   "Flag",
+   "NameSpecification",
+   "Option",
+   "OptionGroup",
+   "ParentCommand",
+   "AsyncParsableCommand",
+   "CommandConfiguration",
+   "CommandGroup",
+   "EnumerableFlag",
+   "ExpressibleByArgument",
+   "ParsableArguments",
+   "ParsableCommand",
+   "ArgumentDecoder",
+   "ArgumentDefinition",
+   "ArgumentSet",
+   "CommandParser",
+   "InputKey",
+   "InputOrigin",
+   "Name",
+   "Parsed",
+   "ParsedValues",
+   "ParserError",
+   "SplitArguments",
+   "DumpHelpGenerator",
+   "HelpCommand",
+   "HelpGenerator",
+   "MessageInfo",
+   "UsageGenerator",
+   "CollectionExtensions",
+   "Foundation",
+   "Mutex",
+   "Platform",
+   "SequenceExtensions",
+   "StringExtensions",
+   "SwiftExtensions",
+   "Tree",
+   "AsyncCompletionsValidator",
+   "CodingKeyValidator",
+   "NonsenseFlagsValidator",
+   "ParsableArgumentsValidation",
+   "PositionalArgumentsValidator",
+   "UniqueNamesValidator"
+  ]
+ },
+ "moduleInfos": {
+  "ArgumentParser": {
+   "classes": [],
+   "protocols": [
+    "AsyncMainProtocol",
+    "AsyncParsableCommand",
+    "CaseIterable",
+    "CustomStringConvertible",
+    "Decodable",
+    "Decoder",
+    "EnumerableFlag",
+    "Equatable",
+    "Error",
+    "ExpressibleByArgument",
+    "ExpressibleByArrayLiteral",
+    "ExpressibleByStringInterpolation",
+    "ExpressibleByStringLiteral",
+    "Hashable",
+    "LosslessStringConvertible",
+    "ParsableArguments",
+    "ParsableCommand",
+    "RawRepresentable",
+    "Sendable",
+    "SendableMetatype",
+    "Sequence",
+    "_SendableMetatype"
+   ],
+   "enums": [
+    "Never",
+    "Representation"
+   ],
+   "obfuscationMap": {
+    "Decodable": "s:Se",
+    "Decoder": "s:s7DecoderP",
+    "ExpressibleByArgument": "s:14ArgumentParser013ExpressibleByA0P",
+    "CustomStringConvertible": "s:s23CustomStringConvertibleP",
+    "Hashable": "s:SH",
+    "ExpressibleByStringInterpolation": "s:s32ExpressibleByStringInterpolationP",
+    "Representation": "s:14ArgumentParser17NameSpecificationV7ElementV14RepresentationO",
+    "ParsableCommand": "s:14ArgumentParser15ParsableCommandP",
+    "AsyncMainProtocol": "s:14ArgumentParser17AsyncMainProtocolP",
+    "AsyncParsableCommand": "s:14ArgumentParser20AsyncParsableCommandP",
+    "Error": "s:s5ErrorP",
+    "Sendable": "s:s8SendableP",
+    "RawRepresentable": "s:SY",
+    "CaseIterable": "s:s12CaseIterableP",
+    "Equatable": "s:SQ",
+    "EnumerableFlag": "s:14ArgumentParser14EnumerableFlagP",
+    "_SendableMetatype": "s:14ArgumentParser17_SendableMetatypeP",
+    "ExpressibleByArrayLiteral": "s:s25ExpressibleByArrayLiteralP",
+    "Sequence": "s:ST",
+    "ExpressibleByStringLiteral": "s:s26ExpressibleByStringLiteralP",
+    "ParsableArguments": "s:14ArgumentParser17ParsableArgumentsP",
+    "Never": "s:s5NeverO",
+    "SendableMetatype": "s:s16SendableMetatypeP",
+    "LosslessStringConvertible": "s:s25LosslessStringConvertibleP",
+    "run()": "s:14ArgumentParser15ParsableCommandP3runyyKF",
+    "validate()": "s:14ArgumentParser17ParsableArgumentsP8validateyyKF"
+   },
+   "classMethods": {},
+   "protocolMethods": {
+    "AsyncParsableCommand": [
+     "run()"
+    ],
+    "ParsableArguments": [
+     "validate()"
+    ],
+    "ParsableCommand": [
+     "run()"
+    ]
+   },
+   "functions": [],
+   "importedModules": [
+    "ArgumentParserToolInfo",
+    "Darwin",
+    "Foundation",
+    "os"
+   ]
+  },
+  "SWXMLHash": {
+   "classes": [
+    "IndexOps",
+    "TextElement",
+    "XMLElement",
+    "XMLHash",
+    "XMLHashOptions"
+   ],
+   "protocols": [
+    "CustomStringConvertible",
+    "Error",
+    "LocalizedError",
+    "RawRepresentable",
+    "XMLAttributeDeserializable",
+    "XMLContent",
+    "XMLElementDeserializable",
+    "XMLObjectDeserialization",
+    "XMLValueDeserialization"
+   ],
+   "enums": [
+    "IndexingError",
+    "XMLDeserializationError",
+    "XMLIndexer"
+   ],
+   "obfuscationMap": {
+    "Error": "s:s5ErrorP",
+    "IndexingError": "s:9SWXMLHash13IndexingErrorO",
+    "CustomStringConvertible": "s:s23CustomStringConvertibleP",
+    "LocalizedError": "s:10Foundation14LocalizedErrorP",
+    "XMLContent": "s:9SWXMLHash10XMLContentP",
+    "TextElement": "s:9SWXMLHash11TextElementC",
+    "XMLAttributeDeserializable": "s:9SWXMLHash26XMLAttributeDeserializableP",
+    "XMLElement": "s:9SWXMLHash10XMLElementC",
+    "XMLDeserializationError": "s:9SWXMLHash23XMLDeserializationErrorO",
+    "IndexOps": "s:9SWXMLHash8IndexOpsC",
+    "RawRepresentable": "s:SY",
+    "XMLElementDeserializable": "s:9SWXMLHash24XMLElementDeserializableP",
+    "XMLHashOptions": "s:9SWXMLHash14XMLHashOptionsC",
+    "XMLHash": "s:9SWXMLHash7XMLHashC",
+    "XMLIndexer": "s:9SWXMLHash10XMLIndexerO",
+    "XMLObjectDeserialization": "s:9SWXMLHash24XMLObjectDeserializationP",
+    "XMLValueDeserialization": "s:9SWXMLHash23XMLValueDeserializationP",
+    "validate()": "s:9SWXMLHash23XMLValueDeserializationP8validateyyKF",
+    "attribute(by:)": "s:9SWXMLHash10XMLElementC9attribute2byAA12XMLAttributeVSgSS_tF",
+    "value(ofAttribute:)": "s:9SWXMLHash10XMLElementC5value11ofAttributexSgq__tAA26XMLAttributeDeserializableRzSYR_SS8RawValueRt_r0_lF",
+    "parse(_:)": "s:9SWXMLHash7XMLHashC5parseyAA10XMLIndexerO10Foundation4DataVF"
+   },
+   "classMethods": {
+    "XMLElement": [
+     "attribute(by:)",
+     "value(ofAttribute:)",
+     "value(ofAttribute:)",
+     "value(ofAttribute:)",
+     "value(ofAttribute:)"
+    ],
+    "XMLHash": [
+     "parse(_:)",
+     "parse(_:)"
+    ]
+   },
+   "protocolMethods": {
+    "XMLAttributeDeserializable": [
+     "validate()"
+    ],
+    "XMLElementDeserializable": [
+     "validate()"
+    ],
+    "XMLObjectDeserialization": [
+     "validate()"
+    ],
+    "XMLValueDeserialization": [
+     "validate()"
+    ]
+   },
+   "functions": [],
+   "importedModules": [
+    "Foundation"
+   ]
+  },
+  "Yams": {
+   "classes": [
+    "Anchor",
+    "BasicAliasDereferencingStrategy",
+    "Constructor",
+    "Emitter",
+    "NSNull",
+    "Parser",
+    "Resolver",
+    "Tag",
+    "YAMLDecoder",
+    "YAMLEncoder"
+   ],
+   "protocols": [
+    "AliasDereferencingStrategy",
+    "BidirectionalCollection",
+    "BinaryInteger",
+    "Collection",
+    "Comparable",
+    "CustomStringConvertible",
+    "Decodable",
+    "Decoder",
+    "Encodable",
+    "Encoder",
+    "Equatable",
+    "Error",
+    "ExpressibleByArrayLiteral",
+    "ExpressibleByDictionaryLiteral",
+    "ExpressibleByFloatLiteral",
+    "ExpressibleByIntegerLiteral",
+    "ExpressibleByStringLiteral",
+    "FixedWidthInteger",
+    "FloatingPoint",
+    "FormatStyle",
+    "Hashable",
+    "IteratorProtocol",
+    "LosslessStringConvertible",
+    "MutableCollection",
+    "NodeRepresentable",
+    "RandomAccessCollection",
+    "RandomNumberGenerator",
+    "RangeExpression",
+    "RangeReplaceableCollection",
+    "RawRepresentable",
+    "RedundancyAliasingStrategy",
+    "ScalarConstructible",
+    "ScalarRepresentable",
+    "Sequence",
+    "SexagesimalConvertible",
+    "SignedInteger",
+    "SortComparator",
+    "StringProtocol",
+    "TopLevelDecoder",
+    "UnsignedInteger",
+    "YAMLEncodable",
+    "YamlAnchorProviding",
+    "YamlTagProviding"
+   ],
+   "enums": [
+    "ComparisonResult",
+    "Encoding",
+    "LineBreak",
+    "Never",
+    "Node",
+    "Optional",
+    "Publishers",
+    "RedundancyAliasingOutcome",
+    "State",
+    "Style",
+    "UnboundedRange_",
+    "YamlError"
+   ],
+   "obfuscationMap": {
+    "Decodable": "s:Se",
+    "Anchor": "s:4Yams6AnchorC",
+    "RawRepresentable": "s:SY",
+    "ExpressibleByStringLiteral": "s:s26ExpressibleByStringLiteralP",
+    "Hashable": "s:SH",
+    "Encoder": "s:s7EncoderP",
+    "Decoder": "s:s7DecoderP",
+    "CustomStringConvertible": "s:s23CustomStringConvertibleP",
+    "AliasDereferencingStrategy": "s:4Yams26AliasDereferencingStrategyP",
+    "BasicAliasDereferencingStrategy": "s:4Yams31BasicAliasDereferencingStrategyC",
+    "Tag": "s:4Yams3TagC",
+    "Node": "s:4Yams4NodeO",
+    "Constructor": "s:4Yams11ConstructorC",
+    "Emitter": "s:4Yams7EmitterC",
+    "LineBreak": "s:4Yams7EmitterC9LineBreakO",
+    "Style": "s:4Yams4NodeO6ScalarV5StyleO",
+    "RedundancyAliasingStrategy": "s:4Yams26RedundancyAliasingStrategyP",
+    "State": "s:4Yams7EmitterC5State33_ED6AA6759560A6062E809BF7E6589292LLO",
+    "Encodable": "s:SE",
+    "RedundancyAliasingOutcome": "s:4Yams25RedundancyAliasingOutcomeO",
+    "NSNull": "c:objc(cs)NSNull",
+    "ScalarConstructible": "s:4Yams19ScalarConstructibleP",
+    "NodeRepresentable": "s:4Yams17NodeRepresentableP",
+    "Comparable": "s:SL",
+    "ExpressibleByArrayLiteral": "s:s25ExpressibleByArrayLiteralP",
+    "ExpressibleByDictionaryLiteral": "s:s30ExpressibleByDictionaryLiteralP",
+    "ExpressibleByFloatLiteral": "s:s25ExpressibleByFloatLiteralP",
+    "ExpressibleByIntegerLiteral": "s:s27ExpressibleByIntegerLiteralP",
+    "Error": "s:s5ErrorP",
+    "RandomNumberGenerator": "s:SG",
+    "BidirectionalCollection": "s:SK",
+    "RangeExpression": "s:SX",
+    "UnboundedRange_": "s:s15UnboundedRange_O",
+    "Sequence": "s:ST",
+    "Collection": "s:Sl",
+    "RangeReplaceableCollection": "s:Sm",
+    "SortComparator": "s:10Foundation14SortComparatorP",
+    "Publishers": "s:7Combine10PublishersO",
+    "Never": "s:s5NeverO",
+    "FormatStyle": "s:10Foundation11FormatStyleP",
+    "ComparisonResult": "c:@E@NSComparisonResult",
+    "Equatable": "s:SQ",
+    "MutableCollection": "s:SM",
+    "RandomAccessCollection": "s:Sk",
+    "Resolver": "s:4Yams8ResolverC",
+    "Parser": "s:4Yams6ParserC",
+    "Encoding": "s:4Yams6ParserC8EncodingO",
+    "FloatingPoint": "s:SF",
+    "SexagesimalConvertible": "s:4Yams22SexagesimalConvertibleP",
+    "ScalarRepresentable": "s:4Yams19ScalarRepresentableP",
+    "LosslessStringConvertible": "s:s25LosslessStringConvertibleP",
+    "FixedWidthInteger": "s:s17FixedWidthIntegerP",
+    "YAMLDecoder": "s:4Yams11YAMLDecoderC",
+    "TopLevelDecoder": "s:7Combine15TopLevelDecoderP",
+    "YAMLEncodable": "s:4Yams13YAMLEncodableP",
+    "YAMLEncoder": "s:4Yams11YAMLEncoderC",
+    "YamlAnchorProviding": "s:4Yams19YamlAnchorProvidingP",
+    "YamlError": "s:4Yams9YamlErrorO",
+    "IteratorProtocol": "s:St",
+    "StringProtocol": "s:Sy",
+    "YamlTagProviding": "s:4Yams16YamlTagProvidingP",
+    "SignedInteger": "s:SZ",
+    "UnsignedInteger": "s:SU",
+    "BinaryInteger": "s:Sz",
+    "Optional": "s:Sq",
+    "encode(to:)": "s:SYsSERzSS8RawValueSYRtzrlE6encode2toys7Encoder_p_tKF::SYNTHESIZED::s:4Yams3TagC",
+    "hash(into:)": "s:SYsSHRzSH8RawValueSYRpzrlE4hash4intoys6HasherVz_tF::SYNTHESIZED::s:4Yams6AnchorC",
+    "any(from:)": "s:4Yams11ConstructorC3any4fromypAA4NodeO_tF",
+    "open()": "s:4Yams7EmitterC4openyyKF",
+    "close()": "s:4Yams7EmitterC5closeyyKF",
+    "serialize(node:)": "s:4Yams7EmitterC9serialize4nodeyAA4NodeO_tKF",
+    "alias(for:)": "s:4Yams31StrictEncodableAliasingStrategyC5alias3forAA010RedundancyD7OutcomeOSE_p_tKF",
+    "releaseAnchorReferences()": "s:4Yams31StrictEncodableAliasingStrategyC23releaseAnchorReferencesyyKF",
+    "remit(anchor:)": "s:4Yams31StrictEncodableAliasingStrategyC5remit6anchoryAA6AnchorC_tKF",
+    "represented()": "s:4Yams19ScalarRepresentableP11representedAA4NodeO0B0VyF",
+    "nextRoot()": "s:4Yams6ParserC8nextRootAA4NodeOSgyKF",
+    "singleRoot()": "s:4Yams6ParserC10singleRootAA4NodeOSgyKF",
+    "resolveTag(of:)": "s:4Yams8ResolverC10resolveTag2ofAA0D0C4NameVAA4NodeO_tF",
+    "appending(_:)": "s:4Yams8ResolverC9appendingyA2C4RuleVF",
+    "appending(_:_:)": "s:4Yams8ResolverC9appendingyAcA3TagC4NameV_SStKF",
+    "replacing(_:)": "s:4Yams8ResolverC9replacingyA2C4RuleVF",
+    "replacing(_:with:)": "s:4Yams8ResolverC9replacing_4withAcA3TagC4NameV_SStKF",
+    "removing(_:)": "s:4Yams8ResolverC8removingyAcA3TagC4NameVF",
+    "copy(with:resolver:constructor:)": "s:4Yams3TagC4copy4with8resolver11constructorA2C4NameVSg_AA8ResolverCSgAA11ConstructorCSgtF",
+    "decode(_:from:userInfo:)": "s:4Yams11YAMLDecoderC6decode_4from8userInfoxxm_10Foundation4DataVSDys010CodingUserF3KeyVypGtKSeRzlF",
+    "box()": "s:4Yams13YAMLEncodableP3boxAA4NodeOyF",
+    "encode(_:userInfo:)": "s:4Yams11YAMLEncoderC6encode_8userInfoSSx_SDys010CodingUserE3KeyVypGtKSERzlF"
+   },
+   "classMethods": {
+    "Anchor": [
+     "encode(to:)",
+     "hash(into:)"
+    ],
+    "Constructor": [
+     "any(from:)"
+    ],
+    "Emitter": [
+     "open()",
+     "close()",
+     "serialize(node:)"
+    ],
+    "HashableAliasingStrategy": [
+     "alias(for:)",
+     "releaseAnchorReferences()",
+     "remit(anchor:)"
+    ],
+    "Parser": [
+     "nextRoot()",
+     "singleRoot()"
+    ],
+    "Resolver": [
+     "resolveTag(of:)",
+     "appending(_:)",
+     "appending(_:_:)",
+     "replacing(_:)",
+     "replacing(_:with:)",
+     "removing(_:)"
+    ],
+    "StrictEncodableAliasingStrategy": [
+     "alias(for:)",
+     "releaseAnchorReferences()",
+     "remit(anchor:)"
+    ],
+    "Tag": [
+     "copy(with:resolver:constructor:)",
+     "encode(to:)"
+    ],
+    "YAMLDecoder": [
+     "decode(_:from:userInfo:)",
+     "decode(_:from:userInfo:)",
+     "decode(_:from:userInfo:)"
+    ],
+    "YAMLEncoder": [
+     "encode(_:userInfo:)"
+    ]
+   },
+   "protocolMethods": {
+    "NodeRepresentable": [
+     "represented()"
+    ],
+    "RedundancyAliasingStrategy": [
+     "alias(for:)",
+     "releaseAnchorReferences()",
+     "remit(anchor:)"
+    ],
+    "ScalarRepresentable": [
+     "represented()"
+    ],
+    "YAMLEncodable": [
+     "box()"
+    ]
+   },
+   "functions": [
+    "compose",
+    "compose_all",
+    "dump",
+    "load",
+    "load_all",
+    "serialize"
+   ],
+   "importedModules": [
+    "CYaml",
+    "Foundation",
+    "protocol Combine.TopLevelDecoder"
+   ]
+  }
+ },
+ "fileStructures": {
+  "/src/argparser-demo/Sources/argparser-demo/main.swift": {
+   "referredTypes": [
+    "ParsableCommand"
+   ]
+  }
+ },
+ "fileIndexes": {
+  "/src/argparser-demo/Sources/argparser-demo/main.swift": {
+   "swiftModules": [
+    "ArgumentParser",
+    "ArgumentParserToolInfo",
+    "Combine",
+    "CoreFoundation",
+    "Darwin",
+    "Dispatch",
+    "Foundation",
+    "ObjectiveC",
+    "Observation",
+    "SWXMLHash",
+    "Swift",
+    "SwiftOnoneSupport",
+    "System",
+    "Yams",
+    "_Builtin_float",
+    "_errno",
+    "_math",
+    "_signal",
+    "_stdio",
+    "_time",
+    "os",
+    "sys_time",
+    "unistd"
+   ],
+   "clangModules": [
+    "CYaml",
+    "CoreFoundation",
+    "Darwin",
+    "Dispatch",
+    "Foundation",
+    "Mach",
+    "ObjectiveC",
+    "SwiftShims",
+    "_Builtin_float",
+    "_SwiftConcurrencyShims",
+    "_errno",
+    "_math",
+    "_signal",
+    "_stdio",
+    "_time",
+    "lock",
+    "log",
+    "os",
+    "signpost",
+    "sys_time",
+    "sysdir",
+    "timeval",
+    "unistd",
+    "uuid",
+    "workgroup"
+   ],
+   "obfuscatedSymbols": {
+    "ArgumentParser": "c:@M@ArgumentParser",
+    "SWXMLHash": "c:@M@SWXMLHash",
+    "Yams": "c:@M@Yams",
+    "Demo": "s:14argparser_demo4DemoV",
+    "ParsableCommand": "s:14ArgumentParser15ParsableCommandP",
+    "Option": "s:14ArgumentParser6OptionV",
+    "init(name:parsing:help:completion:)": "s:14ArgumentParser6OptionV4name7parsing4help10completionACyqd__SgGAA17NameSpecificationV_AA26SingleValueParsingStrategyVAA0A4HelpVSgAA14CompletionKindVSgtcAHRszAA013ExpressibleByA0Rd__lufc",
+    "xml": "s:14argparser_demo4DemoV3xmlSSSgvp",
+    "String": "s:SS",
+    "run()": "s:14argparser_demo4DemoV3runyyKF",
+    "XMLHash": "s:9SWXMLHash7XMLHashC",
+    "parse(_:)": "s:9SWXMLHash7XMLHashC5parseyAA10XMLIndexerOSSFZ",
+    "print(_:separator:terminator:)": "s:s5print_9separator10terminatoryypd_S2StF",
+    "element": "s:9SWXMLHash10XMLIndexerO7elementAA10XMLElementCSgvp",
+    "text": "s:9SWXMLHash10XMLElementC4textSSvp",
+    "??(_:_:)": "s:s2qqoiyxxSgn_xyKXKtKRi_zlF",
+    "dump(object:canonical:indent:width:allowUnicode:lineBreak:explicitStart:explicitEnd:version:sortKeys:sequenceStyle:mappingStyle:newLineScalarStyle:redundancyAliasingStrategy:)": "s:4Yams4dump6object9canonical6indent5width12allowUnicode9lineBreak13explicitStart0K3End7version8sortKeys13sequenceStyle07mappingR0013newLineScalarR026redundancyAliasingStrategySSypSg_SbS2iSbAA7EmitterC0uJ0OS2bSi5major_Si5minortSgSbAA4NodeO8SequenceV0R0OAZ7MappingVA1_OAZ0V0VA1_OAA010RedundancyxY0_pSgtKF"
+   },
+   "symbolLocations": {
+    "ArgumentParser": [
+     1
+    ],
+    "SWXMLHash": [
+     2
+    ],
+    "Yams": [
+     3,
+     15
+    ],
+    "Demo": [
+     6
+    ],
+    "s:14ArgumentParser15ParsableCommandPAAE13configurationAA0D13ConfigurationVvpZ": [
+     6
+    ],
+    "s:14ArgumentParser15ParsableCommandPAAE12_commandNameSSvpZ": [
+     6
+    ],
+    "s:14ArgumentParser17ParsableArgumentsPAAE8validateyyKF": [
+     6
+    ],
+    "s:14ArgumentParser17ParsableArgumentsPAAE11_errorLabelSSvpZ": [
+     6
+    ],
+    "s:14ArgumentParser17ParsableArgumentsPAAE12_errorPrefixSSvpZ": [
+     6
+    ],
+    "ParsableCommand": [
+     6
+    ],
+    "Option": [
+     7
+    ],
+    "s:14ArgumentParser0A4HelpV13stringLiteralACSS_tcfc": [
+     7
+    ],
+    "init(name:parsing:help:completion:)": [
+     7
+    ],
+    "xml": [
+     8,
+     11,
+     12
+    ],
+    "s:14argparser_demo4DemoV3xmlSSSgvg": [
+     8,
+     12
+    ],
+    "s:14argparser_demo4DemoV3xmlSSSgvs": [
+     8
+    ],
+    "String": [
+     8
+    ],
+    "run()": [
+     10
+    ],
+    "XMLHash": [
+     12
+    ],
+    "parse(_:)": [
+     12
+    ],
+    "print(_:separator:terminator:)": [
+     13,
+     16
+    ],
+    "element": [
+     13
+    ],
+    "s:9SWXMLHash10XMLIndexerO7elementAA10XMLElementCSgvg": [
+     13
+    ],
+    "text": [
+     13
+    ],
+    "s:9SWXMLHash10XMLElementC4textSSvg": [
+     13
+    ],
+    "??(_:_:)": [
+     13
+    ],
+    "dump(object:canonical:indent:width:allowUnicode:lineBreak:explicitStart:explicitEnd:version:sortKeys:sequenceStyle:mappingStyle:newLineScalarStyle:redundancyAliasingStrategy:)": [
+     15
+    ],
+    "s:SD17dictionaryLiteralSDyxq_Gx_q_td_tcfc": [
+     15
+    ],
+    "s:14argparser_demo4DemoV3xmlAC14ArgumentParser6OptionVySSSgG_tcfc": [
+     6
+    ],
+    "s:14argparser_demo4DemoVACycfc": [
+     6
+    ]
+   },
+   "moduleReferences": {
+    "ArgumentParser": [
+     1,
+     6,
+     7
+    ],
+    "SWXMLHash": [
+     2,
+     12,
+     13
+    ],
+    "Yams": [
+     3,
+     15
+    ]
+   }
+  }
+ }
+}

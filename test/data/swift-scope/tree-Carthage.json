@@ -1,0 +1,417 @@
+{
+  "identity": "carthage",
+  "name": "Carthage",
+  "url": "/src/Carthage",
+  "version": "unspecified",
+  "path": "/src/Carthage",
+  "traits": [
+    "default"
+  ],
+  "dependencies": [
+    {
+      "identity": "result",
+      "name": "Result",
+      "url": "https://github.com/antitypical/Result.git",
+      "version": "4.1.0",
+      "path": "/src/Carthage/.build/checkouts/Result",
+      "traits": [
+        "default"
+      ],
+      "dependencies": [
+
+      ]
+    },
+    {
+      "identity": "reactivetask",
+      "name": "ReactiveTask",
+      "url": "https://github.com/Carthage/ReactiveTask.git",
+      "version": "0.16.0",
+      "path": "/src/Carthage/.build/checkouts/ReactiveTask",
+      "traits": [
+        "default"
+      ],
+      "dependencies": [
+        {
+          "identity": "result",
+          "name": "Result",
+          "url": "https://github.com/antitypical/Result.git",
+          "version": "4.1.0",
+          "path": "/src/Carthage/.build/checkouts/Result",
+          "traits": [
+            "default"
+          ],
+          "dependencies": [
+
+          ]
+        },
+        {
+          "identity": "reactiveswift",
+          "name": "ReactiveSwift",
+          "url": "https://github.com/ReactiveCocoa/ReactiveSwift.git",
+          "version": "5.0.1",
+          "path": "/src/Carthage/.build/checkouts/ReactiveSwift",
+          "traits": [
+            "default"
+          ],
+          "dependencies": [
+            {
+              "identity": "result",
+              "name": "Result",
+              "url": "https://github.com/antitypical/Result.git",
+              "version": "4.1.0",
+              "path": "/src/Carthage/.build/checkouts/Result",
+              "traits": [
+                "default"
+              ],
+              "dependencies": [
+
+              ]
+            },
+            {
+              "identity": "quick",
+              "name": "Quick",
+              "url": "https://github.com/Quick/Quick.git",
+              "version": "2.2.1",
+              "path": "/src/Carthage/.build/checkouts/Quick",
+              "traits": [
+                "default"
+              ],
+              "dependencies": [
+                {
+                  "identity": "nimble",
+                  "name": "Nimble",
+                  "url": "https://github.com/Quick/Nimble.git",
+                  "version": "8.1.2",
+                  "path": "/src/Carthage/.build/checkouts/Nimble",
+                  "traits": [
+                    "default"
+                  ],
+                  "dependencies": [
+
+                  ]
+                }
+              ]
+            },
+            {
+              "identity": "nimble",
+              "name": "Nimble",
+              "url": "https://github.com/Quick/Nimble.git",
+              "version": "8.1.2",
+              "path": "/src/Carthage/.build/checkouts/Nimble",
+              "traits": [
+                "default"
+              ],
+              "dependencies": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "identity": "quick",
+          "name": "Quick",
+          "url": "https://github.com/Quick/Quick.git",
+          "version": "2.2.1",
+          "path": "/src/Carthage/.build/checkouts/Quick",
+          "traits": [
+            "default"
+          ],
+          "dependencies": [
+            {
+              "identity": "nimble",
+              "name": "Nimble",
+              "url": "https://github.com/Quick/Nimble.git",
+              "version": "8.1.2",
+              "path": "/src/Carthage/.build/checkouts/Nimble",
+              "traits": [
+                "default"
+              ],
+              "dependencies": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "identity": "nimble",
+          "name": "Nimble",
+          "url": "https://github.com/Quick/Nimble.git",
+          "version": "8.1.2",
+          "path": "/src/Carthage/.build/checkouts/Nimble",
+          "traits": [
+            "default"
+          ],
+          "dependencies": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "identity": "commandant",
+      "name": "Commandant",
+      "url": "https://github.com/Carthage/Commandant.git",
+      "version": "0.16.0",
+      "path": "/src/Carthage/.build/checkouts/Commandant",
+      "traits": [
+        "default"
+      ],
+      "dependencies": [
+        {
+          "identity": "result",
+          "name": "Result",
+          "url": "https://github.com/antitypical/Result.git",
+          "version": "4.1.0",
+          "path": "/src/Carthage/.build/checkouts/Result",
+          "traits": [
+            "default"
+          ],
+          "dependencies": [
+
+          ]
+        },
+        {
+          "identity": "quick",
+          "name": "Quick",
+          "url": "https://github.com/Quick/Quick.git",
+          "version": "2.2.1",
+          "path": "/src/Carthage/.build/checkouts/Quick",
+          "traits": [
+            "default"
+          ],
+          "dependencies": [
+            {
+              "identity": "nimble",
+              "name": "Nimble",
+              "url": "https://github.com/Quick/Nimble.git",
+              "version": "8.1.2",
+              "path": "/src/Carthage/.build/checkouts/Nimble",
+              "traits": [
+                "default"
+              ],
+              "dependencies": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "identity": "nimble",
+          "name": "Nimble",
+          "url": "https://github.com/Quick/Nimble.git",
+          "version": "8.1.2",
+          "path": "/src/Carthage/.build/checkouts/Nimble",
+          "traits": [
+            "default"
+          ],
+          "dependencies": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "identity": "prettycolors",
+      "name": "PrettyColors",
+      "url": "https://github.com/jdhealy/PrettyColors.git",
+      "version": "5.0.2",
+      "path": "/src/Carthage/.build/checkouts/PrettyColors",
+      "traits": [
+        "default"
+      ],
+      "dependencies": [
+
+      ]
+    },
+    {
+      "identity": "reactiveswift",
+      "name": "ReactiveSwift",
+      "url": "https://github.com/ReactiveCocoa/ReactiveSwift.git",
+      "version": "5.0.1",
+      "path": "/src/Carthage/.build/checkouts/ReactiveSwift",
+      "traits": [
+        "default"
+      ],
+      "dependencies": [
+        {
+          "identity": "result",
+          "name": "Result",
+          "url": "https://github.com/antitypical/Result.git",
+          "version": "4.1.0",
+          "path": "/src/Carthage/.build/checkouts/Result",
+          "traits": [
+            "default"
+          ],
+          "dependencies": [
+
+          ]
+        },
+        {
+          "identity": "quick",
+          "name": "Quick",
+          "url": "https://github.com/Quick/Quick.git",
+          "version": "2.2.1",
+          "path": "/src/Carthage/.build/checkouts/Quick",
+          "traits": [
+            "default"
+          ],
+          "dependencies": [
+            {
+              "identity": "nimble",
+              "name": "Nimble",
+              "url": "https://github.com/Quick/Nimble.git",
+              "version": "8.1.2",
+              "path": "/src/Carthage/.build/checkouts/Nimble",
+              "traits": [
+                "default"
+              ],
+              "dependencies": [
+
+              ]
+            }
+          ]
+        },
+        {
+          "identity": "nimble",
+          "name": "Nimble",
+          "url": "https://github.com/Quick/Nimble.git",
+          "version": "8.1.2",
+          "path": "/src/Carthage/.build/checkouts/Nimble",
+          "traits": [
+            "default"
+          ],
+          "dependencies": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "identity": "tentacle",
+      "name": "Tentacle",
+      "url": "https://github.com/mdiep/Tentacle.git",
+      "version": "0.13.1",
+      "path": "/src/Carthage/.build/checkouts/Tentacle",
+      "traits": [
+        "default"
+      ],
+      "dependencies": [
+        {
+          "identity": "reactiveswift",
+          "name": "ReactiveSwift",
+          "url": "https://github.com/ReactiveCocoa/ReactiveSwift.git",
+          "version": "5.0.1",
+          "path": "/src/Carthage/.build/checkouts/ReactiveSwift",
+          "traits": [
+            "default"
+          ],
+          "dependencies": [
+            {
+              "identity": "result",
+              "name": "Result",
+              "url": "https://github.com/antitypical/Result.git",
+              "version": "4.1.0",
+              "path": "/src/Carthage/.build/checkouts/Result",
+              "traits": [
+                "default"
+              ],
+              "dependencies": [
+
+              ]
+            },
+            {
+              "identity": "quick",
+              "name": "Quick",
+              "url": "https://github.com/Quick/Quick.git",
+              "version": "2.2.1",
+              "path": "/src/Carthage/.build/checkouts/Quick",
+              "traits": [
+                "default"
+              ],
+              "dependencies": [
+                {
+                  "identity": "nimble",
+                  "name": "Nimble",
+                  "url": "https://github.com/Quick/Nimble.git",
+                  "version": "8.1.2",
+                  "path": "/src/Carthage/.build/checkouts/Nimble",
+                  "traits": [
+                    "default"
+                  ],
+                  "dependencies": [
+
+                  ]
+                }
+              ]
+            },
+            {
+              "identity": "nimble",
+              "name": "Nimble",
+              "url": "https://github.com/Quick/Nimble.git",
+              "version": "8.1.2",
+              "path": "/src/Carthage/.build/checkouts/Nimble",
+              "traits": [
+                "default"
+              ],
+              "dependencies": [
+
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "identity": "curry",
+      "name": "Curry",
+      "url": "https://github.com/thoughtbot/Curry.git",
+      "version": "4.0.2",
+      "path": "/src/Carthage/.build/checkouts/Curry",
+      "traits": [
+        "default"
+      ],
+      "dependencies": [
+
+      ]
+    },
+    {
+      "identity": "quick",
+      "name": "Quick",
+      "url": "https://github.com/Quick/Quick.git",
+      "version": "2.2.1",
+      "path": "/src/Carthage/.build/checkouts/Quick",
+      "traits": [
+        "default"
+      ],
+      "dependencies": [
+        {
+          "identity": "nimble",
+          "name": "Nimble",
+          "url": "https://github.com/Quick/Nimble.git",
+          "version": "8.1.2",
+          "path": "/src/Carthage/.build/checkouts/Nimble",
+          "traits": [
+            "default"
+          ],
+          "dependencies": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "identity": "nimble",
+      "name": "Nimble",
+      "url": "https://github.com/Quick/Nimble.git",
+      "version": "8.1.2",
+      "path": "/src/Carthage/.build/checkouts/Nimble",
+      "traits": [
+        "default"
+      ],
+      "dependencies": [
+
+      ]
+    }
+  ]
+}
+

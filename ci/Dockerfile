@@ -20,6 +20,7 @@ ARG JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF-8"
 ARG SCALA_VERSION=3.9.0
 
 ENV GOPATH=/opt/app-root/go \
+    SOURCEKITTEN_CMD=/usr/local/bin/sourcekitten \
     JAVA_VERSION=$JAVA_VERSION \
     SBT_VERSION=$SBT_VERSION \
     MAVEN_VERSION=$MAVEN_VERSION \
@@ -137,6 +138,11 @@ RUN set -e; \
     && gem install bundler cocoapods \
     && gem --version \
     && bundler --version
+
+# sourcekitten for Swift evidence, built against this image's Swift toolchain:
+# Linux Swift has no stable ABI, so a prebuilt binary cannot load its SourceKit
+COPY ci/images/common/install-sourcekitten.sh /tmp/install-sourcekitten.sh
+RUN sh /tmp/install-sourcekitten.sh && rm /tmp/install-sourcekitten.sh
 
 FROM base AS cdxgen
 

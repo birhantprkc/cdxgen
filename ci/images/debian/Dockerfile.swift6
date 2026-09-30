@@ -109,6 +109,11 @@ RUN set -e; \
 CMD ["/bin/bash"]
 
 
+# sourcekitten for Swift evidence, built against this image's Swift toolchain:
+# Linux Swift has no stable ABI, so a prebuilt binary cannot load its SourceKit
+COPY ci/images/common/install-sourcekitten.sh /tmp/install-sourcekitten.sh
+RUN GITHUB_URL=${GITHUB_URL} sh /tmp/install-sourcekitten.sh && rm /tmp/install-sourcekitten.sh
+
 # cdxgen-builder-image
 FROM base AS cdxgen-builder
 
@@ -128,6 +133,7 @@ RUN sh /tmp/common/cdxgen-build.sh
 FROM base AS cdxgen
 
 ENV CDXGEN_IN_CONTAINER=true \
+    SOURCEKITTEN_CMD=/usr/local/bin/sourcekitten \
     NODE_COMPILE_CACHE="/opt/cdxgen-node-cache" \
     PATH=${PATH}:${PYTHONPATH}/bin:/opt/cdxgen/node_modules/.bin
 

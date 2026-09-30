@@ -18,6 +18,9 @@ bomresults
 # resolves them. The fixtures are their build files; the output is not one.
 test/data/jvm-tools/**/target/
 test/data/jvm-tools/**/.bsp/
+# SwiftPM build state of the Swift evidence fixture
+test/data/swift-evinse-demo/.build/
+test/data/swift-evinse-demo/.swiftpm/
 
 # Toolchain matrix run artifacts (contrib/toolchain-matrix.js). These are
 # artifacts, not fixtures; the recorded baseline lives in test/matrix/.

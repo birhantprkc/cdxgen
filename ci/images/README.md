@@ -38,6 +38,11 @@ RUN chmod a-w -R /opt
   `cdxgen` stage exposes). The ruby images at 3.3 and below omit `rbastgen` from their
   smoke tests: atom's ruby frontend only runs on ruby 3.4.x and 4.0.x, so the binary
   reports a missing runtime on the older images.
+- [`common/install-sourcekitten.sh`](./common/install-sourcekitten.sh) — builds the pinned,
+  sha256-verified SourceKitten release with the image's own Swift toolchain, installs
+  only the binary to `/usr/local/bin/sourcekitten`, and checks that it can load SourceKit.
+  Linux Swift has no stable ABI, so a prebuilt sourcekitten cannot be used. The images
+  that install Swift run it and set `SOURCEKITTEN_CMD` for Swift evidence.
 
 The multi-stage build keeps the final image lean: pnpm/corepack/npm caches and the
 toolchain needed only for the install never leak into the published `cdxgen` stage —

@@ -552,16 +552,19 @@ jobs:
           packages: 'platform-tools'
       - run: sdkmanager --uninstall "build-tools;30.0.3"
       - name: Setup swift
-        if: matrix.os == 'ubuntu-24.04'
+        if: matrix.os == 'ubuntu-24.04' || matrix.os == 'ubuntu-24.04-arm'
         run: |
-          curl -O "https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz" && \
-          tar zxf "swiftly-$(uname -m).tar.gz" && \
-          ./swiftly init --quiet-shell-followup && \
-          . ~/.local/share/swiftly/env.sh && \
-          hash -r
+          curl -fsSLO "https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz"
+          tar zxf "swiftly-$(uname -m).tar.gz"
+          ./swiftly init --assume-yes --quiet-shell-followup
+          # shellcheck source=/dev/null
+          . "${SWIFTLY_HOME_DIR:-$HOME/.local/share/swiftly}/env.sh"
+          # env.sh only affects this step; later steps find swift through GITHUB_PATH
+          echo "$SWIFTLY_BIN_DIR" >> "$GITHUB_PATH"
       - name: Setup swift
         if: matrix.os == 'macos-15'
         run: |
+          # shellcheck source=/dev/null
           curl -O https://download.swift.org/swiftly/darwin/swiftly.pkg && \
           installer -pkg swiftly.pkg -target CurrentUserHomeDirectory && \
           ~/.swiftly/bin/swiftly init --quiet-shell-followup && \
@@ -1040,6 +1043,26 @@ jobs:
           CDXGEN_DEBUG_MODE=verbose bin/cdxgen.js -r -t swift repotests/swift-markdown -o bomresults/bom-swift.json
           CDXGEN_DEBUG_MODE=verbose bin/cdxgen.js -r -t swift repotests/swift-markdown -o bomresults/bom-swift.json --profile research
           rm -rf repotests/swift-markdown || true
+        shell: bash
+      - name: repotests swift evidence fixture
+        if: matrix.os == 'ubuntu-24.04' || matrix.os == 'ubuntu-24.04-arm' || matrix.os == 'macos-15'
+        run: |
+          bin/cdxgen.js -t swift --evidence test/data/swift-evinse-demo -o bomresults/bom-swift-evinse.json --semantics-slices-file bomresults/swift-evinse.slices.json
+          # Occurrences come from the executable's sources only; the tests are not
+          # indexed. On macOS the bundled sourcekitten resolves references beyond
+          # the import line (ParsableCommand conformance, @Option), so a floor of
+          # three catches a regression to import-only evidence.
+          min_occurrences=1
+          if [ "$RUNNER_OS" = "macOS" ]; then
+            min_occurrences=3
+          fi
+          jq -e --argjson min "$min_occurrences" 'any(.components[]; .name == "swift-argument-parser" and ((.evidence.occurrences // []) | length) >= $min and all((.evidence.occurrences // [])[]; .location | endswith("Sources/evinse-demo/main.swift")))' bomresults/bom-swift-evinse.json
+          # Packages only the tests use, and what they pull in, are optional
+          jq -e 'any(.components[]; .name == "swift-algorithms" and .scope == "optional")' bomresults/bom-swift-evinse.json
+          jq -e 'any(.components[]; .name == "swift-numerics" and .scope == "optional")' bomresults/bom-swift-evinse.json
+          jq -e 'all(.components[]; .name != "swift-argument-parser" or .scope != "optional")' bomresults/bom-swift-evinse.json
+          bin/cdxgen.js -t swift --evidence --required-only test/data/swift-evinse-demo -o bomresults/bom-swift-evinse-required.json --semantics-slices-file bomresults/swift-evinse-required.slices.json
+          jq -e 'any(.components[]; .name == "swift-argument-parser") and all(.components[]; .name != "swift-algorithms" and .name != "swift-numerics")' bomresults/bom-swift-evinse-required.json
         shell: bash
       - name: repotests openpbs
         run: |
