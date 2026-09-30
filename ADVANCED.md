@@ -189,6 +189,26 @@ npm install -g @cdxgen/cdxgen-plugins-bin
 cdxgen -t docker -o bom.json <image name>
 ```
 
+### Using WSL Containers (wslc)
+
+Docker Desktop is optional on Windows hosts with WSL. cdxgen can pull and export images with [wslc](https://learn.microsoft.com/en-us/windows/wsl/wsl-container), the container CLI that ships with WSL ("WSL Containers", generally available with WSL 3.x).
+
+When the docker CLI is not installed, cdxgen automatically uses wslc for image operations, so OCI scans work without Docker Desktop:
+
+```shell
+wsl --update
+wsl --install --no-distribution
+# Reboot if "Virtual Machine Platform" was just enabled
+cdxgen -t oci -o bom.json alpine:latest
+```
+
+Requirements and notes:
+
+- WSL 2.9.3 or higher (`wsl --version`). wslc pulls images for the host architecture only.
+- The 'Virtual Machine Platform' optional component must be enabled, with virtualization enabled in the firmware. When Windows itself runs inside a VM (for example, a cloud instance or Parallels), nested virtualization must be available for the wslc container session to start.
+- Set the environment variable `DOCKER_CMD=wslc` to force wslc even when a docker CLI is installed.
+- Registry authentication configured with `wslc login` is used for private registries.
+
 ## Generate SBOM with evidence for the cdxgen repo
 
 Why not?

@@ -683,6 +683,17 @@ systemctl --user start podman.socket
 podman system service -t 0 &
 ```
 
+### WSL Containers (wslc) on Windows
+
+On Windows, Docker Desktop is optional when [WSL Containers][wsl-containers-docs] is available. cdxgen automatically uses the `wslc` CLI (shipped with WSL 3.x) to pull, inspect, and export images whenever the docker CLI is not installed, so image scans such as the below work with just WSL:
+
+```shell
+wsl --update
+cdxgen alpine:latest -t oci -o bom.json
+```
+
+Set `DOCKER_CMD=wslc` to prefer wslc even when a docker CLI is installed. See [Generating container SBOM on Windows](./ADVANCED.md#generating-container-sbom-on-windows) for requirements, including the nested virtualization needed when Windows itself runs inside a VM.
+
 ## Generate OBOM for a live system
 
 You can use the `obom` command to generate an OBOM for a live system or a VM for compliance and vulnerability management purposes. Linux, Windows, and macOS are supported in this mode, though some macOS tables require elevated privileges and Full Disk Access.
@@ -985,4 +996,5 @@ Copy the below block to your markdown files to show your ❤️ for cdxgen.
 [npmjs-cdxgen-v12]: https://www.npmjs.com/package/@cyclonedx/cdxgen
 [podman-github-rootless]: https://github.com/containers/podman/blob/master/docs/tutorials/rootless_tutorial.md
 [podman-github-remote]: https://github.com/containers/podman/blob/master/docs/tutorials/mac_win_client.md
+[wsl-containers-docs]: https://learn.microsoft.com/en-us/windows/wsl/wsl-container
 [swh-cdxgen]: https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/cdxgen/cdxgen
