@@ -229,6 +229,18 @@ jobs:
           jq -e 'any(.components[]; .purl == "pkg:npm/picocolors@1.1.1" and .scope == "optional")' bomresults/bom-unused-runtime-dep-fixture.json
           jq -e '[.components[].purl] | (index("pkg:npm/left-pad@1.3.0") != null) and (index("pkg:npm/ms@2.1.3") != null) and (index("pkg:npm/picocolors@1.1.1") == null)' bomresults/bom-unused-runtime-dep-required-fixture.json
         shell: bash
+      - name: repotests semver build metadata fixtures
+        run: |
+          # A version such as 1.0.0+root must reach the purl escaped once (%2B),
+          # pass validation, and carry the version npm publish would record.
+          for pm in npm pnpm yarn yarn-classic bun; do
+            bom="bomresults/bom-${pm}-build-metadata.json"
+            bin/cdxgen.js -t js "test/repotests/${pm}-build-metadata-smoke" -o "$bom" --no-recurse --fail-on-error
+            jq -e --arg pm "$pm" '.metadata.component.purl == ("pkg:npm/" + $pm + "-build-metadata@1.0.0%2Broot") and any(.metadata.component.properties[]?; .name == "cdx:npm:cleanedVersion" and .value == "1.0.0")' "$bom"
+            jq -e 'any(.components[], (.metadata.component.components // [])[]; .purl == "pkg:npm/wsmember@3.0.0%2Bws" and .version == "3.0.0+ws" and any(.properties[]?; .name == "cdx:npm:cleanedVersion" and .value == "3.0.0"))' "$bom"
+            jq -e '[.. | objects | .purl? // empty | select(contains("%25"))] | length == 0' "$bom"
+          done
+        shell: bash
       - name: repotests npm hidden lockfile fixture
         run: |
           cd test/data/npm-hidden-lockfile-repotest && npm ci

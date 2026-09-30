@@ -1,0 +1,13 @@
+{
+  "description": "Semver build metadata in npm versions, read from bun.lock. The root (1.0.0+root) and two workspace members (3.0.0+ws, @acme/tools 0.9.0+exp.sha.5114f85) must keep their recorded version, escape '+' as %2B in the purl exactly once, keep the decoded form in bom-ref and dependency refs, and carry cdx:npm:cleanedVersion with the version npm publish would record. bun.lock records no version for the local tarball, only its path (./localdep.tgz), so it stays a non-registry download_url component without a cleaned version. left-pad@1.3.0 is the control that carries no cleaned version.",
+  "fixture": ".",
+  "scenarios": [
+    {
+      "name": "default",
+      "projectType": [
+        "bun"
+      ],
+      "options": {}
+    }
+  ]
+}

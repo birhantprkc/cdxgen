@@ -362,6 +362,12 @@ A purl typed by hand as a scan source (`cdxgen pkg:cargo/wasi@0.11.0+wasi-snapsh
 or read from a third-party BOM is accepted with the characters unescaped: cdxgen
 splits it on its separators and rebuilds it before validating it.
 
+`npm publish` records `semver.clean()` of a version, so a project, workspace
+member or git/file dependency whose `package.json` says `1.0.0+build.5` is
+known to the npm registry as `1.0.0`. npm components whose version would be
+cleaned carry that form in the `cdx:npm:cleanedVersion` property, whichever
+package manager's lockfile the component came from.
+
 ### Guidance for downstream consumers
 
 **dep-scan and other tools that match on purl strings** must handle the new
