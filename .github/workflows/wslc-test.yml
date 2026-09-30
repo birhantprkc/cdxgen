@@ -40,9 +40,15 @@ jobs:
         run: |
           wsl --version
           # wslc (WSL Containers) needs WSL 2.9.3+. Update WSL first, then fall
-          # back to the GitHub-released MSI when the Store/update service is
+          # back to the GitHub-released MSI when the update service is
           # unavailable on the runner image.
           wsl --update | Out-Host
+          # The update may have just added wslc's directory to the machine
+          # PATH, which the current process does not pick up on its own.
+          $refreshPath = {
+            $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')
+          }
+          & $refreshPath
           $wslc = Get-Command wslc -ErrorAction SilentlyContinue
           if (-not $wslc) {
             Write-Output 'wslc not on PATH after wsl --update; installing the WSL MSI release'
@@ -50,8 +56,15 @@ jobs:
             curl.exe -L -o $msi https://github.com/microsoft/WSL/releases/download/3.0.1/wsl.3.0.1.0.x64.msi
             msiexec /i $msi /qn /norestart | Out-Host
             if ($LASTEXITCODE -ne 0) { throw "WSL MSI install failed with $LASTEXITCODE" }
+            & $refreshPath
+            $wslc = Get-Command wslc -ErrorAction SilentlyContinue
+          }
+          if (-not $wslc) {
+            $candidate = 'C:\Program Files\WSL\wslc.exe'
+            if (Test-Path $candidate) { $env:Path += ';' + (Split-Path $candidate) }
           }
           wslc version
+          if ($LASTEXITCODE -ne 0) { throw 'wslc version failed' }
           if (Get-Command docker -ErrorAction SilentlyContinue) {
             Write-Output 'docker CLI present; forcing wslc via DOCKER_CMD for this test'
           } else {
