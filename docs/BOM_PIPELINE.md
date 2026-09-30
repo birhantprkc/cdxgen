@@ -93,6 +93,8 @@ The CLI accepts more than one style of input.
 
 In standard CLI usage, `bin/cdxgen.js` calls `prepareEnv(srcDir, options)` before `createBom()`. `prepareEnv()` is synchronous and may install or configure required tools for Python, Node.js, Swift, Ruby, or SDKMAN-managed Java versions.
 
+Image export talks to the local Docker or Podman daemon when available and otherwise shells out to a container CLI. On Windows hosts without a docker CLI, `wslc` (WSL Containers, shipped with WSL 3.x) is used instead, so no Docker installation is required. `DOCKER_CMD` forces a specific CLI.
+
 That means the first class of failures often happens before BOM generation itself has started.
 
 ## Step 2: Mode selection inside `createBom()`
