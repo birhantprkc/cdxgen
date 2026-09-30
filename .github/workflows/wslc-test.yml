@@ -59,7 +59,12 @@ jobs:
           if (-not $wslc) {
             Write-Output 'wslc not on PATH after wsl --update; installing the WSL MSI release'
             $msi = Join-Path $env:TEMP 'wsl.msi'
-            curl.exe -L -o $msi https://github.com/microsoft/WSL/releases/download/3.0.1/wsl.3.0.1.0.x64.msi
+            curl.exe -fsSL -o $msi https://github.com/microsoft/WSL/releases/download/3.0.1/wsl.3.0.1.0.x64.msi
+            if ($LASTEXITCODE -ne 0) { throw "WSL MSI download failed with $LASTEXITCODE" }
+            # Digest published with the microsoft/WSL 3.0.1 release asset.
+            $expectedSha256 = '28b1a0d013640a2ac95898ea705fa186e5b4ff767a1c1b49257161bc106599c6'
+            $actualSha256 = (Get-FileHash -Algorithm SHA256 $msi).Hash.ToLowerInvariant()
+            if ($actualSha256 -ne $expectedSha256) { throw "WSL MSI digest mismatch: $actualSha256" }
             msiexec /i $msi /qn /norestart | Out-Host
             if ($LASTEXITCODE -ne 0) { throw "WSL MSI install failed with $LASTEXITCODE" }
             & $refreshPath
@@ -78,7 +83,7 @@ jobs:
           Add-Content $env:GITHUB_PATH $wslcDir
           Write-Output "wslc added to PATH for subsequent steps: $wslcDir"
           if (Get-Command docker -ErrorAction SilentlyContinue) {
-            Write-Output 'docker CLI present; forcing wslc via DOCKER_CMD for this test'
+            Write-Output "docker CLI present: $((Get-Command docker).Source)"
           } else {
             Write-Output 'docker CLI absent; cdxgen auto-selects wslc'
           }
@@ -99,14 +104,12 @@ jobs:
         shell: bash
         env:
           CDXGEN_DEBUG_MODE: debug
-          # windows-latest images ship a docker CLI bound to a Windows-containers
-          # daemon. Hide it from PATH so cdxgen's CLI auto-detection falls
-          # through to wslc, matching a WSL-only host with no Docker install.
           TMP: 'D:\cdxtmp'
           TEMP: 'D:\cdxtmp'
         run: |
-          # Hide the docker CLI by dropping the directory it resolves to from
-          # PATH, so cdxgen's CLI auto-detection falls through to wslc,
+          # windows-latest images ship a docker CLI bound to a Windows
+          # containers daemon. Hide it by dropping the directory it resolves to
+          # from PATH, so cdxgen's CLI auto-detection falls through to wslc,
           # matching a WSL-only host with no Docker install.
           if command -v docker >/dev/null 2>&1; then
             DOCKER_BIN="$(dirname "$(command -v docker)")"
@@ -120,10 +123,44 @@ jobs:
           node bin/cdxgen.js -t oci -o bom-alpine.cdx.json alpine:3.20 2>&1 | tee alpine-scan.log
           grep -q "Using wslc (WSL Containers) as the container CLI" alpine-scan.log
           grep -q "using wslc cli" alpine-scan.log
-          node -e "const b=require('./bom-alpine.cdx.json'); if(!b.components||b.components.length<10){throw new Error('expected OS components in the alpine BOM, got '+b.components?.length)}; console.log('alpine BOM components:', b.components.length)"
-          # Show the key shape wslc emits for the local image cache matching in
-          # getImage (docker-style Repository/Tag keys).
-          wslc images --format=json | grep alpine || echo 'alpine not listed by wslc images'
+          grep -q "container-cli:wslc" alpine-scan.log
+          # The parent purl carries the digest, so wslc inspect returned
+          # docker-compatible RepoTags and RepoDigests.
+          node -e "const b=require('./bom-alpine.cdx.json'); if(!b.components||b.components.length<10){throw new Error('expected OS components in the alpine BOM, got '+b.components?.length)}; const p=b.metadata?.component?.purl||''; if(!p.startsWith('pkg:oci/alpine@sha256:')){throw new Error('expected a digest-pinned parent purl, got '+p)}; console.log('alpine BOM components:', b.components.length, 'parent:', p)"
+          # A second scan must reuse the image from the wslc store: the local
+          # cache lookup parses wslc images --format=json (docker-style keys).
+          node bin/cdxgen.js -t oci -o bom-alpine-cached.cdx.json alpine:3.20 2>&1 | tee alpine-rescan.log
+          grep -q "wslc images --format=json" alpine-rescan.log
+          grep -q "wslc inspect alpine:3.20" alpine-rescan.log
+          if grep -q "wslc pull alpine:3.20" alpine-rescan.log; then
+            echo "expected the rescan to reuse alpine:3.20 from the wslc image store"
+            exit 1
+          fi
+          # A missing image fails with wslc's own error and a wslc pull hint.
+          node bin/cdxgen.js -t oci -o bom-missing.cdx.json docker.io/cdxgen/no-such-image:missing > missing-scan.log 2>&1 || true
+          cat missing-scan.log | grep -v "ACT-" || true
+          grep -q "Try manually pulling this image using wslc pull docker.io/cdxgen/no-such-image:missing" missing-scan.log
+          if grep -q "to use an alternative command such as nerdctl or podman" missing-scan.log; then
+            echo "wslc pull errors must not be replaced by the DOCKER_CMD hint"
+            exit 1
+          fi
+      - name: Suggest wslc when the docker CLI cannot pull Linux images
+        shell: bash
+        env:
+          TMP: 'D:\cdxtmp'
+          TEMP: 'D:\cdxtmp'
+        run: |
+          # The runner's docker CLI talks to a Windows containers daemon, the
+          # same state as Docker Desktop switched to Windows containers.
+          # cdxgen keeps docker but points at the installed wslc.
+          if ! command -v docker >/dev/null 2>&1; then
+            echo "docker CLI not installed on this runner image; nothing to check"
+            exit 0
+          fi
+          node bin/cdxgen.js -t oci -o bom-docker.cdx.json alpine:3.20 > docker-scan.log 2>&1 || true
+          cat docker-scan.log
+          grep -q "using docker pull alpine:3.20" docker-scan.log
+          grep -q "Set the environment variable DOCKER_CMD=wslc" docker-scan.log
       - name: Scan a published cdxgen image with wslc
         shell: bash
         env:
