@@ -47,14 +47,6 @@
           "value": "true"
         },
         {
-          "name": "cdx:npm:manifestSource",
-          "value": "file:/Users/prabhu/work/cdxgen/cdxgen-4423/test/repotests/npm-build-metadata-smoke/packages/tools"
-        },
-        {
-          "name": "cdx:npm:manifestSourceType",
-          "value": "path"
-        },
-        {
           "name": "cdx:npm:resolvedPath",
           "value": "packages/tools"
         },
@@ -253,14 +245,6 @@
         {
           "name": "cdx:npm:isWorkspace",
           "value": "true"
-        },
-        {
-          "name": "cdx:npm:manifestSource",
-          "value": "file:/Users/prabhu/work/cdxgen/cdxgen-4423/test/repotests/npm-build-metadata-smoke/packages/wsmember"
-        },
-        {
-          "name": "cdx:npm:manifestSourceType",
-          "value": "path"
         },
         {
           "name": "cdx:npm:resolvedPath",
