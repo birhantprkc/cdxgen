@@ -145,7 +145,7 @@
   "dependencies": {
     "@babel/parser": "8.0.6",
     "@babel/traverse": "8.0.6",
-    "@cdxgen/cdx-purl": "0.0.5",
+    "@cdxgen/cdx-purl": "0.0.6",
     "@isaacs/string-locale-compare": "1.1.0",
     "@npmcli/fs": "6.0.0",
     "@npmcli/map-workspaces": "6.0.0",

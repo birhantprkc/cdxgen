@@ -1,0 +1,13 @@
+{
+  "description": "Semver build metadata in npm versions, read from pnpm-lock.yaml (lockfile v9). The root (1.0.0+root) and two workspace members (3.0.0+ws, @acme/tools 0.9.0+exp.sha.5114f85) must keep their recorded version, escape '+' as %2B in the purl exactly once, keep the decoded form in bom-ref and dependency refs, and carry cdx:npm:cleanedVersion with the version npm publish would record. The file: tarball takes its version (2.0.0+local) from its packages entry rather than its path, and the root links to it. left-pad@1.3.0 is the control that carries no cleaned version.",
+  "fixture": ".",
+  "scenarios": [
+    {
+      "name": "default",
+      "projectType": [
+        "pnpm"
+      ],
+      "options": {}
+    }
+  ]
+}

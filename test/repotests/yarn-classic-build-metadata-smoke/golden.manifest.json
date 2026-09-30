@@ -1,0 +1,13 @@
+{
+  "description": "Semver build metadata in npm versions, read from yarn.lock (yarn v1). The root (1.0.0+root) and two workspace members (3.0.0+ws, @acme/tools 0.9.0+exp.sha.5114f85) must keep their recorded version, escape '+' as %2B in the purl exactly once, keep the decoded form in bom-ref and dependency refs, and carry cdx:npm:cleanedVersion with the version npm publish would record. yarn v1 records the file: tarball already cleaned (2.0.0), so it carries no cleaned version. left-pad@1.3.0 is the control that carries no cleaned version. yarn v1 writes no lock entries for workspace members, so each member must still get a dependency entry from its own package.json (wsmember depends on left-pad and on the @acme/tools member) and be reachable from the root.",
+  "fixture": ".",
+  "scenarios": [
+    {
+      "name": "default",
+      "projectType": [
+        "yarn"
+      ],
+      "options": {}
+    }
+  ]
+}

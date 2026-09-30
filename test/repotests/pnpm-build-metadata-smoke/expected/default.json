@@ -1,0 +1,224 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "pkg:npm/left-pad@1.3.0",
+      "evidence": {
+        "identity": [
+          {
+            "concludedValue": "pnpm-lock.yaml",
+            "confidence": 1,
+            "field": "purl",
+            "methods": [
+              {
+                "confidence": 1,
+                "technique": "manifest-analysis",
+                "value": "pnpm-lock.yaml"
+              }
+            ]
+          }
+        ]
+      },
+      "group": "",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "5c8e4c3f354d0298c0ca1433a615fc06498ab0a5310f82ddc8adb88997901a29c137dc93413ddb165081cbf695c761eb35ca901ac768b7c821ae3cabbcc0a810"
+        }
+      ],
+      "name": "left-pad",
+      "properties": [
+        {
+          "name": "cdx:npm:deprecation_notice",
+          "value": "use String.prototype.padStart()"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "pnpm-lock.yaml"
+        }
+      ],
+      "purl": "pkg:npm/left-pad@1.3.0",
+      "type": "library",
+      "version": "1.3.0"
+    },
+    {
+      "bom-ref": "pkg:npm/localdep@2.0.0%2Blocal_vcs_url_file:localdep.tgz",
+      "evidence": {
+        "identity": [
+          {
+            "concludedValue": "pnpm-lock.yaml",
+            "confidence": 1,
+            "field": "purl",
+            "methods": [
+              {
+                "confidence": 1,
+                "technique": "manifest-analysis",
+                "value": "pnpm-lock.yaml"
+              }
+            ]
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "file:localdep.tgz"
+        }
+      ],
+      "group": "",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9dfe2e8d58c10906e41ced6566c2b97b34a59143939f43048c7e778d981b3660f26d1e4264ef156f5427a7ae6bd91f9bee67511555024dcaabe99952429c7623"
+        }
+      ],
+      "name": "localdep",
+      "properties": [
+        {
+          "name": "cdx:npm:cleanedVersion",
+          "value": "2.0.0"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "pnpm-lock.yaml"
+        }
+      ],
+      "purl": "pkg:npm/localdep@2.0.0%2Blocal?vcs_url=file:localdep.tgz",
+      "type": "library",
+      "version": "2.0.0+local"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [],
+      "ref": "pkg:npm/%40acme/tools@0.9.0%2Bexp.sha.5114f85"
+    },
+    {
+      "dependsOn": [],
+      "ref": "pkg:npm/left-pad@1.3.0"
+    },
+    {
+      "dependsOn": [],
+      "ref": "pkg:npm/localdep@2.0.0%2Blocal_vcs_url_file:localdep.tgz"
+    },
+    {
+      "dependsOn": [
+        "pkg:npm/%40acme/tools@0.9.0%2Bexp.sha.5114f85",
+        "pkg:npm/left-pad@1.3.0",
+        "pkg:npm/localdep@2.0.0%2Blocal_vcs_url_file:localdep.tgz",
+        "pkg:npm/wsmember@3.0.0%2Bws"
+      ],
+      "ref": "pkg:npm/pnpm-build-metadata@1.0.0%2Broot"
+    },
+    {
+      "dependsOn": [],
+      "ref": "pkg:npm/wsmember@3.0.0%2Bws"
+    }
+  ],
+  "metadata": {
+    "authors": [],
+    "component": {
+      "bom-ref": "pkg:npm/pnpm-build-metadata@1.0.0%2Broot",
+      "components": [
+        {
+          "bom-ref": "pkg:npm/%40acme/tools@0.9.0%2Bexp.sha.5114f85",
+          "group": "@acme",
+          "name": "tools",
+          "properties": [
+            {
+              "name": "cdx:npm:cleanedVersion",
+              "value": "0.9.0"
+            },
+            {
+              "name": "internal:SrcFile",
+              "value": "packages/tools/package.json"
+            },
+            {
+              "name": "internal:is_workspace",
+              "value": "true"
+            },
+            {
+              "name": "internal:virtual_path",
+              "value": "../../../packages/tools"
+            }
+          ],
+          "purl": "pkg:npm/%40acme/tools@0.9.0%2Bexp.sha.5114f85",
+          "type": "application",
+          "version": "0.9.0+exp.sha.5114f85"
+        },
+        {
+          "bom-ref": "pkg:npm/wsmember@3.0.0%2Bws",
+          "group": "",
+          "name": "wsmember",
+          "properties": [
+            {
+              "name": "cdx:npm:cleanedVersion",
+              "value": "3.0.0"
+            },
+            {
+              "name": "internal:SrcFile",
+              "value": "packages/wsmember/package.json"
+            },
+            {
+              "name": "internal:is_workspace",
+              "value": "true"
+            },
+            {
+              "name": "internal:virtual_path",
+              "value": "../../../packages/wsmember"
+            }
+          ],
+          "purl": "pkg:npm/wsmember@3.0.0%2Bws",
+          "type": "application",
+          "version": "3.0.0+ws"
+        }
+      ],
+      "group": "",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "name": "pnpm-build-metadata",
+      "properties": [
+        {
+          "name": "cdx:npm:cleanedVersion",
+          "value": "1.0.0"
+        }
+      ],
+      "purl": "pkg:npm/pnpm-build-metadata@1.0.0%2Broot",
+      "type": "application",
+      "version": "1.0.0+root"
+    },
+    "lifecycles": [
+      {
+        "phase": "pre-build"
+      }
+    ],
+    "timestamp": "1970-01-01T00:00:00.000Z",
+    "tools": {
+      "components": [
+        {
+          "authors": [
+            {
+              "name": "OWASP Foundation"
+            }
+          ],
+          "bom-ref": "pkg:npm/%40cdxgen/cdxgen@0.0.0-normalized",
+          "group": "@cdxgen",
+          "name": "cdxgen",
+          "publisher": "OWASP Foundation",
+          "purl": "pkg:npm/%40cdxgen/cdxgen@0.0.0-normalized",
+          "type": "application",
+          "version": "0.0.0-normalized"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:00000000-0000-0000-0000-000000000000",
+  "specVersion": "1.7",
+  "version": 1
+}

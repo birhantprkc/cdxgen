@@ -1,0 +1,254 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "pkg:npm/%40acme/tools@0.9.0%2Bexp.sha.5114f85",
+      "evidence": {
+        "identity": [
+          {
+            "concludedValue": "packages/tools/package.json",
+            "confidence": 0.7,
+            "field": "purl",
+            "methods": [
+              {
+                "confidence": 0.7,
+                "technique": "manifest-analysis",
+                "value": "packages/tools/package.json"
+              }
+            ]
+          }
+        ]
+      },
+      "group": "@acme",
+      "name": "tools",
+      "properties": [
+        {
+          "name": "cdx:npm:cleanedVersion",
+          "value": "0.9.0"
+        },
+        {
+          "name": "cdx:npm:is_workspace",
+          "value": "true"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "packages/tools/package.json"
+        },
+        {
+          "name": "internal:workspaceRef",
+          "value": "pkg:npm/%40acme/tools@0.9.0%2Bexp.sha.5114f85"
+        },
+        {
+          "name": "internal:workspaceSrcFile",
+          "value": "packages/tools/package.json"
+        }
+      ],
+      "purl": "pkg:npm/%40acme/tools@0.9.0%2Bexp.sha.5114f85",
+      "scope": "required",
+      "type": "library",
+      "version": "0.9.0+exp.sha.5114f85"
+    },
+    {
+      "bom-ref": "pkg:npm/left-pad@1.3.0",
+      "evidence": {
+        "identity": [
+          {
+            "concludedValue": "$ROOT/yarn.lock",
+            "confidence": 1,
+            "field": "purl",
+            "methods": [
+              {
+                "confidence": 1,
+                "technique": "manifest-analysis",
+                "value": "$ROOT/yarn.lock"
+              }
+            ]
+          }
+        ]
+      },
+      "group": "",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3fb59c76e281a2f5c810ad71dbbb8eba8b10c6cf94733dc7f27b8c516a5376cacea53543e76f6ae477d866c8954b27f1e15ca349424c2542474eb5bb1d2b6955"
+        }
+      ],
+      "name": "left-pad",
+      "properties": [
+        {
+          "name": "internal:SrcFile",
+          "value": "$ROOT/yarn.lock"
+        }
+      ],
+      "purl": "pkg:npm/left-pad@1.3.0",
+      "type": "library",
+      "version": "1.3.0"
+    },
+    {
+      "bom-ref": "pkg:npm/localdep@2.0.0%2Blocal",
+      "evidence": {
+        "identity": [
+          {
+            "concludedValue": "$ROOT/yarn.lock",
+            "confidence": 1,
+            "field": "purl",
+            "methods": [
+              {
+                "confidence": 1,
+                "technique": "manifest-analysis",
+                "value": "$ROOT/yarn.lock"
+              }
+            ]
+          }
+        ]
+      },
+      "group": "",
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "988340062b2715b0b25620a5370f5608460f67c447fbe186e028865e51bc69ee167c53d9053c5542e0beba1a3055616ec72094c8974a476ebbaa4d7d9d898228"
+        }
+      ],
+      "name": "localdep",
+      "properties": [
+        {
+          "name": "cdx:npm:cleanedVersion",
+          "value": "2.0.0"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "$ROOT/yarn.lock"
+        }
+      ],
+      "purl": "pkg:npm/localdep@2.0.0%2Blocal",
+      "type": "library",
+      "version": "2.0.0+local"
+    },
+    {
+      "bom-ref": "pkg:npm/wsmember@3.0.0%2Bws",
+      "evidence": {
+        "identity": [
+          {
+            "concludedValue": "packages/wsmember/package.json",
+            "confidence": 0.7,
+            "field": "purl",
+            "methods": [
+              {
+                "confidence": 0.7,
+                "technique": "manifest-analysis",
+                "value": "packages/wsmember/package.json"
+              }
+            ]
+          }
+        ]
+      },
+      "group": "",
+      "name": "wsmember",
+      "properties": [
+        {
+          "name": "cdx:npm:cleanedVersion",
+          "value": "3.0.0"
+        },
+        {
+          "name": "cdx:npm:is_workspace",
+          "value": "true"
+        },
+        {
+          "name": "internal:SrcFile",
+          "value": "packages/wsmember/package.json"
+        },
+        {
+          "name": "internal:workspaceRef",
+          "value": "pkg:npm/wsmember@3.0.0%2Bws"
+        },
+        {
+          "name": "internal:workspaceSrcFile",
+          "value": "packages/wsmember/package.json"
+        }
+      ],
+      "purl": "pkg:npm/wsmember@3.0.0%2Bws",
+      "scope": "required",
+      "type": "library",
+      "version": "3.0.0+ws"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [],
+      "ref": "pkg:npm/%40acme/tools@0.9.0%2Bexp.sha.5114f85"
+    },
+    {
+      "dependsOn": [],
+      "ref": "pkg:npm/left-pad@1.3.0"
+    },
+    {
+      "dependsOn": [],
+      "ref": "pkg:npm/localdep@2.0.0%2Blocal"
+    },
+    {
+      "dependsOn": [],
+      "ref": "pkg:npm/wsmember@3.0.0%2Bws"
+    },
+    {
+      "dependsOn": [
+        "pkg:npm/%40acme/tools@0.9.0%2Bexp.sha.5114f85",
+        "pkg:npm/left-pad@1.3.0",
+        "pkg:npm/localdep@2.0.0%2Blocal",
+        "pkg:npm/wsmember@3.0.0%2Bws"
+      ],
+      "ref": "pkg:npm/yarn-build-metadata@1.0.0%2Broot"
+    }
+  ],
+  "metadata": {
+    "authors": [],
+    "component": {
+      "bom-ref": "pkg:npm/yarn-build-metadata@1.0.0%2Broot",
+      "group": "",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "name": "yarn-build-metadata",
+      "properties": [
+        {
+          "name": "cdx:npm:cleanedVersion",
+          "value": "1.0.0"
+        }
+      ],
+      "purl": "pkg:npm/yarn-build-metadata@1.0.0%2Broot",
+      "type": "application",
+      "version": "1.0.0+root"
+    },
+    "lifecycles": [
+      {
+        "phase": "pre-build"
+      }
+    ],
+    "timestamp": "1970-01-01T00:00:00.000Z",
+    "tools": {
+      "components": [
+        {
+          "authors": [
+            {
+              "name": "OWASP Foundation"
+            }
+          ],
+          "bom-ref": "pkg:npm/%40cdxgen/cdxgen@0.0.0-normalized",
+          "group": "@cdxgen",
+          "name": "cdxgen",
+          "publisher": "OWASP Foundation",
+          "purl": "pkg:npm/%40cdxgen/cdxgen@0.0.0-normalized",
+          "type": "application",
+          "version": "0.0.0-normalized"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:00000000-0000-0000-0000-000000000000",
+  "specVersion": "1.7",
+  "version": 1
+}

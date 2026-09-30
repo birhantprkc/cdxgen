@@ -181,8 +181,8 @@ importers:
         specifier: 8.0.6
         version: 8.0.6
       '@cdxgen/cdx-purl':
-        specifier: 0.0.5
-        version: 0.0.5
+        specifier: 0.0.6
+        version: 0.0.6
       '@isaacs/string-locale-compare':
         specifier: 1.1.0
         version: 1.1.0
@@ -515,8 +515,8 @@ packages:
     engines: {node: '>=22'}
     hasBin: true
 
-  '@cdxgen/cdx-purl@0.0.5':
-    resolution: {integrity: sha512-ESyBl4GaIsZH04v+Bt9LFEVoUtULRvwTWKS7iGYWp3GupFSP40ZTqmOhAFp1Do1n4B67XD7xb7l7P9mnUIuAWg==, tarball: https://registry.npmjs.org/@cdxgen/cdx-purl/-/cdx-purl-0.0.5.tgz}
+  '@cdxgen/cdx-purl@0.0.6':
+    resolution: {integrity: sha512-aAjX8L5v28l02FUMTbwlNgq+WDSOFbsdsBtBfglXMPFQAkERwjdbJN3dAFZ3/E17i0XFZyowGtd6UdOqjfVjjQ==, tarball: https://registry.npmjs.org/@cdxgen/cdx-purl/-/cdx-purl-0.0.6.tgz}
     engines: {bun: '>=1.0.0', deno: '>=1.40.0', node: '>=20'}
 
   '@cdxgen/cdxgen-plugins-bin-darwin-amd64@4.0.4':
@@ -1514,7 +1514,7 @@ snapshots:
       '@bufbuild/protobuf': 2.15.0
     optional: true
 
-  '@cdxgen/cdx-purl@0.0.5': {}
+  '@cdxgen/cdx-purl@0.0.6': {}
 
   '@cdxgen/cdxgen-plugins-bin-darwin-amd64@4.0.4':
     optional: true
