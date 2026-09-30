@@ -93,7 +93,7 @@
     "edn-data": "npm:edn-data@1.2.2",
     "glob": "npm:glob@13.0.6",
     "node-stream-zip": "npm:node-stream-zip@1.16.0",
-    "@cdxgen/cdx-purl": "npm:@cdxgen/cdx-purl@0.0.5",
+    "@cdxgen/cdx-purl": "npm:@cdxgen/cdx-purl@0.0.6",
     "semver": "npm:semver@7.8.5",
     "ssri": "npm:ssri@14.0.0",
     "tar": "npm:tar@7.5.22",
