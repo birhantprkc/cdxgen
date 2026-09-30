@@ -206,8 +206,9 @@ Requirements and notes:
 
 - WSL 2.9.3 or higher (`wsl --version`). wslc pulls images for the host architecture only.
 - The 'Virtual Machine Platform' optional component must be enabled, with virtualization enabled in the firmware. When Windows itself runs inside a VM (for example, a cloud instance or Parallels), nested virtualization must be available for the wslc container session to start.
-- Set the environment variable `DOCKER_CMD=wslc` to force wslc even when a docker CLI is installed.
+- Set the environment variable `DOCKER_CMD=wslc` to force wslc even when a docker CLI is installed. cdxgen never switches from an installed docker CLI to wslc on its own, since wslc keeps a separate image store. When docker cannot provide the image, for example because Docker Desktop is not running or is switched to Windows containers, cdxgen suggests `DOCKER_CMD=wslc` if wslc is installed.
 - Registry authentication configured with `wslc login` is used for private registries.
+- When `CDXGEN_ALLOWED_COMMANDS` is set, add `wslc` to the list. The activity report records which container CLI was selected.
 
 ## Generate SBOM with evidence for the cdxgen repo
 
