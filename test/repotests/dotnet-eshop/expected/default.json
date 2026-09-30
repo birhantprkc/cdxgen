@@ -285,13 +285,13 @@
         "pkg:nuget/Serilog@3.1.1",
         "pkg:nuget/Swashbuckle.AspNetCore@6.5.0"
       ],
-      "ref": "pkg:nuget/eShop.Shared@latest"
+      "ref": "pkg:nuget/eShop.Shared@1.0.0"
     }
   ],
   "metadata": {
     "authors": [],
     "component": {
-      "bom-ref": "pkg:nuget/eShop.Shared@latest",
+      "bom-ref": "pkg:nuget/eShop.Shared@1.0.0",
       "name": "eShop.Shared",
       "properties": [
         {
@@ -303,8 +303,9 @@
           "value": "eShop.Shared"
         }
       ],
-      "purl": "pkg:nuget/eShop.Shared@latest",
-      "type": "application"
+      "purl": "pkg:nuget/eShop.Shared@1.0.0",
+      "type": "application",
+      "version": "1.0.0"
     },
     "lifecycles": [
       {
