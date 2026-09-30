@@ -1,0 +1,33 @@
+# cdxgen image with SourceKitten built from the bundled Swift toolchain.
+#
+# Swift semantic slicing (evinse/`--evidence`) shells out to sourcekitten,
+# which is only distributed as a macOS binary in cdxgen-plugins-bin. This
+# image builds it from source on Linux so `cdxgen -t swift --evidence` works
+# in containers, matching the environment the macOS users get.
+#
+# Build (from the repo root):
+#   docker build -f ci/Dockerfile-swift-evinse -t cdxgen-swift-evinse .
+# Run:
+#   docker run --rm -v /path/to/swift-project:/src:Z cdxgen-swift-evinse \
+#     -t swift --evidence --no-install-deps -o /src/bom.json /src
+FROM ghcr.io/cdxgen/cdxgen:latest
+
+# Keep the pinned tarball digest in sync with
+# thirdparty/sourcekitten/build.sh in cdxgen-plugins-bin.
+ARG SOURCEKITTEN_VERSION=0.38.0
+ARG SOURCEKITTEN_SHA256=7eaf0b7acaa2ae4bebf49c686641f9e50b0044c1a91d3c75121ecf698d7fbb91
+
+USER root
+RUN curl -fsSL -o /tmp/sourcekitten.tar.gz \
+      "https://github.com/jpsim/SourceKitten/releases/download/${SOURCEKITTEN_VERSION}/SourceKitten-${SOURCEKITTEN_VERSION}.tar.gz" \
+    && echo "${SOURCEKITTEN_SHA256}  /tmp/sourcekitten.tar.gz" | sha256sum -c - \
+    && mkdir -p /opt/sourcekitten \
+    && tar -xzf /tmp/sourcekitten.tar.gz --strip-components=1 -C /opt/sourcekitten \
+    && cd /opt/sourcekitten \
+    && swift build -c release \
+    && ln -s /opt/sourcekitten/.build/release/sourcekitten /usr/local/bin/sourcekitten \
+    && chmod +x /usr/local/bin/sourcekitten \
+    && rm -rf /tmp/sourcekitten.tar.gz \
+    && sourcekitten --version
+
+ENV SOURCEKITTEN_CMD=/usr/local/bin/sourcekitten

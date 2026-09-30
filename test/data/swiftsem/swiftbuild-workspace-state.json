@@ -1,0 +1,64 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swift-argument-parser",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/apple/swift-argument-parser",
+          "name" : "swift-argument-parser"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+            "version" : "1.8.2"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "swift-argument-parser"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swxmlhash",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/drmohundro/SWXMLHash",
+          "name" : "SWXMLHash"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "a853604c9e9a83ad9954c7e3d2a565273982471f",
+            "version" : "7.0.2"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "SWXMLHash"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "yams",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/jpsim/Yams",
+          "name" : "Yams"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "3d6871d5b4a5cd519adf233fbb576e0a2af71c17",
+            "version" : "5.4.0"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "Yams"
+      }
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

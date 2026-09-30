@@ -330,6 +330,28 @@ export declare function parseSwiftResolved(resolvedFile: string): {
     };
 }[];
 /**
+ * Determine which Swift package dependencies are used exclusively by test
+ * targets, based on a `swift package dump-package` document.
+ *
+ * Target dependency references appear either as product entries
+ * (`{"product": [name, packageIdentity]}`) or `byName` entries. A package
+ * referenced only from test targets is a development dependency and is marked
+ * optional so that `--required-only` can narrow the BOM.
+ *
+ * @param {Object} dumpJson Parsed dump-package document
+ * @returns {Set<string>} Lowercased names/identities of test-only dependencies
+ */
+export declare function parseSwiftTestOnlyDependencies(dumpJson: Object): Set<string>;
+/**
+ * Decide whether a dump-package target is a test target. The `type` field is
+ * usually the string `"test"`, but manifest APIs have also been observed
+ * representing it as an object.
+ *
+ * @param {Object} atarget dump-package target
+ * @returns {boolean} `true` for test targets
+ */
+export declare function isSwiftTestTarget(atarget: Object): boolean;
+/**
  * Parse a CMake-generated dot/graphviz file and extract components and their dependency
  * relationships.
  *

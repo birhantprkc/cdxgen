@@ -42,6 +42,40 @@ export declare function isDosaiDotnetLanguage(language: string): boolean;
  */
 export declare function readDosaiJsonFile(jsonFile: string): Object | undefined;
 /**
+ * Read a dosai methods report of any size.
+ *
+ * A report that fits in one JavaScript string is parsed whole. A larger one is
+ * read in bounded runs, keeping the requested sections, the CallGraph nodes and
+ * edges that PackageReachability references, and the MethodCalls accepted by
+ * `keepMethodCall` (none when it is omitted). Nothing cdxgen reads is lost.
+ *
+ * @param {string} reportFile Path to the dosai methods JSON
+ * @param {Object} [options] Options
+ * @param {string[]} [options.sections] Sections to keep from a large report (default: every section cdxgen reads)
+ * @param {Function} [options.keepMethodCall] Predicate choosing the MethodCalls to keep from a large report
+ * @param {number} [options.maxTextBytes] Largest report parsed whole, for tests
+ * @returns {Object|undefined} Parsed report, or undefined when missing or invalid
+ */
+export declare function readDosaiMethodsReport(reportFile: string, options?: {
+    sections?: string[];
+    keepMethodCall?: Function;
+    maxTextBytes?: number;
+}): Object | undefined;
+/**
+ * Read a dosai data-flow report of any size.
+ *
+ * A report that fits in one JavaScript string is parsed whole. A larger one
+ * keeps Metadata, Slices, PackageReachability, and the Nodes those reference.
+ *
+ * @param {string} reportFile Path to the dosai data-flow JSON
+ * @param {Object} [options] Options
+ * @param {number} [options.maxTextBytes] Largest report parsed whole, for tests
+ * @returns {Object|undefined} Parsed report, or undefined when missing or invalid
+ */
+export declare function readDosaiDataFlowReport(reportFile: string, options?: {
+    maxTextBytes?: number;
+}): Object | undefined;
+/**
  * Run a dosai subcommand ("methods", "dataflows", or "crypto") against a source
  * tree and write its JSON output to the given file.
  *

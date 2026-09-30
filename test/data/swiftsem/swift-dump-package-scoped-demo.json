@@ -1,0 +1,140 @@
+{
+  "cLanguageStandard" : null,
+  "cxxLanguageStandard" : null,
+  "defaultLocalization" : null,
+  "dependencies" : [
+    {
+      "sourceControl" : [
+        {
+          "identity" : "swift-collections",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/apple/swift-collections"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "range" : [
+              {
+                "lowerBound" : "1.1.0",
+                "upperBound" : "2.0.0"
+              }
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceControl" : [
+        {
+          "identity" : "swift-argument-parser",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/apple/swift-argument-parser"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "range" : [
+              {
+                "lowerBound" : "1.5.0",
+                "upperBound" : "2.0.0"
+              }
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "name" : "scoped-demo",
+  "packageKind" : {
+    "root" : [
+      "/Users/appthreat/sandbox/swift4415/scoped-demo"
+    ]
+  },
+  "pkgConfig" : null,
+  "platforms" : [
+
+  ],
+  "products" : [
+
+  ],
+  "providers" : null,
+  "swiftLanguageVersions" : null,
+  "targets" : [
+    {
+      "dependencies" : [
+        {
+          "product" : [
+            "Collections",
+            "swift-collections",
+            null,
+            null
+          ]
+        }
+      ],
+      "exclude" : [
+
+      ],
+      "name" : "scoped-demo",
+      "packageAccess" : true,
+      "resources" : [
+
+      ],
+      "settings" : [
+
+      ],
+      "type" : "executable"
+    },
+    {
+      "dependencies" : [
+        {
+          "byName" : [
+            "scoped-demo",
+            null
+          ]
+        },
+        {
+          "product" : [
+            "ArgumentParser",
+            "swift-argument-parser",
+            null,
+            null
+          ]
+        }
+      ],
+      "exclude" : [
+
+      ],
+      "name" : "scoped-demoTests",
+      "packageAccess" : true,
+      "resources" : [
+
+      ],
+      "settings" : [
+
+      ],
+      "type" : "test"
+    }
+  ],
+  "toolsVersion" : {
+    "_version" : "6.0.0"
+  },
+  "traits" : [
+
+  ]
+}

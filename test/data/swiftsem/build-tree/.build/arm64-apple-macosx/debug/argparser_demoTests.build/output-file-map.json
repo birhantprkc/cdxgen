@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/appthreat/sandbox/swift4415/argparser-demo/.build/arm64-apple-macosx/debug/argparser_demoTests.build/primary.swiftdeps"
+  },
+  "/Users/appthreat/sandbox/swift4415/argparser-demo/Tests/argparser-demoTests/DemoTests.swift": {
+    "dependencies": "/Users/appthreat/sandbox/swift4415/argparser-demo/.build/arm64-apple-macosx/debug/argparser_demoTests.build/DemoTests.d",
+    "object": "/Users/appthreat/sandbox/swift4415/argparser-demo/.build/arm64-apple-macosx/debug/argparser_demoTests.build/DemoTests.swift.o",
+    "swiftmodule": "/Users/appthreat/sandbox/swift4415/argparser-demo/.build/arm64-apple-macosx/debug/argparser_demoTests.build/DemoTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/appthreat/sandbox/swift4415/argparser-demo/.build/arm64-apple-macosx/debug/argparser_demoTests.build/DemoTests.swiftdeps",
+    "diagnostics": "/Users/appthreat/sandbox/swift4415/argparser-demo/.build/arm64-apple-macosx/debug/argparser_demoTests.build/DemoTests.dia"  }
+}
