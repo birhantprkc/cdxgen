@@ -1045,8 +1045,15 @@ jobs:
         if: matrix.os == 'ubuntu-24.04' || matrix.os == 'macos-15'
         run: |
           bin/cdxgen.js -t swift --evidence test/data/swift-evinse-demo -o bomresults/bom-swift-evinse.json --semantics-slices-file bomresults/swift-evinse.slices.json
-          # Occurrences come from the executable's sources only; the tests are not indexed
-          jq -e 'any(.components[]; .name == "swift-argument-parser" and ((.evidence.occurrences // []) | length) >= 1 and all((.evidence.occurrences // [])[]; .location | endswith("Sources/evinse-demo/main.swift")))' bomresults/bom-swift-evinse.json
+          # Occurrences come from the executable's sources only; the tests are not
+          # indexed. On macOS the bundled sourcekitten resolves references beyond
+          # the import line (ParsableCommand conformance, @Option), so a floor of
+          # three catches a regression to import-only evidence.
+          min_occurrences=1
+          if [ "$RUNNER_OS" = "macOS" ]; then
+            min_occurrences=3
+          fi
+          jq -e --argjson min "$min_occurrences" 'any(.components[]; .name == "swift-argument-parser" and ((.evidence.occurrences // []) | length) >= $min and all((.evidence.occurrences // [])[]; .location | endswith("Sources/evinse-demo/main.swift")))' bomresults/bom-swift-evinse.json
           # Packages only the tests use, and what they pull in, are optional
           jq -e 'any(.components[]; .name == "swift-algorithms" and .scope == "optional")' bomresults/bom-swift-evinse.json
           jq -e 'any(.components[]; .name == "swift-numerics" and .scope == "optional")' bomresults/bom-swift-evinse.json
