@@ -394,6 +394,8 @@ Options:
   -c, --resolve-class             Resolve class names for packages. Jar projects only.                          [boolean]
       --deep                      Perform deep searches for components. Useful while scanning C/C++ apps, live OS and
                                   oci images.                                                                  [boolean]
+      --cmake-cache               Path to the CMakeCache.txt of a configured C/C++ build. Overrides the lookup under
+                                  build/, out/ and cmake-build-*/.                                              [string]
       --git-branch                Git branch to clone when the source is a git URL or purl                      [string]
       --server-url                Dependency track url. Eg: https://deptrack.cyclonedx.io                       [string]
       --skip-dt-tls-check         Skip TLS certificate check when calling Dependency-Track.   [boolean] [default: false]
