@@ -152,6 +152,20 @@ From the cache and surrounding files it recovers:
   `cdx:cmake:uninitialised=true`, which is the normal case for shallow CI
   clones; the version degrades to the commit SHA.
 
+Without a build tree, the dependencies a project downloads at configure time are
+read from the CMake files themselves: `FetchContent_Declare`,
+`ExternalProject_Add` and the CPM.cmake `CPMAddPackage` family (shorthand and
+keyword forms). A git repository becomes a `pkg:github` purl (or `pkg:generic`
+with a `vcs_url`) at its `GIT_TAG`; a GitHub archive URL becomes a `pkg:github`
+purl at the ref it names; any other URL becomes a `pkg:generic` purl with a
+`download_url` (user information and query strings removed), and `URL_HASH` a
+hash. These components are tagged `cdx:cmake:depKind` = `fetch`,
+`external-project` or `cpm` and `cdx:cmake:resolvedVia=cmake-lists`. When the
+build tree resolves the same dependency, the gitclone entry replaces the
+declared one, and a `find_package` of a fetched name does not add a second
+component. CMake command names are matched in any case (`FIND_PACKAGE`,
+`PROJECT`).
+
 When several `CMakeLists.txt` files request different versions of the same
 package (`find_package(Boost 1.54)` in one, `find_package(Boost 1.64)` in
 another), `collapseCmakeVersions` keeps one entry at the highest version and
