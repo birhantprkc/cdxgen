@@ -35,18 +35,18 @@ c: ["c", "cpp", "c++", "conan", "collider"]
 ```
 
 Any of `c`, `cpp`, `c++`, `conan`, or `collider` routes to `createCppBom` in
-`lib/cli/nativeBom.js:932`. From one project root, cdxgen looks for all of these
-in a single scan:
+`lib/cli/nativeBom.js`. From one project root, cdxgen looks for all of these in a
+single scan:
 
-| File                        | Parser                        | What it contributes                                  |
-| --------------------------- | ----------------------------- | ---------------------------------------------------- |
-| `conan.lock`                | `parseConanLockData`          | Resolved packages plus a dependency graph            |
-| `conanfile.txt`             | `parseConanData`              | Flat requires/build_requires list, with scope        |
-| `collider.lock`             | `parseColliderLockData`       | Resolved packages and graph                          |
-| `CMakeLists.txt`, `*.cmake` | `parseCmakeLikeFile`          | Parent project, `find_package` requirements          |
-| `meson.build`               | `parseCmakeLikeFile`          | Parent project, `dependency()` declarations          |
-| `vcpkg.json`                | `getCppModules` (cppEvidence) | Parent project and declared dependencies             |
-| `CMakeCache.txt`            | `resolveCmakeContext`         | Resolved versions, FetchContent pins, submodule pins |
+| File                        | Parser                        | What it contributes                                                   |
+| --------------------------- | ----------------------------- | --------------------------------------------------------------------- |
+| `conan.lock`                | `parseConanLockData`          | Resolved packages plus a dependency graph                             |
+| `conanfile.txt`             | `parseConanData`              | Flat requires/build_requires list, with scope                         |
+| `collider.lock`             | `parseColliderLockData`       | Resolved packages and graph                                           |
+| `CMakeLists.txt`, `*.cmake` | `parseCmakeLikeFile`          | Parent project, `find_package` requirements, configure-time downloads |
+| `meson.build`               | `parseCmakeLikeFile`          | Parent project, `dependency()` declarations                           |
+| `vcpkg.json`                | `getCppModules` (cppEvidence) | Parent project and declared dependencies                              |
+| `CMakeCache.txt`            | `resolveCmakeContext`         | Resolved versions, FetchContent pins, submodule pins                  |
 
 There is a deliberate priority: Conan lock files come first because they carry
 resolved versions and a real graph. If no lock exists, cdxgen falls back to
@@ -60,7 +60,9 @@ Run it:
 cdxgen -t c++ -o bom.json .
 ```
 
-Use `--deep` to also run include analysis (see step 6).
+An explicit `-t c` (or `cpp`, `c++`) also runs include analysis with atom in
+header mode; `--deep` switches it to a full parse with function bodies (see
+step 6).
 
 ## 2) Conan support
 
@@ -190,17 +192,19 @@ cdxgen addresses this in two ways:
    distinguished from plain `find_package` requirements by the `cdx:cmake:depKind`
    property. A submodule pinned to a commit SHA is a real, checked-out thing; a
    `find_package` line is a version requirement the build may or may not satisfy.
-2. **Include analysis with atom.** When you pass `--deep` (and the project is not
-   a container/OS scan), `getCppModules` invokes the `atom` companion helper to
-   produce C usage slices. Every `#include` is resolved to a file, mapped to an
+2. **Include analysis with atom.** When C/C++ is requested explicitly with `-t`,
+   or `--deep` is passed (and the project is not a container/OS scan),
+   `getCppModules` invokes the `atom` companion helper to produce C usage
+   slices: in header mode (`atom -l h`, no function bodies) by default, and as a
+   full parse (`atom -l c`) with `--deep`. Every `#include` is resolved to a file, mapped to an
    OS package when possible, and otherwise emitted as a `generic` component with
    a `Filename` identity method. Imported symbols are recorded under
    `internal:ImportedSymbols`.
 
 This step uses the atom companion — a native binary on most platforms, needing
 Java 23+ only on the jar-based darwin-amd64, windows-arm64, and linux-arm64-musl
-triples — which is why it is gated behind `--deep` and skipped entirely for
-container and OS scans.
+triples — which is why a scan that detects C/C++ among other project types runs
+it only with `--deep`, and container and OS scans skip it entirely.
 
 ## 7) CI sketch
 
@@ -239,5 +243,5 @@ emitting requirements.
 3. vcpkg support reads `vcpkg.json` only, not the installed tree.
 4. CMake cache resolution turns `find_package` requirements into resolved
    components and separately captures FetchContent and submodule pins.
-5. `--deep` adds include analysis via atom, which is how vendored headers and
-   static libraries get represented.
+5. Include analysis via atom (header mode for an explicit `-t c`, a full parse
+   with `--deep`) is how vendored headers and static libraries get represented.

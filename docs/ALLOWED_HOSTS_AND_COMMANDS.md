@@ -77,7 +77,7 @@ HBOM is special because the optional `@cdxgen/cdx-hbom` collector can declare it
 | **Dart**                       | `dart`, `flutter`, `pub`                                                                                                                                         | `pub`                                                                             | `pub.dev`                                                                                                    |
 | **Haskell**                    | `haskell`, `hackage`, `cabal`                                                                                                                                    | `cabal`                                                                           | Usually none                                                                                                 |
 | **Elixir**                     | `elixir`, `hex`, `mix`                                                                                                                                           | `mix`                                                                             | Usually none                                                                                                 |
-| **C++**                        | `c`, `cpp`, `c++`, `conan`                                                                                                                                       | `conan`, `cmake`                                                                  | Usually none                                                                                                 |
+| **C++**                        | `c`, `cpp`, `c++`, `conan`                                                                                                                                       | `atom` _(or `node` for the bundled atom)_, `git`, `gcc`, `osquery`                | Usually none                                                                                                 |
 | **Clojure**                    | `clojure`, `edn`, `clj`, `leiningen`                                                                                                                             | `clj`, `lein`                                                                     | Usually none                                                                                                 |
 | **GitHub Actions**             | `github`, `actions`                                                                                                                                              | Usually none                                                                      | Usually none                                                                                                 |
 | **Jenkins Plugins**            | `jenkins`                                                                                                                                                        | Usually none                                                                      | Usually none                                                                                                 |
@@ -98,11 +98,12 @@ These external commands are only invoked in certain platforms.
 
 ### Linux Only
 
-| Language / Platform  | External Commands    | Purpose                      |
-| -------------------- | -------------------- | ---------------------------- |
-| **All Languages**    | `ldd`                | List dynamic dependencies    |
-| **Operating System** | `dpkg`, `rpm`, `apk` | Package managers             |
-| **Container**        | `dpkg`, `rpm`, `apk` | Container package inspection |
+| Language / Platform  | External Commands                               | Purpose                             |
+| -------------------- | ----------------------------------------------- | ----------------------------------- |
+| **All Languages**    | `ldd`                                           | List dynamic dependencies           |
+| **Operating System** | `dpkg`, `rpm`, `apk`                            | Package managers                    |
+| **Container**        | `dpkg`, `rpm`, `apk`                            | Container package inspection        |
+| **C/C++**            | `dpkg`, `dnf`, `rpm`, `apk`, `pacman`, `equery` | Map headers to development packages |
 
 ### macOS Only
 
