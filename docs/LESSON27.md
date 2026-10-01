@@ -127,8 +127,11 @@ Meson dependencies often arrive under a local name that differs from the
 upstream package. cdxgen improves confidence here by consulting the bundled
 Meson WrapDB (`data/wrapdb-releases.json`, loaded as `mesonWrapDB`). When a
 scraped name matches a `PkgProvides` entry, the component is renamed to its
-canonical WrapDB name and the wrap's properties are attached. Confidence rises
-from 0 to 0.5 because the name and URL are now known.
+canonical WrapDB name, tagged `cdx:meson:wrapdb:wrap` and
+`cdx:meson:wrapdb:latestVersion`, and given the wrap's release archive as a
+`distribution` external reference carrying its SHA-256. The hash stays on the
+reference: it describes that release, not necessarily the version the project
+builds. Confidence rises from 0 to 0.5 because the name and URL are now known.
 
 ## 5) CMake: cache resolution and FetchContent
 

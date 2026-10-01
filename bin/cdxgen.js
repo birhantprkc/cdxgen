@@ -260,6 +260,11 @@ const args = _yargs
     description:
       "Perform deep searches for components. Useful while scanning C/C++ apps, live OS and oci images.",
   })
+  .option("cmake-cache", {
+    type: "string",
+    description:
+      "Path to the CMakeCache.txt of a configured C/C++ build. Overrides the lookup under build/, out/ and cmake-build-*/.",
+  })
   .option("git-branch", {
     description: "Git branch to clone when the source is a git URL or purl",
     type: "string",
