@@ -113,6 +113,18 @@ cdxgen -t js --no-install-deps -o bom.json .
 
 If the project is very large, read [Scanning Large and Complex Projects](MONOREPO.md) and split the scan by service or language first.
 
+### Evidence or research scans that hit the time limit
+
+Source analysis with atom (`--evidence`, `--deep`, `--profile research`) is bounded like every other external command. When atom runs out of time, cdxgen prints `atom did not finish within ... and was stopped`, and the BOM carries whatever evidence the other slices produced. atom's dispatcher stops atom at that limit, so atom does not keep running after cdxgen exits. From atom 4.0.0, atom's helper processes are stopped with it, and atom also stops by itself when cdxgen is killed.
+
+To give atom alone more time without lengthening the limit for build tools and package managers, set `ATOM_TIMEOUT` in milliseconds:
+
+```bash
+ATOM_TIMEOUT=7200000 cdxgen -t python --profile research -o bom.json .
+```
+
+`CDXGEN_TIMEOUT_MS` raises the limit for every external command, atom included.
+
 ## Symptom: Node.js install or resolution fails
 
 ### What this often looks like

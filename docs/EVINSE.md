@@ -66,7 +66,7 @@ evinse -i bom.json -o bom.evinse.json -l java --with-data-flow .
 | `--profile`                      | `generic`                | Use `research` to enable dosai data-flow and crypto analysis for .NET projects                                    |
 | `--usages-slices-file`           | `usages.slices.json`     | Reuse an existing usages slice file                                                                               |
 | `--data-flow-slices-file`        | `data-flow.slices.json`  | Reuse an existing data-flow slice file                                                                            |
-| `--reachables-slices-file`       | `reachables.slices.json` | Reuse an existing reachables slice file                                                                           |
+| `--reachables-slices-file`       | `reachables.slices.json` | Reuse an existing reachables slice file and its `_1.json`, `_2.json`, ... chunks                                  |
 | `--semantics-slices-file`        | `semantics.slices.json`  | Reuse an existing semantics slice file                                                                            |
 | `--openapi-spec-file`            | `openapi.json`           | Reuse an existing OpenAPI spec file                                                                               |
 | `-p, --print`                    | off                      | Print evidence tables after generation                                                                            |
