@@ -1927,7 +1927,9 @@ jobs:
 
           # evinse warns and exits 0 when atom produces nothing, so each
           # language asserts a minimum usages-slice count instead of just a
-          # zero exit.
+          # zero exit. Only slices that name a method or file count: an atom
+          # built from body-less ASTs writes placeholder slices named
+          # "<empty>", which must not pass for real ones.
           assert_slices() {
             node -e '
               const { existsSync, readFileSync } = require("node:fs");
@@ -1936,7 +1938,9 @@ jobs:
                 console.error(`${label}: no usages slices file was written; atom did not run.`);
                 process.exit(1);
               }
-              const count = (JSON.parse(readFileSync(file, "utf8")).objectSlices || []).length;
+              const count = (JSON.parse(readFileSync(file, "utf8")).objectSlices || []).filter(
+                (slice) => slice.fullName && slice.fullName !== "<empty>",
+              ).length;
               if (count < Number(minimum)) {
                 console.error(`${label}: ${count} object slice(s), expected at least ${minimum}.`);
                 process.exit(1);
