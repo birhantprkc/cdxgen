@@ -110,6 +110,29 @@ export declare const temporaryFiles: Set<any>;
 /** Set accumulating every executable command spawned via safeSpawnSync. */
 export declare const commandsExecuted: Set<any>;
 /**
+ * Quote one argument of a shell command line that is built as a single
+ * string. The shell flag exists so cmd.exe can resolve bare command names,
+ * `.cmd` shims and scripts, and every argument is data (paths, flags) that
+ * must arrive as one token whatever it contains: joined unquoted, an
+ * argument with spaces splits into several and hands the tool the wrong
+ * tokens.
+ *
+ * Windows follows the quoting rules cmd.exe and the MSVC runtimes share:
+ * wrap in double quotes, doubling the backslashes that precede a quote and
+ * escaping the quote itself. Inside double quotes cmd.exe already treats
+ * `&`, `|`, `<`, `>`, `^` and parentheses as literals, and the
+ * shell-metacharacter block above refuses `%` and the rest before this
+ * runs. A POSIX shell gets single quotes, which no expansion can leave.
+ *
+ * The command itself is deliberately not quoted: callers pass a single
+ * token, pre-splitting anything like `node script.js` (see executeAtom).
+ *
+ * @param {string} arg Argument to quote
+ * @param {boolean} [forWindows] Quote for cmd.exe rather than a POSIX shell; defaults to the current platform
+ * @returns {string} The argument, quoted when the shell needs it
+ */
+export declare function shellQuoteArgument(arg: string, forWindows?: boolean): string;
+/**
  * Safe wrapper around spawnSync that enforces permission checks, injects default
  * options (maxBuffer, encoding, timeout), warns about unsafe Python and pip/uv
  * invocations, and records every executed command in the commandsExecuted set.
