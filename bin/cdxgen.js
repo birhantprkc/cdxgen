@@ -265,6 +265,11 @@ const args = _yargs
     description:
       "Path to the CMakeCache.txt of a configured C/C++ build. Overrides the lookup under build/, out/ and cmake-build-*/.",
   })
+  .option("compile-commands", {
+    type: "string",
+    description:
+      "Path to the compile_commands.json of a C/C++ build, or a directory holding one. atom then parses each file with its build's include paths, macros and language. Overrides the lookup in the project root, build/, out/, builddir/ and cmake-build-*/, which is skipped in secure mode.",
+  })
   .option("git-branch", {
     description: "Git branch to clone when the source is a git URL or purl",
     type: "string",

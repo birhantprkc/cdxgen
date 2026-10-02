@@ -89,6 +89,11 @@ const args = yargs(hideBin(process.argv))
     default: false,
     type: "boolean",
   })
+  .option("compile-commands", {
+    description:
+      "Path to the compile_commands.json of a C/C++ build, or a directory holding one, for atom to parse each file as its build does. Overrides the lookup in the project root, build/, out/, builddir/ and cmake-build-*/, which is skipped in secure mode.",
+    type: "string",
+  })
   .option("golem-command", {
     description: "Use a specific golem binary for Go Evinse analysis.",
     default: readEnvironmentVariable("GOLEM_CMD"),

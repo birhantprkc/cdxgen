@@ -201,6 +201,22 @@ cdxgen addresses this in two ways:
    a `Filename` identity method. Imported symbols are recorded under
    `internal:ImportedSymbols`.
 
+When the project has a JSON compilation database, atom parses each file with
+the include paths, macros and language its build uses instead of guessing them.
+cdxgen looks for `compile_commands.json` in the scan root, `build/`, `out/`,
+`builddir/` and `cmake-build-*/`, and next to the `--cmake-cache` file, and
+passes the first it finds to atom (`--frontend-args compile-commands=<path>`)
+when the installed atom lists that key in `atom --frontend-args-keys -l c`
+(atom 4.0 and later). An older atom is run with its usual arguments.
+`--compile-commands <file|dir>` names a database
+explicitly, for an out-of-tree build. CMake writes the database with
+`-DCMAKE_EXPORT_COMPILE_COMMANDS=ON`, Meson always does, and `bear -- make`
+records one for other builds. atom asks the GCC or Clang driver a command names
+for its predefined macros, but only a driver found on the `PATH` or given by an
+absolute path outside the project; since a database can come with the code it
+describes, secure mode (`CDXGEN_SECURE_MODE=true`) uses only an explicit
+`--compile-commands`. The same database is used by `evinse -l c`.
+
 This step uses the atom companion — a native binary on most platforms, needing
 Java 23+ only on the jar-based darwin-amd64, windows-arm64, and linux-arm64-musl
 triples — which is why a scan that detects C/C++ among other project types runs

@@ -38,6 +38,7 @@ evinse -i bom.json -o bom.evinse.json -l java --with-data-flow .
 | `-i, --input`                    | `bom.json`               | Input CycloneDX BOM                                                                                               |
 | `-o, --output`                   | `bom.evinse.json`        | Output enriched BOM                                                                                               |
 | `-l, --language`                 | `java`                   | Source language                                                                                                   |
+| `--compile-commands`             | autodetected             | C/C++ `compile_commands.json` (or its directory) for atom 4.0+; see [LESSON27.md](LESSON27.md)                    |
 | `--golem-command`                | `GOLEM_CMD`              | Use a specific `golem` binary for Go Evinse                                                                       |
 | `--golem-callgraph`              | `static` / `none`        | Go call graph mode: `none`, `static`, `cha`, `rta`, or `vta`                                                      |
 | `--golem-dataflow`               | `none` / `all`           | Go data-flow mode: `none`, `security`, `crypto`, or `all`                                                         |
