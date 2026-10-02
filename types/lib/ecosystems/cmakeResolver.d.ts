@@ -172,5 +172,28 @@ export declare function buildDependentPurl(resolvedUrl: string, version?: string
  * @returns {Object[]} Components with one entry per package name, in first-seen order
  */
 export declare function collapseCmakeVersions(pkgList: Object[]): Object[];
+/**
+ * Keep one component per dependency downloaded at configure time.
+ *
+ * The same `FetchContent_Declare` may be read from several files, and a
+ * `find_package(<name>)` names the package a `FetchContent_Declare(<name>)` or
+ * `CPMAddPackage` fetches. Within the components scraped from CMake files, the
+ * first fetched component of each name stands for all of them, and a plain
+ * `find_package` entry of that name is dropped.
+ *
+ * @param {Object[]} pkgList Components scraped from CMake-like files
+ * @returns {Object[]} The components, in first-seen order
+ */
+export declare function preferFetchedCmakeDependencies(pkgList: Object[]): Object[];
+/**
+ * Drop the components scraped from CMake files for a dependency the build tree
+ * has resolved: the gitclone script names the repository and tag that were
+ * really checked out, so its component replaces the declared one.
+ *
+ * @param {Object[]} pkgList Components collected so far
+ * @param {string} name Name of the resolved dependency
+ * @returns {Object[]} The components without the scraped entries for `name`
+ */
+export declare function withoutScrapedFetchDependency(pkgList: Object[], name: string): Object[];
 export { GIT_COMMAND, toRepoRelative };
 //# sourceMappingURL=cmakeResolver.d.ts.map
