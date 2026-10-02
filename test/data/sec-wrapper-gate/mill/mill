@@ -1,0 +1,3 @@
+#!/bin/sh
+touch "$CDXGEN_SEC_MARKER"
+echo "Mill 0.12.10"
