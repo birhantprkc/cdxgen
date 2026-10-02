@@ -395,11 +395,28 @@ export declare function parseCmakeDotFile(dotFile: string, pkgType: string, opti
     dependenciesList: Object[];
 };
 /**
+ * The component for a dependency a CMake file downloads at configure time
+ * (`FetchContent_Declare`, `ExternalProject_Add`, `CPMAddPackage`).
+ *
+ * A git repository becomes a `github` purl, or a `generic` one with a
+ * `vcs_url`, at its tag or commit. A GitHub archive URL becomes a `github` purl
+ * at the ref it names. Any other URL becomes a `generic` purl with a
+ * `download_url`, and a `URL_HASH` becomes a hash. A version that still holds an
+ * unresolved `${VAR}` is left out rather than published.
+ *
+ * @param {Object} dep Dependency facts from `cmakeFetchDependencies`
+ * @param {string} srcFile The CMake file the dependency was read from
+ * @returns {Object} The component
+ */
+export declare function cmakeFetchDependencyComponent(dep: Object, srcFile: string): Object;
+/**
  * Parse a CMake-like build file (CMakeLists.txt, meson.build, etc.) and extract the
  * parent component and list of dependency packages.
  *
  * Handles `set`, `project`, `find_package`, `find_library`, `find_dependency`,
- * `find_file`, `FetchContent_MakeAvailable`, and `dependency()` directives.
+ * `find_file` and `dependency()` directives (CMake command names in any case),
+ * and, for CMake files, the dependencies downloaded at configure time by
+ * `FetchContent_Declare`, `ExternalProject_Add` and `CPMAddPackage`.
  * Uses the MesonWrapDB to improve name resolution confidence.
  *
  * @param {string} cmakeListFile Path to the CMake-like build file

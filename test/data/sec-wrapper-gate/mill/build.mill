@@ -1,0 +1,2 @@
+package build
+object secgate extends mill.RootModule with JavaModule

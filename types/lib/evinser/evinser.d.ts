@@ -118,8 +118,9 @@ export declare function purlToLanguage(purl: string, filePath?: string): string 
  * Seed purl-location and import maps from SBOM component evidence.
  *
  * Walks the supplied components reading `internal:ImportedModules` (or
- * `internal:Namespaces` for php/ruby) and `evidence.occurrences` properties
- * to construct lookup maps used during slice analysis.
+ * `internal:Namespaces` for php/ruby, plus the `internal:ImportedSymbols` the
+ * C/C++ collector records) and `evidence.occurrences` properties to construct
+ * lookup maps used during slice analysis.
  *
  * @param {Object[]} components CycloneDX components from the input SBOM
  * @param {string} language Application language used to select the import property name
