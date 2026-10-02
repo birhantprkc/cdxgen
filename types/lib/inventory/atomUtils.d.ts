@@ -22,6 +22,21 @@ export declare const ATOM_NATIVE_PACKAGES: Set<string>;
  */
 export declare function findCompileCommands(src: string, options?: Object): string | undefined;
 /**
+ * Split an atom command that may carry a leading argument (`node
+ * script.js`, a custom `ATOM_CMD`) into its binary and that argument. The
+ * first space only splits when it can: a binary under a path with spaces
+ * (`C:\Program Files\...\node.exe script.js`) would otherwise be cut
+ * mid-path and the shell told to run `C:\Program`. A command name without a
+ * path separator (`node script.js`) resolves through the PATH, so it splits
+ * at its first space as before; otherwise the first prefix that exists as a
+ * file is the binary, and when none does the first space keeps the old
+ * behaviour.
+ *
+ * @param {string} command The atom command, possibly with an argument
+ * @returns {[string, string|undefined]} The binary and its leading argument, when present
+ */
+export declare function splitAtomCommand(command: string): [string, string | undefined];
+/**
  * The `--frontend-args` keys the installed atom accepts for a language, as
  * `atom --frontend-args-keys -l <language>` lists them. Asked once per atom
  * command and language. An atom that cannot list them (a release without

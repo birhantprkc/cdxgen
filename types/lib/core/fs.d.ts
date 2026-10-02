@@ -124,8 +124,9 @@ export declare const commandsExecuted: Set<any>;
  * shell-metacharacter block above refuses `%` and the rest before this
  * runs. A POSIX shell gets single quotes, which no expansion can leave.
  *
- * The command itself is deliberately not quoted: callers pass a single
- * token, pre-splitting anything like `node script.js` (see executeAtom).
+ * The same quoting is applied to the command itself when it names an
+ * existing file under a path with spaces; a command the shell must parse
+ * (a bare name, `sh -c`) never names a file as a whole and stays verbatim.
  *
  * @param {string} arg Argument to quote
  * @param {boolean} [forWindows] Quote for cmd.exe rather than a POSIX shell; defaults to the current platform
