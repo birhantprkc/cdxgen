@@ -134,6 +134,25 @@ export declare const commandsExecuted: Set<any>;
  */
 export declare function shellQuoteArgument(arg: string, forWindows?: boolean): string;
 /**
+ * Build the single command string a shell spawn runs. Every argument is
+ * quoted for the platform shell, so an argument containing spaces stays one
+ * token and cannot alter the command, and a command that is itself a file
+ * under a path with spaces (`C:\Program Files\...\node.exe`) is quoted too;
+ * a command the shell must parse (`sh -c`, a bare name) never names an
+ * existing file as a whole and is left verbatim.
+ *
+ * The one exception is a caller that composes shell fragments itself (sbt
+ * command lines embed their own quoting for the shell to strip): it passes
+ * `rawShellArgs` and keeps the verbatim join, under the shell-metacharacter
+ * block in safeSpawnSync like every other argument.
+ *
+ * @param {string} command The executable
+ * @param {string[]|undefined} args Arguments, when the caller passed any
+ * @param {boolean} [rawShellArgs] Join the arguments verbatim instead of quoting them
+ * @returns {string} The command line the shell will run
+ */
+export declare function joinShellCommand(command: string, args: string[] | undefined, rawShellArgs?: boolean): string;
+/**
  * Safe wrapper around spawnSync that enforces permission checks, injects default
  * options (maxBuffer, encoding, timeout), warns about unsafe Python and pip/uv
  * invocations, and records every executed command in the commandsExecuted set.

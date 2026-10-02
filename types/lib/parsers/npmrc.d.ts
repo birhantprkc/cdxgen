@@ -9,6 +9,11 @@ export declare const DEFAULT_NPMRC_BLOCKLIST: Set<string>;
 /**
  * Parse .npmrc content into a plain key-value object.
  *
+ * Keys that collide with JavaScript object internals are skipped: assigning
+ * them on a plain object either silently mutates Object.prototype semantics or,
+ * for the array syntax, crashed the parser with a TypeError because
+ * `result.__proto__` resolves to Object.prototype instead of an own property.
+ *
  * @param {string} content - Raw .npmrc file content
  * @returns {Object} Parsed key-value pairs
  */

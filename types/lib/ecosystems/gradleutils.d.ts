@@ -1,10 +1,16 @@
 /**
  * Method to return the gradle command to use.
  *
+ * Project-local wrapper scripts (`gradlew`) are attacker-controlled files in
+ * the scanned project, so they are only used when dependency tooling is
+ * allowed (`options.installDeps !== false`); otherwise the system Gradle is
+ * used.
+ *
  * @param {string} srcPath Path to look for gradlew wrapper
  * @param {string|null} rootPath Root directory to look for gradlew wrapper
+ * @param {Object} [options] CLI options (`installDeps` gates wrapper use)
  */
-export declare function getGradleCommand(srcPath: string, rootPath: string | null): string;
+export declare function getGradleCommand(srcPath: string, rootPath: string | null, options?: Object): string;
 /**
  * Method to combine the general gradle arguments, the sub-commands and the sub-commands' arguments in the correct way
  *
@@ -57,7 +63,7 @@ export declare function parseGradleProperties(rawOutput: string, gradleModuleNam
  *
  * @returns {string} The combined output for all subprojects of the Gradle properties task
  */
-export declare function executeParallelGradleProperties(dir: string, allProjectsStr: array, extraArgs?: array): string;
+export declare function executeParallelGradleProperties(dir: string, allProjectsStr: array, extraArgs?: array, options?: {}): string;
 /**
  * Forget the causes diagnosed so far, so a process that generates more than
  * one BOM diagnoses each run on its own.
@@ -159,16 +165,26 @@ _includeCacheDir?: boolean): Promise<Object>;
 /**
  * Method to return the mill command to use.
  *
+ * The project-local `mill` script is an attacker-controlled file in the
+ * scanned project, so it is only used when dependency tooling is allowed
+ * (`options.installDeps !== false`).
+ *
  * @param {string} srcPath Path to look for mill wrapper
+ * @param {Object} [options] CLI options (`installDeps` gates wrapper use)
  */
-export declare function getMillCommand(srcPath: string): string;
+export declare function getMillCommand(srcPath: string, options?: Object): string;
 /**
  * Method to return the maven command to use.
  *
+ * Project-local wrapper scripts (`mvnw`) are attacker-controlled files in the
+ * scanned project, so they are only used when dependency tooling is allowed
+ * (`options.installDeps !== false`); otherwise the installed Maven is used.
+ *
  * @param {string} srcPath Path to look for maven wrapper
  * @param {string} rootPath Root directory to look for maven wrapper
+ * @param {Object} [options] CLI options (`installDeps` gates wrapper use)
  */
-export declare function getMavenCommand(srcPath: string, rootPath: string): string;
+export declare function getMavenCommand(srcPath: string, rootPath: string, options?: Object): string;
 /**
  * Parse a Gradle version catalog (`gradle/libs.versions.toml`).
  *
